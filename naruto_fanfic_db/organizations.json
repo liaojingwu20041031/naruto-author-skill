@@ -1,0 +1,1266 @@
+{
+  "schema_version": "1.1",
+  "source": {
+    "reference_url": "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+    "retrieved_at": "2026-04-13",
+    "policy": "归纳摘要，不保存网页长段原文。",
+    "additional_reference_urls": [
+      "https://zh.wikipedia.org/zh-sg/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8"
+    ],
+    "last_enriched_at": "2026-04-14"
+  },
+  "cleaning_policy": {
+    "id_style": "lower_snake_case_ascii",
+    "removed_dirty_data": [
+      "没有 type 的组织",
+      "把历史成员和当前成员混在一个 member 字段的记录",
+      "缺少时间范围的单一 leader 字符串"
+    ],
+    "leader_rule": "使用 leader_history；不要用单个 leader 覆盖历史。"
+  },
+  "organizations": [
+    {
+      "id": "konohagakure",
+      "name_zh": "木叶隐村",
+      "type": "hidden_village",
+      "nation": "land_of_fire",
+      "leader_title": "hokage",
+      "leader_history": [
+        {
+          "character_id": "senju_hashirama",
+          "title": "first_hokage",
+          "status": "historical"
+        },
+        {
+          "character_id": "senju_tobirama",
+          "title": "second_hokage",
+          "status": "historical"
+        },
+        {
+          "character_id": "sarutobi_hiruzen",
+          "title": "third_hokage",
+          "status": "dead_by_part_1"
+        },
+        {
+          "character_id": "namikaze_minato",
+          "title": "fourth_hokage",
+          "status": "dead_before_main_story"
+        },
+        {
+          "character_id": "tsunade",
+          "title": "fifth_hokage",
+          "status": "active_part_2"
+        },
+        {
+          "character_id": "hatake_kakashi",
+          "title": "sixth_hokage",
+          "status": "post_war"
+        },
+        {
+          "character_id": "uzumaki_naruto",
+          "title": "seventh_hokage",
+          "status": "future_canon"
+        }
+      ],
+      "core_assets": [
+        "academy",
+        "anbu",
+        "root",
+        "hyuga_clan",
+        "nara_yamanaka_akimichi_clans",
+        "uchiha_district_historical"
+      ],
+      "canon_conflicts": [
+        "kyuubi_attack",
+        "uchiha_massacre",
+        "konoha_crush",
+        "pain_assault",
+        "fourth_war"
+      ],
+      "continuity_fields": [
+        "current_hokage",
+        "village_damage_level",
+        "public_opinion",
+        "active_teams",
+        "missing_nin",
+        "root_status"
+      ],
+      "fanfic_risk": "不要把木叶写成单一黑箱；火影、顾问、根、普通忍者、民众的立场要分开。"
+    },
+    {
+      "id": "sunagakure",
+      "name_zh": "砂隐村",
+      "type": "hidden_village",
+      "nation": "land_of_wind",
+      "leader_title": "kazekage",
+      "leader_history": [
+        {
+          "character_id": "fourth_kazekage",
+          "title": "fourth_kazekage",
+          "status": "killed_before_konoha_crush"
+        },
+        {
+          "character_id": "gaara",
+          "title": "fifth_kazekage",
+          "status": "active_part_2"
+        }
+      ],
+      "core_assets": [
+        "puppet_corps",
+        "sand_defense",
+        "shukaku_historical"
+      ],
+      "canon_conflicts": [
+        "konoha_crush",
+        "kazekage_rescue"
+      ],
+      "continuity_fields": [
+        "alliance_with_konoha",
+        "kazekage_status",
+        "elder_council",
+        "jinchuriki_policy"
+      ],
+      "fanfic_risk": "砂隐资源贫弱和政治压力是行动逻辑核心，不能只当木叶附庸。"
+    },
+    {
+      "id": "kirigakure",
+      "name_zh": "雾隐村",
+      "type": "hidden_village",
+      "nation": "land_of_water",
+      "leader_title": "mizukage",
+      "leader_history": [
+        {
+          "character_id": "yagura",
+          "title": "fourth_mizukage",
+          "status": "historical_controlled"
+        },
+        {
+          "character_id": "terumi_mei",
+          "title": "fifth_mizukage",
+          "status": "active_five_kage_summit"
+        }
+      ],
+      "core_assets": [
+        "seven_ninja_swordsmen",
+        "bloody_mist_legacy"
+      ],
+      "canon_conflicts": [
+        "zabuza_backstory",
+        "five_kage_summit",
+        "fourth_war"
+      ],
+      "continuity_fields": [
+        "bloody_mist_policy_status",
+        "swords_registry",
+        "missing_nin"
+      ],
+      "fanfic_risk": "血雾时代和血继清洗会影响白、再不斩、鬼鲛等角色动机。"
+    },
+    {
+      "id": "iwagakure",
+      "name_zh": "岩隐村",
+      "type": "hidden_village",
+      "nation": "land_of_earth",
+      "leader_title": "tsuchikage",
+      "leader_history": [
+        {
+          "character_id": "onoki",
+          "title": "third_tsuchikage",
+          "status": "active_five_kage_summit"
+        }
+      ],
+      "core_assets": [
+        "earth_release_corps",
+        "explosive_corps_historical",
+        "jinchuriki_assets_historical"
+      ],
+      "canon_conflicts": [
+        "third_war",
+        "deidara_missing_nin",
+        "fourth_war"
+      ],
+      "continuity_fields": [
+        "konoha_war_grudges",
+        "akatsuki_hiring_history",
+        "jinchuriki_status"
+      ],
+      "fanfic_risk": "第三次忍界大战时期的岩隐与木叶旧怨必须影响角色判断。"
+    },
+    {
+      "id": "kumogakure",
+      "name_zh": "云隐村",
+      "type": "hidden_village",
+      "nation": "land_of_lightning",
+      "leader_title": "raikage",
+      "leader_history": [
+        {
+          "character_id": "a_fourth_raikage",
+          "title": "fourth_raikage",
+          "status": "active_part_2"
+        }
+      ],
+      "core_assets": [
+        "killer_bee",
+        "gyuki",
+        "yugito_nii_historical",
+        "lightning_release_taijutsu"
+      ],
+      "canon_conflicts": [
+        "hyuga_affair_historical",
+        "killer_bee_capture_attempt",
+        "five_kage_summit",
+        "fourth_war"
+      ],
+      "continuity_fields": [
+        "jinchuriki_security",
+        "raikage_position",
+        "relation_with_konoha",
+        "bee_location"
+      ],
+      "fanfic_risk": "云隐对人柱力军事化程度高，奇拉比失踪会触发强政治反应。"
+    },
+    {
+      "id": "akatsuki",
+      "name_zh": "晓",
+      "type": "rogue_organization",
+      "nation": "transnational",
+      "leader_history": [
+        {
+          "character_id": "yahiko",
+          "title": "founder_public_symbol",
+          "status": "dead_before_main_story"
+        },
+        {
+          "character_id": "nagato",
+          "title": "public_leader_as_pain",
+          "status": "dead_after_pain_assault"
+        },
+        {
+          "character_id": "uchiha_obito",
+          "title": "hidden_controller",
+          "status": "revealed_late"
+        },
+        {
+          "character_id": "uchiha_madara",
+          "title": "claimed_mastermind",
+          "status": "revived_war"
+        },
+        {
+          "character_id": "black_zetsu",
+          "title": "deeper_hidden_manipulator",
+          "status": "final_reveal"
+        }
+      ],
+      "core_assets": [
+        "gedo_statue",
+        "akatsuki_rings",
+        "tailed_beast_extraction_sealing",
+        "paired_teams"
+      ],
+      "high_impact_members": [
+        "nagato",
+        "konan",
+        "uchiha_itachi",
+        "hoshigaki_kisame",
+        "deidara",
+        "sasori",
+        "hidan",
+        "kakuzu",
+        "zetsu",
+        "uchiha_obito"
+      ],
+      "canon_conflicts": [
+        "kazekage_rescue",
+        "hidan_kakuzu_arc",
+        "jiraiya_pain_arc",
+        "pain_assault",
+        "fourth_war"
+      ],
+      "continuity_fields": [
+        "member_status",
+        "ring_assignments",
+        "pairings",
+        "captured_tailed_beasts",
+        "current_target",
+        "public_exposure",
+        "moon_eye_stage"
+      ],
+      "fanfic_risk": "晓成员提前死亡会牵连搭档、戒指、尾兽捕获、资金和情报链。"
+    },
+    {
+      "id": "root",
+      "name_zh": "根",
+      "type": "black_ops_faction",
+      "nation": "land_of_fire",
+      "leader_history": [
+        {
+          "character_id": "shimura_danzo",
+          "title": "root_leader",
+          "status": "dead_after_five_kage_summit"
+        }
+      ],
+      "core_assets": [
+        "conditioned_agents",
+        "tongue_seal",
+        "secret_labs",
+        "political_leverage"
+      ],
+      "high_impact_members": [
+        "sai",
+        "yamato"
+      ],
+      "canon_conflicts": [
+        "sasuke_reunion",
+        "five_kage_summit",
+        "danzo_vs_sasuke"
+      ],
+      "continuity_fields": [
+        "agent_list",
+        "mission_orders",
+        "danzo_authority",
+        "known_crimes",
+        "relationship_with_hokage"
+      ],
+      "fanfic_risk": "根适合灰色政治线，但不要把所有木叶问题都粗暴归因给团藏。"
+    },
+    {
+      "id": "team_7",
+      "name_zh": "第七班",
+      "type": "shinobi_team",
+      "nation": "land_of_fire",
+      "leader_history": [
+        {
+          "character_id": "hatake_kakashi",
+          "title": "jonin_sensei",
+          "status": "primary"
+        },
+        {
+          "character_id": "yamato",
+          "title": "acting_captain",
+          "status": "part_2_interval"
+        }
+      ],
+      "high_impact_members": [
+        "uzumaki_naruto",
+        "uchiha_sasuke",
+        "haruno_sakura",
+        "sai"
+      ],
+      "canon_conflicts": [
+        "land_of_waves",
+        "chunin_exam",
+        "sasuke_retrieval",
+        "sasuke_reunion",
+        "war_finale"
+      ],
+      "continuity_fields": [
+        "member_status",
+        "trust_levels",
+        "current_mission",
+        "sasuke_absence_state",
+        "team_objective"
+      ],
+      "fanfic_risk": "OC 插入第七班必须记录对鸣佐樱卡关系的影响。"
+    },
+    {
+      "id": "team_10",
+      "name_zh": "第十班",
+      "type": "shinobi_team",
+      "nation": "land_of_fire",
+      "leader_history": [
+        {
+          "character_id": "sarutobi_asuma",
+          "title": "jonin_sensei",
+          "status": "dead_after_hidan_kakuzu"
+        }
+      ],
+      "high_impact_members": [
+        "nara_shikamaru",
+        "yamanaka_ino",
+        "akimichi_choji"
+      ],
+      "canon_conflicts": [
+        "hidan_kakuzu_arc",
+        "fourth_war"
+      ],
+      "continuity_fields": [
+        "asuma_status",
+        "ino_shika_cho_sync",
+        "revenge_motivation",
+        "war_command_role"
+      ],
+      "fanfic_risk": "阿斯玛死亡与猪鹿蝶成熟强绑定，改写后需替代成长事件。"
+    },
+    {
+      "id": "team_guy",
+      "name_zh": "凯班",
+      "type": "shinobi_team",
+      "nation": "land_of_fire",
+      "leader_history": [
+        {
+          "character_id": "might_guy",
+          "title": "jonin_sensei",
+          "status": "primary"
+        }
+      ],
+      "high_impact_members": [
+        "rock_lee",
+        "hyuga_neji",
+        "tenten"
+      ],
+      "canon_conflicts": [
+        "chunin_exam",
+        "kazekage_rescue",
+        "fourth_war"
+      ],
+      "continuity_fields": [
+        "lee_injury_status",
+        "neji_status",
+        "guy_gates_limit",
+        "team_morale"
+      ],
+      "fanfic_risk": "宁次生死和小李伤势会强影响后续剧情。"
+    },
+    {
+      "id": "uzumaki_clan_historical",
+      "name_zh": "漩涡一族",
+      "type": "historical_clan",
+      "nation": "uzushiogakure_historical",
+      "leader_title": "clan_elder",
+      "leader_history": [],
+      "core_assets": [
+        "sealing_jutsu",
+        "strong_life_force",
+        "reaper_mask_historical"
+      ],
+      "canon_conflicts": [
+        "kyuubi_sealing_history",
+        "uzushiogakure_destruction_historical"
+      ],
+      "continuity_fields": [
+        "survivors",
+        "sealing_scrolls",
+        "relic_locations",
+        "bloodline_descendants"
+      ],
+      "fanfic_risk": "漩涡封印术和遗物非常容易变成外挂仓库，必须记录来源和代价。"
+    },
+    {
+      "id": "shinobi_allied_forces",
+      "name_zh": "忍者联军",
+      "type": "wartime_alliance",
+      "nation": "multi_national",
+      "leader_history": [
+        {
+          "character_id": "a_fourth_raikage",
+          "title": "supreme_commander",
+          "status": "fourth_war"
+        },
+        {
+          "character_id": "nara_shikaku",
+          "title": "chief_strategist",
+          "status": "fourth_war_until_death"
+        }
+      ],
+      "core_assets": [
+        "five_village_forces",
+        "sensor_division",
+        "medical_division",
+        "battle_divisions"
+      ],
+      "canon_conflicts": [
+        "fourth_war"
+      ],
+      "continuity_fields": [
+        "formation_status",
+        "division_rosters",
+        "casualty_count",
+        "protected_jinchuriki",
+        "enemy_intel",
+        "morale"
+      ],
+      "fanfic_risk": "联军成立需要五影会谈与共同威胁铺垫，不能凭空一章拉起。"
+    },
+    {
+      "id": "otsutsuki_lineage",
+      "name_zh": "大筒木一脉",
+      "type": "mythic_lineage",
+      "nation": "none",
+      "leader_title": "lineage_origin",
+      "leader_history": [
+        {
+          "character_id": "otsutsuki_kaguya",
+          "title": "chakra_origin",
+          "status": "sealed"
+        },
+        {
+          "character_id": "otsutsuki_hagoromo",
+          "title": "ninshu_founder",
+          "status": "spiritual_legacy"
+        },
+        {
+          "character_id": "otsutsuki_hamura",
+          "title": "moon_lineage_origin",
+          "status": "historical"
+        }
+      ],
+      "core_assets": [
+        "divine_tree",
+        "chakra_fruit",
+        "ten_tails_origin",
+        "six_paths_power"
+      ],
+      "canon_conflicts": [
+        "infinite_tsukuyomi_origin",
+        "indra_asura_reincarnation",
+        "kaguya_revival"
+      ],
+      "continuity_fields": [
+        "sealed_members",
+        "spiritual_legacies",
+        "reincarnation_threads",
+        "moon_lineage_status"
+      ],
+      "fanfic_risk": "大筒木层级会迅速抬高战力天花板，必须作为终局或神话底层谨慎使用。"
+    },
+    {
+      "id": "ninshu_origin",
+      "name_zh": "忍宗",
+      "type": "spiritual_doctrine",
+      "nation": "pre_village_world",
+      "leader_title": "founder",
+      "leader_history": [
+        {
+          "character_id": "otsutsuki_hagoromo",
+          "title": "founder",
+          "status": "historical"
+        }
+      ],
+      "core_assets": [
+        "chakra_as_connection",
+        "spiritual_teaching",
+        "indra_asura_succession_conflict"
+      ],
+      "canon_conflicts": [
+        "indra_asura_split",
+        "modern_ninjutsu_distortion"
+      ],
+      "continuity_fields": [
+        "doctrine_state",
+        "successor_conflict",
+        "reincarnation_trace"
+      ],
+      "fanfic_risk": "忍宗不是现代忍术学校，不能把查克拉连接理念写成普通战斗技能课。"
+    },
+    {
+      "id": "senju_clan",
+      "name_zh": "千手一族",
+      "type": "historical_clan",
+      "nation": "pre_konoha_land_of_fire",
+      "leader_title": "clan_head",
+      "leader_history": [
+        {
+          "character_id": "senju_hashirama",
+          "title": "clan_head_and_first_hokage",
+          "status": "historical"
+        },
+        {
+          "character_id": "senju_tobirama",
+          "title": "second_hokage",
+          "status": "historical"
+        }
+      ],
+      "core_assets": [
+        "large_chakra_vitality",
+        "wood_release_exception",
+        "konoha_foundation"
+      ],
+      "canon_conflicts": [
+        "warring_states",
+        "konoha_foundation",
+        "madara_break"
+      ],
+      "continuity_fields": [
+        "war_casualties",
+        "alliance_with_uchiha",
+        "village_integration"
+      ],
+      "fanfic_risk": "千手不是完美和平符号，战国血仇和建村制度设计必须存在。"
+    },
+    {
+      "id": "uchiha_clan",
+      "name_zh": "宇智波一族",
+      "type": "historical_clan",
+      "nation": "pre_konoha_land_of_fire_then_konohagakure",
+      "leader_title": "clan_head",
+      "leader_history": [
+        {
+          "character_id": "uchiha_madara",
+          "title": "warring_states_leader",
+          "status": "defected"
+        },
+        {
+          "character_id": "uchiha_izuna",
+          "title": "madara_brother",
+          "status": "dead_before_foundation"
+        }
+      ],
+      "core_assets": [
+        "sharingan",
+        "mangekyo_sharingan",
+        "police_force_historical",
+        "founding_clan_status"
+      ],
+      "canon_conflicts": [
+        "warring_states",
+        "konoha_foundation_fracture",
+        "kyuubi_suspicion",
+        "uchiha_massacre"
+      ],
+      "continuity_fields": [
+        "clan_trust_level",
+        "police_status",
+        "coup_pressure",
+        "survivors",
+        "dojutsu_registry"
+      ],
+      "fanfic_risk": "宇智波问题不是单纯邪恶血统，而是力量、创伤、制度性不信任和政治隔离叠加。"
+    },
+    {
+      "id": "kinkaku_force",
+      "name_zh": "金角部队",
+      "type": "historical_military_unit",
+      "nation": "land_of_lightning",
+      "leader_title": "unit_leader",
+      "leader_history": [
+        {
+          "character_id": "kinkaku",
+          "title": "leader_or_symbol",
+          "status": "historical"
+        },
+        {
+          "character_id": "ginkaku",
+          "title": "core_member",
+          "status": "historical"
+        }
+      ],
+      "core_assets": [
+        "nine_tails_chakra_fragments",
+        "sage_tools"
+      ],
+      "canon_conflicts": [
+        "first_shinobi_war",
+        "tobirama_last_stand"
+      ],
+      "continuity_fields": [
+        "unit_status",
+        "pursuit_target",
+        "sage_tools_location"
+      ],
+      "fanfic_risk": "金角部队牵涉扉间断后和日斩继任，不能当普通云隐小队处理。"
+    },
+    {
+      "id": "amegakure",
+      "name_zh": "雨隐村",
+      "type": "hidden_village_minor_state",
+      "nation": "land_of_rain",
+      "leader_title": "village_leader",
+      "leader_history": [
+        {
+          "character_id": "hanzo",
+          "title": "leader",
+          "status": "historical"
+        },
+        {
+          "character_id": "nagato",
+          "title": "pain_regime",
+          "status": "dead_after_pain_assault"
+        },
+        {
+          "character_id": "konan",
+          "title": "brief_successor_or_guardian",
+          "status": "dead_after_obito_conflict"
+        }
+      ],
+      "core_assets": [
+        "rain_surveillance",
+        "war_orphans",
+        "akatsuki_origin"
+      ],
+      "canon_conflicts": [
+        "second_shinobi_war",
+        "akatsuki_origin",
+        "pain_rule"
+      ],
+      "continuity_fields": [
+        "civilian_suffering",
+        "hanzo_regime",
+        "akatsuki_presence",
+        "rain_surveillance_status"
+      ],
+      "fanfic_risk": "雨隐是大国战争夹缝小国，不要只写成佩恩副本地图。"
+    },
+    {
+      "id": "akatsuki_original",
+      "name_zh": "初代晓/弥彦晓",
+      "type": "anti_war_movement",
+      "nation": "land_of_rain",
+      "leader_title": "founder",
+      "leader_history": [
+        {
+          "character_id": "yahiko",
+          "title": "founder_idealistic_leader",
+          "status": "dead"
+        },
+        {
+          "character_id": "nagato",
+          "title": "survivor_transformed_leader",
+          "status": "became_pain"
+        },
+        {
+          "character_id": "konan",
+          "title": "survivor_witness",
+          "status": "later_akatsuki_member"
+        }
+      ],
+      "core_assets": [
+        "anti_war_ideal",
+        "ame_orphans",
+        "grassroots_support"
+      ],
+      "canon_conflicts": [
+        "second_shinobi_war_aftermath",
+        "hanzo_danzo_trap",
+        "pain_ideology_birth"
+      ],
+      "continuity_fields": [
+        "public_support",
+        "hanzo_relation",
+        "danzo_interference",
+        "yahiko_status"
+      ],
+      "fanfic_risk": "晓的恐怖组织阶段必须从反战组织被摧毁后演化出来，不能跳过弥彦。"
+    },
+    {
+      "id": "moon_lineage",
+      "name_zh": "月球一脉",
+      "type": "mythic_branch_lineage",
+      "nation": "moon",
+      "leader_title": "lineage_origin",
+      "leader_history": [
+        {
+          "character_id": "otsutsuki_hamura",
+          "title": "origin",
+          "status": "historical"
+        }
+      ],
+      "core_assets": [
+        "hamura_legacy",
+        "kaguya_seal_watch",
+        "byakugan_related_origin"
+      ],
+      "canon_conflicts": [
+        "kaguya_seal_legacy"
+      ],
+      "continuity_fields": [
+        "seal_watch_status",
+        "branch_survivors",
+        "moon_artifacts"
+      ],
+      "fanfic_risk": "月球一脉牵涉世界观扩展，普通少年篇不要随便下放为低级副本。"
+    },
+    {
+      "id": "team_8",
+      "name_zh": "第八班",
+      "aliases": [
+        "夕日红班",
+        "红班"
+      ],
+      "type": "shinobi_team",
+      "nation": "land_of_fire",
+      "leader_history": [],
+      "high_impact_members": [
+        "hyuga_hinata",
+        "inuzuka_kiba",
+        "aburame_shino",
+        "yuhi_kurenai"
+      ],
+      "core_assets": [
+        "tracking",
+        "reconnaissance",
+        "byakugan",
+        "ninken",
+        "insect_scouting"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "tracking_assignments",
+        "kurenai_status",
+        "hinata_confidence",
+        "kiba_akamaru_status",
+        "shino_insect_colony"
+      ],
+      "fanfic_risk": "第八班是侦察班，不应长期当正面火力队使用；白眼、嗅觉、虫群会提前发现许多埋伏。"
+    },
+    {
+      "id": "team_baki",
+      "name_zh": "马基班",
+      "aliases": [
+        "砂隐三姐弟小队",
+        "砂隐小队"
+      ],
+      "type": "shinobi_team",
+      "nation": "land_of_wind",
+      "leader_history": [],
+      "high_impact_members": [
+        "gaara",
+        "temari",
+        "kankuro",
+        "baki"
+      ],
+      "core_assets": [
+        "sand_jinchuriki",
+        "wind_release",
+        "puppet_technique"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "sand_konoha_alliance",
+        "gaara_psychological_state",
+        "shukaku_control",
+        "sibling_trust"
+      ],
+      "fanfic_risk": "砂隐小队行动受风之国资源和毁灭木叶计划影响，不能只写成考试路人。"
+    },
+    {
+      "id": "team_samui",
+      "name_zh": "萨姆伊小队",
+      "aliases": [
+        "云隐萨姆伊班"
+      ],
+      "type": "shinobi_team",
+      "nation": "land_of_lightning",
+      "leader_history": [],
+      "high_impact_members": [
+        "samui",
+        "karui",
+        "omoi"
+      ],
+      "core_assets": [
+        "cloud_diplomatic_pressure",
+        "kenjutsu",
+        "killer_bee_rescue_context"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "bee_status",
+        "sasuke_intel",
+        "konoha_diplomatic_response",
+        "team_morale"
+      ],
+      "fanfic_risk": "云隐来木叶的冲突是外交压力，不是私人找茬。"
+    },
+    {
+      "id": "legendary_sannin",
+      "name_zh": "传说中的三忍",
+      "aliases": [
+        "三忍",
+        "木叶三忍"
+      ],
+      "type": "elite_title_group",
+      "nation": "land_of_fire",
+      "leader_history": [],
+      "high_impact_members": [
+        "jiraiya",
+        "tsunade",
+        "orochimaru"
+      ],
+      "core_assets": [
+        "toad_contract",
+        "slug_contract",
+        "snake_contract",
+        "medical_mastery",
+        "forbidden_research"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "member_status",
+        "student_lineages",
+        "summon_contracts",
+        "political_influence"
+      ],
+      "fanfic_risk": "三忍既是战力标尺也是师承网络，改写任何一人都会牵动鸣人、佐助、小樱成长线。"
+    },
+    {
+      "id": "seven_ninja_swordsmen",
+      "name_zh": "忍刀七人众",
+      "aliases": [
+        "雾隐忍刀七人众",
+        "七忍刀"
+      ],
+      "type": "elite_weapon_group",
+      "nation": "land_of_water",
+      "leader_history": [],
+      "high_impact_members": [
+        "zabuza",
+        "hoshigaki_kisame",
+        "chojuro",
+        "suigetsu"
+      ],
+      "core_assets": [
+        "legendary_swords",
+        "kirigakure_bloody_mist_legacy"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "sword_registry",
+        "owner_history",
+        "missing_swords",
+        "blood_mist_reputation"
+      ],
+      "fanfic_risk": "忍刀持有权和雾隐政治强绑定，换刀必须记录来源和继承/夺取过程。"
+    },
+    {
+      "id": "medical_corps",
+      "name_zh": "医疗班",
+      "aliases": [
+        "医疗部队",
+        "木叶医疗班"
+      ],
+      "type": "support_corps",
+      "nation": "varies",
+      "leader_history": [],
+      "high_impact_members": [
+        "tsunade",
+        "haruno_sakura",
+        "shizune"
+      ],
+      "core_assets": [
+        "triage",
+        "antidote",
+        "field_hospital",
+        "chakra_healing"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "available_medics",
+        "hospital_damage",
+        "antidote_stock",
+        "casualty_overload"
+      ],
+      "fanfic_risk": "医疗班可降低死亡率，但不能抹平战场代价；医疗资源会成为政治和后勤压力。"
+    },
+    {
+      "id": "anbu",
+      "name_zh": "暗部",
+      "aliases": [
+        "暗杀战术特殊部队",
+        "木叶暗部"
+      ],
+      "type": "black_ops_unit",
+      "nation": "varies",
+      "leader_history": [],
+      "high_impact_members": [
+        "hatake_kakashi",
+        "yamato",
+        "uchiha_itachi"
+      ],
+      "core_assets": [
+        "masks",
+        "coded_orders",
+        "assassination",
+        "intel_retrieval"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "active_roster",
+        "mission_classification",
+        "chain_of_command",
+        "casualties"
+      ],
+      "fanfic_risk": "暗部不是万能警察；任务保密、授权链和死亡率必须体现。"
+    },
+    {
+      "id": "academy",
+      "name_zh": "忍者学校",
+      "aliases": [
+        "忍校",
+        "木叶忍者学校"
+      ],
+      "type": "training_institution",
+      "nation": "varies",
+      "leader_history": [],
+      "high_impact_members": [
+        "iruka",
+        "mizuki",
+        "sarutobi_konohamaru"
+      ],
+      "core_assets": [
+        "basic_jutsu_training",
+        "graduation_exam",
+        "team_assignment"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "student_roster",
+        "graduation_results",
+        "teacher_assignments",
+        "forbidden_scroll_security"
+      ],
+      "fanfic_risk": "忍校阶段不能提前塞太多高阶忍术，否则毕业考试和下忍任务体系会失效。"
+    },
+    {
+      "id": "hyuga_clan",
+      "name_zh": "日向一族",
+      "aliases": [
+        "日向家",
+        "白眼一族"
+      ],
+      "type": "konoha_clan",
+      "nation": "land_of_fire",
+      "leader_history": [],
+      "high_impact_members": [
+        "hyuga_hinata",
+        "hyuga_neji",
+        "hyuga_hiashi",
+        "hyuga_hanabi"
+      ],
+      "core_assets": [
+        "byakugan",
+        "gentle_fist",
+        "main_branch_side_branch_system"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "main_branch_status",
+        "side_branch_curse_seal",
+        "heir_pressure",
+        "cloud_relation"
+      ],
+      "fanfic_risk": "日向线的痛点是制度和家族义务，不要只写成父女误会。"
+    },
+    {
+      "id": "sound_four",
+      "name_zh": "音忍四人众",
+      "aliases": [
+        "音忍五人众",
+        "音忍四人组"
+      ],
+      "type": "elite_guard_team",
+      "nation": "otogakure",
+      "leader_history": [],
+      "high_impact_members": [
+        "tayuya",
+        "kidomaru",
+        "jirobo",
+        "sakon_ukon",
+        "kimimaro"
+      ],
+      "core_assets": [
+        "curse_mark_stage_2",
+        "barrier_ninjutsu",
+        "sasuke_escort"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "member_status",
+        "curse_mark_stage",
+        "sasuke_delivery_status",
+        "konoha_pursuers"
+      ],
+      "fanfic_risk": "音忍四人众是佐助叛逃事件的路由器，改动会连锁改变木叶追击战。"
+    },
+    {
+      "id": "team_hebi",
+      "name_zh": "蛇小队",
+      "aliases": [
+        "蛇",
+        "Hebi"
+      ],
+      "type": "rogue_team",
+      "nation": "none",
+      "leader_history": [],
+      "high_impact_members": [
+        "uchiha_sasuke",
+        "suigetsu",
+        "karin",
+        "jugo"
+      ],
+      "core_assets": [
+        "anti_itachi_objective",
+        "orochimaru_hideouts",
+        "specialist_members"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "team_name",
+        "objective",
+        "member_loyalty",
+        "orochimaru_status"
+      ],
+      "fanfic_risk": "蛇小队目标是找鼬，不能提前套用鹰小队的复仇木叶逻辑。"
+    },
+    {
+      "id": "otogakure",
+      "name_zh": "音隐村",
+      "aliases": [
+        "音忍村",
+        "音隐"
+      ],
+      "type": "hidden_village_minor",
+      "nation": "land_of_sound_or_hidden_bases",
+      "leader_history": [],
+      "high_impact_members": [
+        "orochimaru",
+        "kabuto",
+        "sound_four",
+        "kimimaro"
+      ],
+      "core_assets": [
+        "curse_mark_experiments",
+        "human_labs",
+        "hidden_bases"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "base_locations",
+        "experiment_subjects",
+        "orochimaru_body_status",
+        "alliance_with_suna"
+      ],
+      "fanfic_risk": "音隐更像大蛇丸实验网络，不应写成制度完整的大国忍村。"
+    },
+    {
+      "id": "takigakure",
+      "name_zh": "泷隐村",
+      "aliases": [
+        "泷隐"
+      ],
+      "type": "hidden_village_minor",
+      "nation": "land_of_waterfall",
+      "leader_history": [],
+      "high_impact_members": [
+        "fu",
+        "kakuzu"
+      ],
+      "core_assets": [
+        "seven_tails_history",
+        "waterfall_defense"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "nanabi_status",
+        "village_security",
+        "kakuzu_history"
+      ],
+      "fanfic_risk": "泷隐拥有七尾历史却不是五大村，适合表现小国持有战略资源的压力。"
+    },
+    {
+      "id": "land_of_iron_samurai",
+      "name_zh": "铁之国武士",
+      "aliases": [
+        "铁之国",
+        "武士"
+      ],
+      "type": "samurai_state",
+      "nation": "land_of_iron",
+      "leader_history": [],
+      "high_impact_members": [
+        "mifune"
+      ],
+      "core_assets": [
+        "samurai_chakra_blades",
+        "neutral_summit_host",
+        "iaido"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "neutrality_status",
+        "summit_security",
+        "samurai_mobilization"
+      ],
+      "fanfic_risk": "铁之国不是忍村，政治中立和武士战法要与忍者体系区分。"
+    },
+    {
+      "id": "mount_myoboku",
+      "name_zh": "妙木山",
+      "aliases": [
+        "蛤蟆山",
+        "妙木山蛤蟆"
+      ],
+      "type": "summon_realm",
+      "nation": "summon_world",
+      "leader_history": [],
+      "high_impact_members": [
+        "gamabunta",
+        "fukasaku",
+        "shima"
+      ],
+      "core_assets": [
+        "toad_contract",
+        "sage_mode_training",
+        "prophecy"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "contract_holders",
+        "sage_training_status",
+        "summon_availability"
+      ],
+      "fanfic_risk": "妙木山进入和仙术训练都要有媒介、时间与风险，不是随便刷副本。"
+    },
+    {
+      "id": "ryuchi_cave",
+      "name_zh": "龙地洞",
+      "aliases": [
+        "蛇仙地",
+        "龙地洞蛇"
+      ],
+      "type": "summon_realm",
+      "nation": "summon_world",
+      "leader_history": [],
+      "high_impact_members": [
+        "manda",
+        "orochimaru",
+        "yakushi_kabuto"
+      ],
+      "core_assets": [
+        "snake_contract",
+        "senjutsu_variant"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "contract_holders",
+        "snake_summons",
+        "sage_training_status"
+      ],
+      "fanfic_risk": "龙地洞仙术线偏危险研究与蛇系契约，不应和妙木山完全同质化。"
+    },
+    {
+      "id": "shikkotsu_forest",
+      "name_zh": "湿骨林",
+      "aliases": [
+        "蛞蝓圣地"
+      ],
+      "type": "summon_realm",
+      "nation": "summon_world",
+      "leader_history": [],
+      "high_impact_members": [
+        "katsuyu",
+        "tsunade",
+        "haruno_sakura"
+      ],
+      "core_assets": [
+        "slug_contract",
+        "medical_support"
+      ],
+      "canon_conflicts": [],
+      "continuity_fields": [
+        "contract_holders",
+        "katsuyu_split_ratio",
+        "healing_chakra_supply"
+      ],
+      "fanfic_risk": "蛞蝓治疗强度由召唤者查克拉供给决定，不能无限分裂无限治疗。"
+    }
+  ]
+}

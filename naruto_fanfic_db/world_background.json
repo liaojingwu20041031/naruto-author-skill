@@ -1,0 +1,575 @@
+{
+  "schema_version": "1.1",
+  "source": {
+    "name": "维基百科：火影忍者",
+    "url": "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+    "retrieved_at": "2026-04-13",
+    "extraction_policy": "背景设定为归纳摘要；部分字段用于同人一致性建模，非网页原文复制。",
+    "additional_reference_urls": [
+      "https://zh.wikipedia.org/zh-sg/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8"
+    ],
+    "last_enriched_at": "2026-04-14",
+    "policy": "归纳摘要并结构化为同人写作一致性锚点，不保存网页长段原文。"
+  },
+  "usage_note": "本文件服务于长篇同人写作前检索。若剧情设定与此处冲突，应在 story_graph.json 中记录 canon_delta、reason 与 replacement_rule。",
+  "world_model": {
+    "civilization": {
+      "summary": "火影世界融合近代日本、东方建筑和有限现代技术。忍术承担了许多机械技术的功能，因此机械交通与现代武器并不普及，但摄影机、电子公告板、蒸汽装置等设备可以存在。",
+      "technology_constraints": [
+        "不要默认出现汽车、铁路、飞机等现代交通工具。",
+        "蒸汽船、摄影机、电子公告板、通信设备等可作为低频技术元素。",
+        "公共建筑可使用混凝土与金属网，但整体社会结构仍偏古典。"
+      ],
+      "currency": "两",
+      "fanfic_consistency_use": "设计经济、交通、情报传递时，优先考虑任务委托、忍村网络、忍术替代技术，而不是现代国家机器。"
+    },
+    "shinobi_concept": {
+      "summary": "本作忍者不是单纯暗杀者，而是以修炼、任务、战斗和坚持为核心的超能力佣兵体系。忍术与团队定位构成战斗漫画的基础。",
+      "tone_rules": [
+        "忍者可以承担军人、佣兵、护卫、侦察、暗杀、外交威慑等多重职责。",
+        "角色强弱不只由等级决定，还由血继、情报、地形、查克拉控制、战术组合决定。",
+        "武器体系应以苦无、手里剑、起爆符、卷轴、刀具等为主，不宜大量引入热兵器。"
+      ]
+    },
+    "chakra_system": {
+      "summary": "查克拉由身体能量与精神能量混合提炼，配合结印发动术。查克拉控制影响术的成功率、威力和精细度，过度消耗存在死亡风险。",
+      "core_fields_to_track": [
+        "chakra_capacity_rank",
+        "current_chakra_percent",
+        "control_precision",
+        "nature_transformations",
+        "yin_yang_affinity",
+        "senjutsu_available",
+        "injury_modifiers",
+        "cooldowns"
+      ],
+      "power_scaling_rules": [
+        "大规模忍术必须消耗大量查克拉或需要外部条件。",
+        "体术之外的大多数术都应显式考虑查克拉消耗。",
+        "仙术需要自然能量参与，不能与普通忍术成长线混为一谈。",
+        "血继限界通过遗传或特殊移植继承，不应无代价随机获得。"
+      ]
+    },
+    "rank_system": {
+      "summary": "忍者等级包括忍者学校学生、下忍、中忍、上忍和影。等级大体代表实力与职责，但不绝对决定战斗结果。",
+      "rank_order": [
+        "academy_student",
+        "genin",
+        "chunin",
+        "jonin",
+        "kage"
+      ],
+      "fanfic_consistency_use": "角色年龄、任务等级、职位权力和战斗表现必须互相校验。低等级角色可以越级胜利，但需要战术、情报、环境或血继等明确理由。"
+    },
+    "geopolitics": {
+      "summary": "多数国家由大名统治，少数国家设有忍者村。忍村通过接受委托派遣忍者维持发展，同时构成国家军事力量。火、风、水、土、雷为忍者五大国，五大忍村首领称为五影。",
+      "major_nations": [
+        {
+          "id": "land_of_fire",
+          "hidden_village": "konohagakure",
+          "kage_title": "hokage"
+        },
+        {
+          "id": "land_of_wind",
+          "hidden_village": "sunagakure",
+          "kage_title": "kazekage"
+        },
+        {
+          "id": "land_of_water",
+          "hidden_village": "kirigakure",
+          "kage_title": "mizukage"
+        },
+        {
+          "id": "land_of_earth",
+          "hidden_village": "iwagakure",
+          "kage_title": "tsuchikage"
+        },
+        {
+          "id": "land_of_lightning",
+          "hidden_village": "kumogakure",
+          "kage_title": "raikage"
+        }
+      ],
+      "political_rules": [
+        "忍村首领与国家元首处于同等政治等级，但不等同于大名。",
+        "跨国任务会牵涉外交和报酬，不应随意跨境行动而无后果。",
+        "五影级会议属于国际政治事件，一旦提前触发，会改变战争准备节奏。"
+      ]
+    },
+    "tools_and_materials": {
+      "summary": "常见忍具有苦无、手里剑、烟雾弹、闪光弹、兵粮丸、卷轴、起爆符、千本与刀具等。卷轴可作为书籍、术式、召唤、封印和通灵契约媒介。",
+      "high_consistency_items": [
+        {
+          "id": "explosive_tag",
+          "name": "起爆符",
+          "tracking_reason": "消耗品，适合做战术伏笔，但不能无限使用。"
+        },
+        {
+          "id": "scroll",
+          "name": "卷轴",
+          "tracking_reason": "可储存术式、武器、封印、契约，是资料库与战斗道具的重要桥梁。"
+        },
+        {
+          "id": "soldier_pill",
+          "name": "兵粮丸",
+          "tracking_reason": "可短期恢复或增强查克拉，但需要记录副作用和库存。"
+        },
+        {
+          "id": "senbon",
+          "name": "千本",
+          "tracking_reason": "可用于经络干扰、假死和医疗场景，容易造成生死状态误判。"
+        }
+      ]
+    }
+  },
+  "organizations": [
+    {
+      "id": "konohagakure",
+      "name": "木叶隐村",
+      "role_in_canon": "主角所属忍村，九尾封印、三代/五代/七代火影、宇智波灭族和根部政治等核心线集中地。",
+      "continuity_fields_needed": [
+        "current_hokage",
+        "council_state",
+        "root_activity",
+        "village_damage_level",
+        "public_opinion_by_character",
+        "active_teams",
+        "missing_nin_list"
+      ]
+    },
+    {
+      "id": "akatsuki",
+      "name": "晓",
+      "role_in_canon": "第二部核心反派组织，目标从尾兽捕获扩展到月之眼计划，成员死亡与替补会显著影响主线。",
+      "continuity_fields_needed": [
+        "member_roster",
+        "ring_assignments",
+        "pairings",
+        "captured_tailed_beasts",
+        "current_public_exposure",
+        "moon_eye_plan_stage",
+        "leader_identity_known_by"
+      ]
+    },
+    {
+      "id": "root",
+      "name": "根",
+      "role_in_canon": "团藏领导的木叶暗部派系，牵涉佐井、五影会谈、团藏代理火影和宇智波相关黑暗政治。",
+      "continuity_fields_needed": [
+        "leader",
+        "active_agents",
+        "sealed_tongue_members",
+        "political_leverage",
+        "known_crimes",
+        "relationship_with_hokage"
+      ]
+    },
+    {
+      "id": "shinobi_allied_forces",
+      "name": "忍者联军",
+      "role_in_canon": "第四次忍界大战中五大国为对抗晓和月之眼计划而组成的军事共同体。",
+      "continuity_fields_needed": [
+        "formation_chapter",
+        "command_structure",
+        "division_rosters",
+        "casualty_estimates",
+        "protected_jinchuriki",
+        "enemy_intel_state"
+      ]
+    }
+  ],
+  "continuity_rules": [
+    {
+      "id": "rule_chakra_exhaustion",
+      "category": "power_scaling",
+      "rule": "查克拉过度消耗可能导致死亡；重大战斗后必须记录剩余查克拉、伤势和冷却。",
+      "required_graph_fields": [
+        "current_chakra_percent",
+        "injuries",
+        "cooldowns",
+        "recovery_conditions"
+      ]
+    },
+    {
+      "id": "rule_jinchuriki_extraction",
+      "category": "tailed_beast",
+      "rule": "尾兽被抽离通常会导致人柱力死亡或濒死；任何例外必须记录术式、救援者和代价。",
+      "required_graph_fields": [
+        "tailed_beast.current_host_id",
+        "tailed_beast.extraction_status",
+        "host.life_status",
+        "revival_event_id"
+      ]
+    },
+    {
+      "id": "rule_edo_tensei_exception",
+      "category": "death_state",
+      "rule": "秽土转生不是普通复活。被召回者应同时记录原本死亡状态、当前秽土状态、召唤者、控制等级与解除条件。",
+      "required_graph_fields": [
+        "life_status",
+        "soul_state",
+        "edo_tensei.is_edo",
+        "edo_tensei.summoner",
+        "edo_tensei.control_level",
+        "edo_tensei.release_condition"
+      ]
+    },
+    {
+      "id": "rule_akatsuki_rings_and_pairs",
+      "category": "organization_state",
+      "rule": "晓成员死亡、叛离、替补或换组时，必须同步更新戒指、搭档、目标尾兽和任务进度。",
+      "required_graph_fields": [
+        "akatsuki.member_roster",
+        "akatsuki.ring_assignments",
+        "akatsuki.pairings",
+        "akatsuki.active_targets"
+      ]
+    },
+    {
+      "id": "rule_dojutsu_transfer",
+      "category": "bloodline_and_body",
+      "rule": "写轮眼、轮回眼等瞳术的开眼、移植、夺取和失明必须记录眼位、来源、宿主适配和消耗。",
+      "required_graph_fields": [
+        "body_parts.eyes",
+        "dojutsu_state",
+        "transplant_source",
+        "usage_cost",
+        "vision_degradation"
+      ]
+    },
+    {
+      "id": "rule_political_cascade",
+      "category": "geopolitics",
+      "rule": "火影、风影、代理火影、五影会谈、忍者联军等政治节点被改变时，必须生成 downstream_obligations。",
+      "required_graph_fields": [
+        "office_history",
+        "faction_relations",
+        "canon_delta",
+        "downstream_obligations"
+      ]
+    },
+    {
+      "id": "rule_tool_inventory",
+      "category": "economy_and_items",
+      "rule": "起爆符、兵粮丸、卷轴、特殊忍具等消耗品或关键道具必须有库存、来源和使用记录。",
+      "required_graph_fields": [
+        "inventory.item_id",
+        "inventory.quantity",
+        "inventory.source",
+        "inventory.used_in_event_ids"
+      ]
+    },
+    {
+      "id": "rule_knowledge_boundary",
+      "category": "character_knowledge",
+      "rule": "角色只能基于自己已知情报行动。佩恩本体、鼬真相、带土身份、月之眼计划等秘密必须逐人记录知情状态。",
+      "required_graph_fields": [
+        "knowledge_state.known_facts",
+        "knowledge_state.false_beliefs",
+        "knowledge_state.source_event_ids",
+        "secret_visibility"
+      ]
+    }
+  ],
+  "recommended_story_graph_extensions": {
+    "character_required_fields": [
+      "birth_year",
+      "age_by_chapter",
+      "life_status",
+      "soul_state",
+      "location_history",
+      "affiliation_history",
+      "office_history",
+      "injuries",
+      "chakra_profile",
+      "known_jutsu",
+      "knowledge_state",
+      "relationship_edges"
+    ],
+    "event_required_fields": [
+      "absolute_time",
+      "relative_to_canon",
+      "canon_anchor_id",
+      "cause_event_ids",
+      "effect_event_ids",
+      "invalidated_canon_events",
+      "new_obligations",
+      "irreversible",
+      "continuity_risk"
+    ],
+    "asset_required_collections": [
+      "tailed_beasts",
+      "akatsuki_rings",
+      "dojutsu_registry",
+      "edo_tensei_registry",
+      "forbidden_jutsu",
+      "key_items",
+      "political_offices"
+    ]
+  },
+  "lore_entries": [
+    {
+      "id": "mission_rank_system",
+      "name_zh": "任务等级制度",
+      "aliases": [
+        "D级任务",
+        "C级任务",
+        "B级任务",
+        "A级任务",
+        "S级任务"
+      ],
+      "category": "mission_economy",
+      "summary": "忍村通过委托任务维持经济与政治影响力。任务等级大体对应风险、报酬、保密程度和派遣忍者级别。",
+      "continuity_rules": [
+        "下忍常规从 D/C 级起步；越级任务必须有误报、护卫升级或战局突变。",
+        "S 级任务通常涉及国家、影级人物、叛忍或战争风险。"
+      ],
+      "story_use": "给日常章和主线章分配合理风险，避免第 1 卷就把下忍长期扔进影级任务。"
+    },
+    {
+      "id": "shinobi_rank_system",
+      "name_zh": "忍者等级体系",
+      "aliases": [
+        "忍者学校学生",
+        "下忍",
+        "中忍",
+        "上忍",
+        "特别上忍",
+        "影"
+      ],
+      "category": "rank_and_office",
+      "summary": "等级代表职责和平均能力，但战斗结果还受情报、血继、地形、配合、查克拉和心理状态影响。",
+      "continuity_rules": [
+        "低等级越级胜利需要战术、克制或外部条件。",
+        "中忍更强调判断和指挥，上忍更强调综合实力与任务独立性。"
+      ],
+      "story_use": "写升级、考试和带队资格时，用等级约束任务权责。"
+    },
+    {
+      "id": "chakra_core_mechanics",
+      "name_zh": "查克拉核心机制",
+      "aliases": [
+        "查克拉",
+        "身体能量",
+        "精神能量"
+      ],
+      "category": "power_system",
+      "summary": "查克拉来自身体能量与精神能量的提炼和混合，是忍术、幻术、医疗、封印和部分体术强化的底层资源。",
+      "continuity_rules": [
+        "大术要写消耗、控制和恢复。",
+        "精神打击、伤病、封印和疲劳会影响提炼效率。"
+      ],
+      "story_use": "每场战斗后更新角色查克拉百分比、伤势和冷却。"
+    },
+    {
+      "id": "nature_transformation_system",
+      "name_zh": "查克拉性质变化",
+      "aliases": [
+        "火风雷土水",
+        "性质变化",
+        "属性查克拉"
+      ],
+      "category": "power_system",
+      "summary": "五大性质变化影响忍术属性、克制与修炼门槛；血继或高级遁术常涉及性质组合或特殊体质。",
+      "continuity_rules": [
+        "角色不能无训练突然全属性精通。",
+        "属性克制是战术变量，不是绝对胜负公式。"
+      ],
+      "story_use": "设计训练线和战斗克制时，用属性限制降低外挂感。"
+    },
+    {
+      "id": "shape_transformation_system",
+      "name_zh": "查克拉形态变化",
+      "aliases": [
+        "形态变化",
+        "查克拉控制"
+      ],
+      "category": "power_system",
+      "summary": "形态变化决定查克拉的形状、旋转、压缩和延展，螺旋丸等术尤其依赖高精度控制。",
+      "continuity_rules": [
+        "形态变化训练可以分阶段写。",
+        "控制失败应体现为散逸、反伤、威力不足或维持时间短。"
+      ],
+      "story_use": "用训练阶段填充章节，而不是靠心理独白注水。"
+    },
+    {
+      "id": "kekkei_genkai_system",
+      "name_zh": "血继限界体系",
+      "aliases": [
+        "血继限界",
+        "血继淘汰",
+        "秘传"
+      ],
+      "category": "power_system",
+      "summary": "血继通常来自遗传、体质或特殊移植，不应被普通修炼无代价复制；秘传术则多由家族传承和训练掌握。",
+      "continuity_rules": [
+        "血继和秘传要分清。",
+        "移植获得能力必须记录来源、适配、排异、查克拉负担和政治风险。"
+      ],
+      "story_use": "防止主角随手捡血继，维持成长曲线和家族政治压力。"
+    },
+    {
+      "id": "dojutsu_registry_rule",
+      "name_zh": "瞳术登记规则",
+      "aliases": [
+        "写轮眼",
+        "白眼",
+        "轮回眼",
+        "万花筒"
+      ],
+      "category": "continuity_tracking",
+      "summary": "瞳术牵涉眼位、来源、开眼阶段、移植适配、视力恶化和知情范围，必须作为身体部位和秘密资产追踪。",
+      "continuity_rules": [
+        "每只眼单独记录左/右、原主人、现主人、阶段和损耗。",
+        "瞳术暴露会引发追杀、政治谈判或夺眼行动。"
+      ],
+      "story_use": "写卡卡西、带土、团藏、青等移植眼角色时防崩。"
+    },
+    {
+      "id": "jinchuriki_social_rule",
+      "name_zh": "人柱力社会规则",
+      "aliases": [
+        "人柱力",
+        "尾兽容器"
+      ],
+      "category": "tailed_beast",
+      "summary": "人柱力既是军事威慑也是社会排斥对象，不同村子对其控制、保护、恐惧和利用方式不同。",
+      "continuity_rules": [
+        "尾兽抽离通常导致宿主死亡或濒死。",
+        "完美人柱力需要长期关系与控制训练，不能一步到位。"
+      ],
+      "story_use": "写鸣人、我爱罗、奇拉比等角色时，用村内舆论和军事价值制造真实压力。"
+    },
+    {
+      "id": "summon_contract_rule",
+      "name_zh": "通灵契约规则",
+      "aliases": [
+        "通灵兽",
+        "契约兽",
+        "三大圣地"
+      ],
+      "category": "summoning",
+      "summary": "通灵依赖契约、查克拉和召唤者资格。大型通灵兽通常有自主性格和势力背景。",
+      "continuity_rules": [
+        "签约来源必须清楚。",
+        "大型通灵不能当无代价战斗外挂或交通工具。"
+      ],
+      "story_use": "通灵兽可增加战斗画面，但必须纳入库存和查克拉账。"
+    },
+    {
+      "id": "genjutsu_counterplay_rule",
+      "name_zh": "幻术攻防规则",
+      "aliases": [
+        "幻术",
+        "解幻术"
+      ],
+      "category": "power_system",
+      "summary": "幻术影响感知和精神，常通过查克拉扰动、外部刺激、瞳术对抗或伙伴打断破解。",
+      "continuity_rules": [
+        "幻术不是万能读心术。",
+        "强幻术应写触发条件、维持成本和破解窗口。"
+      ],
+      "story_use": "让战斗有智斗空间，避免幻术一出直接跳结局。"
+    },
+    {
+      "id": "fuinjutsu_cost_rule",
+      "name_zh": "封印术代价规则",
+      "aliases": [
+        "封印",
+        "封印式",
+        "封印卷轴"
+      ],
+      "category": "power_system",
+      "summary": "封印术依赖术式、媒介、查克拉精度和目标状态，高阶封印常与牺牲或长期准备绑定。",
+      "continuity_rules": [
+        "每个封印都要写媒介、限制、解除条件。",
+        "尸鬼封尽、尾兽封印等不能作为普通封条处理。"
+      ],
+      "story_use": "用于阻止“封印术万能钥匙”式崩坏。"
+    },
+    {
+      "id": "village_politics_rule",
+      "name_zh": "忍村政治规则",
+      "aliases": [
+        "火影",
+        "风影",
+        "五影",
+        "顾问",
+        "大名"
+      ],
+      "category": "geopolitics",
+      "summary": "忍村是国家军事力量和任务经济核心，但大名、顾问、忍族、暗部、根部和民众都能影响决策。",
+      "continuity_rules": [
+        "不要把村子写成单一意志。",
+        "影的命令也会受资源、舆论、外交和派系制衡。"
+      ],
+      "story_use": "避免无脑黑木叶，也避免把火影写成万能独裁者。"
+    },
+    {
+      "id": "small_country_pressure_rule",
+      "name_zh": "小国夹缝规则",
+      "aliases": [
+        "雨之国",
+        "草之国",
+        "泷隐",
+        "小国"
+      ],
+      "category": "geopolitics",
+      "summary": "小国常夹在大国战争和忍村任务经济之间，资源少、外交脆弱，容易成为战争代理场或实验场。",
+      "continuity_rules": [
+        "小国剧情要体现大国压力和民生代价。",
+        "小国持有尾兽或秘术会带来更高战略风险。"
+      ],
+      "story_use": "写雨隐、泷隐、草隐时增加现实压力，而不是只当地图名。"
+    },
+    {
+      "id": "team_composition_rule",
+      "name_zh": "小队配置规则",
+      "aliases": [
+        "三人小队",
+        "带队上忍",
+        "侦察班",
+        "追踪班"
+      ],
+      "category": "team_logic",
+      "summary": "标准小队通常围绕职责互补配置，侦察、医疗、近战、控制和火力的组合会决定任务解法。",
+      "continuity_rules": [
+        "侦察班会提前发现伏击。",
+        "缺医疗或感知会提高战损和误判。"
+      ],
+      "story_use": "根据队伍功能设计事件，而不是让所有队伍用同一种打法。"
+    },
+    {
+      "id": "knowledge_boundary_rule",
+      "name_zh": "秘密知情边界",
+      "aliases": [
+        "知情范围",
+        "秘密",
+        "情报边界"
+      ],
+      "category": "continuity_tracking",
+      "summary": "角色只能根据已知情报做选择。带土身份、鼬真相、佩恩本体、月之眼计划等秘密必须逐人记录。",
+      "continuity_rules": [
+        "不能让角色凭作者视角行动。",
+        "秘密泄露要产生可信来源和后果。"
+      ],
+      "story_use": "长篇防崩最重要的状态表之一。"
+    },
+    {
+      "id": "anime_expansion_policy",
+      "name_zh": "动画扩展采用规则",
+      "aliases": [
+        "动画原创",
+        "漫画主线",
+        "扩展剧情"
+      ],
+      "category": "canon_policy",
+      "summary": "部分人物、任务和尾兽捕获细节在动画中有扩展。采用前应标注来源层级，避免与漫画主线锚点冲突。",
+      "continuity_rules": [
+        "采用动画扩展要写进 story_graph 的 canon_layer。",
+        "若扩展与主线冲突，以本书设定优先并记录替代规则。"
+      ],
+      "story_use": "给长篇补素材，同时避免读者质疑设定来源。"
+    }
+  ]
+}

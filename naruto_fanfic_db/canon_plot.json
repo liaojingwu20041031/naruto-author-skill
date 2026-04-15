@@ -1,0 +1,643 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "name": "维基百科：火影忍者",
+    "url": "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+    "retrieved_at": "2026-04-13",
+    "extraction_policy": "剧情与背景均为归纳摘要，用于同人创作资料库与一致性检索，不保存网页长段原文。"
+  },
+  "usage_note": "本文件记录原著主线走向。写作时如果改动任一 anchor_events，应在 story_graph.json 中建立 canon_delta 与 downstream_obligations，避免后续强行回归原著。",
+  "global_premise": {
+    "summary": "漩涡鸣人体内封印九尾妖狐，起点是被村人排斥的吊车尾忍者，长期目标是成为火影。他与第七班伙伴、木叶同伴以及宿敌宇智波佐助共同经历任务、战争、背叛、复仇与和解。",
+    "core_tensions": [
+      "鸣人从被孤立者成长为被认可的火影候补",
+      "佐助在复仇、真相与革命理念之间不断偏离木叶",
+      "晓组织从暗线威胁升级为尾兽捕获和月之眼计划",
+      "忍界各国从互相戒备走向第四次忍界大战中的联军"
+    ],
+    "primary_canon_resolution": "鸣人与佐助在最终决战后和解，联手解除无限月读，第四次忍界大战结束。"
+  },
+  "arcs": [
+    {
+      "id": "canon_000_kyuubi_attack_backstory",
+      "sequence": 0,
+      "title": "九尾袭击与鸣人封印",
+      "part": "pre_part_1",
+      "manga_range": "前史",
+      "anime_range": "前史",
+      "summary": "木叶遭九尾袭击，第四代火影波风水门牺牲生命，将九尾封印进刚出生的鸣人体内。三代火影猿飞日斩复职，村子逐渐恢复。",
+      "anchor_events": [
+        "波风水门死亡",
+        "九尾成为鸣人体内尾兽",
+        "鸣人在木叶长期承受人柱力身份带来的排斥"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "namikaze_minato",
+          "field": "life_status",
+          "canon_value": "dead"
+        },
+        {
+          "entity_id": "uzumaki_naruto",
+          "field": "jinchuriki",
+          "canon_value": "kurama"
+        },
+        {
+          "entity_id": "sarutobi_hiruzen",
+          "field": "office",
+          "canon_value": "third_hokage_restored"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "如果水门或玖辛奈存活，鸣人的童年、木叶政治、九尾封印稳定性都会重写。",
+        "如果九尾不在鸣人体内，晓组织第二部的追捕逻辑必须整体改写。"
+      ]
+    },
+    {
+      "id": "canon_001_land_of_waves",
+      "sequence": 1,
+      "title": "波之国篇",
+      "part": "part_1",
+      "manga_range": "第1卷-第5卷，第1话-第44话",
+      "anime_range": "第1集-第26集",
+      "summary": "鸣人通过伊鲁卡认可成为下忍，与佐助、小樱组成卡卡西带领的第七班。波之国任务让第七班首次面对真正生死战，再不斩与白成为鸣人理解忍者道路的重要镜面。",
+      "anchor_events": [
+        "鸣人取得护额并成为下忍",
+        "第七班成立",
+        "铃铛演习确立团队协作原则",
+        "波之国实战触发鸣人九尾查克拉初次外显",
+        "佐助写轮眼开眼"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "team_7",
+          "field": "formation",
+          "canon_value": "active"
+        },
+        {
+          "entity_id": "uchiha_sasuke",
+          "field": "sharingan",
+          "canon_value": "awakened_initial"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "白或再不斩若存活，可成为雾隐线、血继限界线、叛忍线的重要分叉。",
+        "佐助写轮眼开眼时间变化会影响中忍考试与大蛇丸兴趣。"
+      ]
+    },
+    {
+      "id": "canon_002_chunin_exam",
+      "sequence": 2,
+      "title": "中忍考试篇",
+      "part": "part_1",
+      "manga_range": "第5卷-第10卷，第45话-第90话",
+      "anime_range": "第27集-第52集",
+      "summary": "第七班参加中忍考试，各村下忍齐聚木叶。死亡森林中大蛇丸袭击第七班，并给佐助留下咒印，正式把佐助推向力量诱惑与复仇偏执的轨道。",
+      "anchor_events": [
+        "木叶同期与外村下忍集中登场",
+        "大蛇丸潜入考试",
+        "佐助获得咒印",
+        "第三场考试预选产生主要对局"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "uchiha_sasuke",
+          "field": "curse_mark",
+          "canon_value": "applied_by_orochimaru"
+        },
+        {
+          "entity_id": "orochimaru",
+          "field": "interest_target",
+          "canon_value": "uchiha_sasuke"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "阻止咒印会削弱佐助投奔大蛇丸的因果。",
+        "考试结果变化会影响木叶同期的晋升、名望和后续任务配置。"
+      ]
+    },
+    {
+      "id": "canon_003_konoha_crush",
+      "sequence": 3,
+      "title": "毁灭木叶行动篇",
+      "part": "part_1",
+      "manga_range": "第11卷-第16卷，第91话-第140话",
+      "anime_range": "第53集-第80集",
+      "summary": "大蛇丸利用中忍考试和砂隐发动袭击。三代火影以生命为代价封印大蛇丸双手，木叶与砂隐均受重创。鸣人与我爱罗的人柱力之战改变我爱罗的精神轨迹。",
+      "anchor_events": [
+        "木叶崩溃计划爆发",
+        "猿飞日斩死亡",
+        "大蛇丸双手被封印",
+        "四代风影死亡真相暴露",
+        "鸣人击败我爱罗并影响其价值观"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "sarutobi_hiruzen",
+          "field": "life_status",
+          "canon_value": "dead"
+        },
+        {
+          "entity_id": "orochimaru",
+          "field": "jutsu_access",
+          "canon_value": "arms_sealed"
+        },
+        {
+          "entity_id": "gaara",
+          "field": "relationship_to_naruto",
+          "canon_value": "defeated_and_mirrored"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "三代若存活，纲手继任与木叶政治压力都会变化。",
+        "我爱罗没有被鸣人影响，会削弱第二部砂隐同盟与风影成长线。"
+      ]
+    },
+    {
+      "id": "canon_004_search_tsunade",
+      "sequence": 4,
+      "title": "纲手搜索篇",
+      "part": "part_1",
+      "manga_range": "第16卷-第19卷，第141话-第171话",
+      "anime_range": "第81集-第106集",
+      "summary": "鼬与鬼鲛作为晓成员出现，目标指向鸣人体内九尾。自来也带鸣人寻找纲手，鸣人修成螺旋丸，纲手拒绝大蛇丸交易并回归木叶成为第五代火影。",
+      "anchor_events": [
+        "晓组织首次正面威胁鸣人",
+        "卡卡西被月读重创",
+        "鸣人开始自来也指导下修行",
+        "鸣人学会螺旋丸",
+        "纲手就任第五代火影"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "tsunade",
+          "field": "office",
+          "canon_value": "fifth_hokage"
+        },
+        {
+          "entity_id": "uzumaki_naruto",
+          "field": "known_jutsu",
+          "canon_value": "rasengan"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "纲手不回木叶会改变医疗体系、佐助夺还任务决策和佩恩袭击后的复兴。",
+        "鼬与鬼鲛提前失败或暴露更多情报，会改变晓组织节奏。"
+      ]
+    },
+    {
+      "id": "canon_005_sasuke_retrieval",
+      "sequence": 5,
+      "title": "佐助夺还篇",
+      "part": "part_1",
+      "manga_range": "第20卷-第27卷，第172话-第238话",
+      "anime_range": "第107集-第135集",
+      "summary": "佐助接受大蛇丸势力诱导离开木叶。鹿丸率领鸣人、丁次、牙、宁次等人追击音忍，砂隐援军介入。鸣人在终结谷败给佐助，佐助成功前往大蛇丸处。",
+      "anchor_events": [
+        "佐助叛离木叶",
+        "木叶追回任务失败",
+        "终结谷第一次鸣佐决战",
+        "鸣人离村跟随自来也修行"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "uchiha_sasuke",
+          "field": "affiliation",
+          "canon_value": "orochimaru_camp"
+        },
+        {
+          "entity_id": "uzumaki_naruto",
+          "field": "training",
+          "canon_value": "jiraiya_apprenticeship"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "佐助若未叛逃，第二部复仇线、鼬真相线和鹰小队都会不存在或改形。",
+        "追回任务若成功，鸣人与佐助的力量差距焦虑需要用新事件替代。"
+      ]
+    },
+    {
+      "id": "canon_006_kakashi_gaiden",
+      "sequence": 6,
+      "title": "卡卡西外传：战场上的少年时代",
+      "part": "backstory",
+      "manga_range": "第27卷，第239话-第244话",
+      "anime_range": "第339集-第340集",
+      "summary": "第三次忍界大战时期，少年卡卡西、带土、琳在水门麾下执行任务。带土觉醒写轮眼并在濒死前将眼睛赠予卡卡西，这成为卡卡西写轮眼与后续带土线的根源。",
+      "anchor_events": [
+        "卡卡西晋升上忍",
+        "带土觉醒写轮眼",
+        "卡卡西失去左眼并获得带土写轮眼",
+        "带土被认为战死"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "hatake_kakashi",
+          "field": "left_eye",
+          "canon_value": "obito_sharingan"
+        },
+        {
+          "entity_id": "uchiha_obito",
+          "field": "public_life_status",
+          "canon_value": "presumed_dead"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "带土若真正死亡或被及时救回，晓、九尾之乱、月之眼计划都会失去核心推动者。",
+        "卡卡西没有写轮眼，其战斗体系和第七班教学都会变化。"
+      ]
+    },
+    {
+      "id": "canon_007_shippuden_return",
+      "sequence": 7,
+      "title": "第二部开局：鸣人归来",
+      "part": "part_2",
+      "manga_range": "第28卷起",
+      "anime_range": "第221集起",
+      "summary": "终结谷之战两年半后，鸣人结束与自来也的修行回到木叶。小樱成为医疗忍者，卡卡西重新测试二人，晓组织开始将目标伸向成为风影的我爱罗。",
+      "anchor_events": [
+        "两年半修行结束",
+        "鸣人与小樱通过新铃铛演习",
+        "晓组织尾兽捕获行动进入明线"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "haruno_sakura",
+          "field": "role",
+          "canon_value": "medical_ninja"
+        },
+        {
+          "entity_id": "gaara",
+          "field": "office",
+          "canon_value": "kazekage"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "跳过或缩短两年半修行会造成全员战力曲线失衡。",
+        "我爱罗未成为风影会影响砂隐对他的认可和被晓袭击后的政治后果。"
+      ]
+    },
+    {
+      "id": "canon_008_kazekage_rescue",
+      "sequence": 8,
+      "title": "风影夺还篇",
+      "part": "part_2",
+      "manga_range": "第28卷-第31卷，第245话-第281话",
+      "anime_range": "第221集-第252集",
+      "summary": "晓成员迪达拉与蝎袭击砂隐并夺走我爱罗。卡卡西班与阿凯班营救，蝎被小樱和千代击败；我爱罗因尾兽抽离死亡，千代牺牲生命复活他。",
+      "anchor_events": [
+        "晓捕获一尾",
+        "我爱罗死亡后被千代复活",
+        "小樱展现医疗与怪力成长",
+        "蝎死亡"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "gaara",
+          "field": "jinchuriki",
+          "canon_value": "former_shukaku_host"
+        },
+        {
+          "entity_id": "chiyo",
+          "field": "life_status",
+          "canon_value": "dead_after_revival_jutsu"
+        },
+        {
+          "entity_id": "sasori",
+          "field": "life_status",
+          "canon_value": "dead"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "蝎若存活，晓内部战力、药师兜情报线与傀儡术资源都会变化。",
+        "我爱罗若无法复活，砂隐政治和鸣人人柱力共情线会显著变暗。"
+      ]
+    },
+    {
+      "id": "canon_009_sasuke_reunion",
+      "sequence": 9,
+      "title": "佐助再会篇",
+      "part": "part_2",
+      "manga_range": "第32卷-第34卷，第282话-第310话",
+      "anime_range": "第253集-第273集",
+      "summary": "卡卡西因万花筒写轮眼消耗住院，大和与佐井加入第七班。第七班追查蝎留下的情报，遭遇大蛇丸和兜，鸣人九尾失控，最终在大蛇丸据点与佐助重逢却再次失败。",
+      "anchor_events": [
+        "大和作为代理队长登场",
+        "佐井加入第七班并脱离根的单纯任务逻辑",
+        "鸣人四尾化暴走",
+        "第七班确认与佐助的巨大差距"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "yamato",
+          "field": "role",
+          "canon_value": "team_7_acting_captain"
+        },
+        {
+          "entity_id": "sai",
+          "field": "bond_to_team_7",
+          "canon_value": "forming"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "大和是否存在会影响九尾压制、木遁实验线和后续战争情报泄露。",
+        "佐井若不倒向第七班，根与团藏的渗透线会加重。"
+      ]
+    },
+    {
+      "id": "canon_010_hidan_kakuzu",
+      "sequence": 10,
+      "title": "飞段・角都篇",
+      "part": "part_2",
+      "manga_range": "第35卷-第38卷，第311话-第342话",
+      "anime_range": "第292集-第309集",
+      "summary": "鸣人在卡卡西指导下开发风遁螺旋手里剑。飞段与角都捕获二尾人柱力并入侵火之国，杀死地陆和猿飞阿斯玛。鹿丸复仇击败飞段，鸣人以新术重创角都。",
+      "anchor_events": [
+        "二尾人柱力由木人被捕获",
+        "阿斯玛死亡",
+        "鹿丸完成对飞段的复仇",
+        "鸣人完成风遁螺旋手里剑实战首秀"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "sarutobi_asuma",
+          "field": "life_status",
+          "canon_value": "dead"
+        },
+        {
+          "entity_id": "hidan",
+          "field": "battle_status",
+          "canon_value": "incapacitated_and_buried"
+        },
+        {
+          "entity_id": "kakuzu",
+          "field": "life_status",
+          "canon_value": "dead"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "阿斯玛若存活，鹿丸成熟转折和第十班悲剧动力需要替换。",
+        "飞段或角都提前阵亡会影响晓组织尾兽捕获节奏与火之国压力。"
+      ]
+    },
+    {
+      "id": "canon_011_jiraiya_pain_sasuke_itachi",
+      "sequence": 11,
+      "title": "自来也VS佩恩・佐助VS鼬篇",
+      "part": "part_2",
+      "manga_range": "第38卷-第43卷，第343话-第402话",
+      "anime_range": "第333集-第338集；第341集-第363集",
+      "summary": "佐助击败大蛇丸并组建蛇小队，追寻鼬。自来也潜入雨隐调查晓首领并战死，临终留下佩恩秘密。佐助杀死鼬后从带土处得知宇智波灭族真相。",
+      "anchor_events": [
+        "佐助击败大蛇丸",
+        "蛇小队成立",
+        "自来也战死",
+        "鼬死亡",
+        "佐助得知鼬真相"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "jiraiya",
+          "field": "life_status",
+          "canon_value": "dead"
+        },
+        {
+          "entity_id": "uchiha_itachi",
+          "field": "life_status",
+          "canon_value": "dead"
+        },
+        {
+          "entity_id": "team_hebi",
+          "field": "formation",
+          "canon_value": "active"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "自来也若存活，佩恩袭击、鸣人仙术修行和木叶情报优势都会改写。",
+        "鼬真相若提前泄露，佐助复仇对象和五影会谈走向会改变。"
+      ]
+    },
+    {
+      "id": "canon_012_pain_assault",
+      "sequence": 12,
+      "title": "佩恩来袭篇",
+      "part": "part_2",
+      "manga_range": "第44卷-第48卷，第403话-第450话",
+      "anime_range": "第372集-第395集",
+      "summary": "鸣人因自来也之死前往妙木山修炼仙术。佐助将蛇改名为鹰并协助晓捕捉八尾但失败。佩恩袭击并摧毁木叶，鸣人以仙人模式击败佩恩，长门被鸣人的信念打动后以轮回天生复活木叶牺牲者并死亡。",
+      "anchor_events": [
+        "鸣人完成仙术修行",
+        "鹰小队捕捉八尾失败",
+        "木叶被神罗天征摧毁",
+        "鸣人与四代火影精神相见并修复九尾封印",
+        "长门发动轮回天生后死亡",
+        "小南与鸣人和解"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "nagato",
+          "field": "life_status",
+          "canon_value": "dead_after_rinne_tensei"
+        },
+        {
+          "entity_id": "konan",
+          "field": "relationship_to_naruto",
+          "canon_value": "reconciled"
+        },
+        {
+          "entity_id": "uzumaki_naruto",
+          "field": "power_state",
+          "canon_value": "sage_mode_available"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "长门不使用轮回天生会导致卡卡西等人死亡状态固定，木叶战后权力真空更极端。",
+        "鸣人未获得木叶认可，会削弱其后续联军精神核心地位。"
+      ]
+    },
+    {
+      "id": "canon_013_five_kage_summit",
+      "sequence": 13,
+      "title": "五影篇",
+      "part": "part_2",
+      "manga_range": "第48卷-第52卷，第451话-第490话",
+      "anime_range": "第417集-第441集",
+      "summary": "木叶重建期间，纲手昏迷，团藏代理火影。雷影因八尾事件推动五影会谈，带土宣布月之眼计划和第四次忍界大战。五大国组成忍者联军，佐助杀死团藏，鸣人与佐助再次相遇。",
+      "anchor_events": [
+        "团藏代理火影",
+        "五影会谈召开",
+        "月之眼计划公开",
+        "第四次忍界大战宣告",
+        "忍者联军成立",
+        "团藏死亡"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "shimura_danzo",
+          "field": "life_status",
+          "canon_value": "dead"
+        },
+        {
+          "entity_id": "shinobi_allied_forces",
+          "field": "formation",
+          "canon_value": "active"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "团藏若不死或提前暴露罪行，木叶政治与佐助仇恨线会改变。",
+        "五影会谈若失败，第四次忍界大战可能不是统一联军对晓。"
+      ]
+    },
+    {
+      "id": "canon_014_war_opening",
+      "sequence": 14,
+      "title": "忍界大战篇：开战与岛龟修行",
+      "part": "part_2",
+      "manga_range": "第52卷-第57卷，第491话-第536话",
+      "anime_range": "第463集-第495集",
+      "summary": "鸣人在岛龟接受奇拉比指导控制九尾查克拉，并见到母亲玖辛奈，得知九尾之乱真相。鬼鲛泄露联军情报，大和被俘。带土取得长门轮回眼，兜以秽土转生与白绝大军加入战局，第四次忍界大战正式爆发。",
+      "anchor_events": [
+        "鸣人开始九尾查克拉控制修行",
+        "鸣人与玖辛奈精神相见",
+        "鬼鲛情报泄露",
+        "大和被俘",
+        "小南死亡",
+        "带土移植轮回眼",
+        "秽土转生大军参战"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "yamato",
+          "field": "capture_status",
+          "canon_value": "captured_by_akatsuki"
+        },
+        {
+          "entity_id": "konan",
+          "field": "life_status",
+          "canon_value": "dead"
+        },
+        {
+          "entity_id": "kabuto",
+          "field": "war_role",
+          "canon_value": "edo_tensei_commander"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "大和未被俘会影响白绝强化与战场规模。",
+        "兜若无法发动秽土转生，大战的死人复活结构会整体消失。"
+      ]
+    },
+    {
+      "id": "canon_015_war_escalation",
+      "sequence": 15,
+      "title": "忍界大战篇：白绝、秽土与历代影",
+      "part": "part_2",
+      "manga_range": "第57卷-第69卷，第537话-第662话",
+      "anime_range": "第496集-第613集",
+      "summary": "战争进入多战线阶段，白绝伪装扰乱联军，秽土转生的历代强者与各部队交战。鸣人与奇拉比奔赴战场，鼬解除秽土控制并与佐助阻止兜，历代影、尾兽、带土、斑等核心力量逐步汇聚。",
+      "anchor_events": [
+        "忍者联军出现大规模伤亡",
+        "白绝伪装造成后方混乱",
+        "鸣人获得雷影认可并前往战场",
+        "秽土鼬解除控制",
+        "鼬与佐助阻止兜",
+        "秽土转生解除或大幅削弱"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "uchiha_itachi",
+          "field": "edo_tensei_control",
+          "canon_value": "self_released_then_final_release"
+        },
+        {
+          "entity_id": "uzumaki_naruto",
+          "field": "war_role",
+          "canon_value": "frontline_detector_and_symbol"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "秽土鼬如果不解除控制，兜可能长期保持死人军团优势。",
+        "鸣人不上战场，联军很难识别白绝伪装。"
+      ]
+    },
+    {
+      "id": "canon_016_war_finale_kaguya_sasuke",
+      "sequence": 16,
+      "title": "忍界大战最终章",
+      "part": "part_2",
+      "manga_range": "第70卷-第72卷，第678话-第700话",
+      "anime_range": "第679集-第699集",
+      "summary": "斑成为十尾人柱力并发动无限月读，却被黑绝作为复活大筒木辉夜的媒介。第七班与带土逃过幻术，最终封印辉夜和黑绝。佐助试图以杀死五影与尾兽来发动自己的忍界革命，鸣人与其在终末谷最终决战，二人和解并解除无限月读。",
+      "anchor_events": [
+        "斑发动无限月读",
+        "辉夜复活",
+        "带土牺牲",
+        "鸣人与佐助获得六道层级力量",
+        "辉夜与黑绝被封印",
+        "鸣佐最终决战",
+        "无限月读解除",
+        "鸣人成为第七代火影的未来成立"
+      ],
+      "entity_state_changes": [
+        {
+          "entity_id": "uchiha_obito",
+          "field": "life_status",
+          "canon_value": "dead_after_redemption"
+        },
+        {
+          "entity_id": "otsutsuki_kaguya",
+          "field": "seal_status",
+          "canon_value": "sealed"
+        },
+        {
+          "entity_id": "uchiha_sasuke",
+          "field": "relationship_to_naruto",
+          "canon_value": "reconciled_after_final_duel"
+        }
+      ],
+      "butterfly_sensitive_points": [
+        "如果黑绝、辉夜或六道力量线提前被处理，终战敌人结构必须重设。",
+        "佐助不发动最终革命，会缺少鸣佐理念终局碰撞，需要替代终极冲突。"
+      ]
+    }
+  ],
+  "continuity_indexes": {
+    "must_track_deaths": [
+      "namikaze_minato",
+      "sarutobi_hiruzen",
+      "fourth_kazekage",
+      "chiyo",
+      "sasori",
+      "sarutobi_asuma",
+      "kakuzu",
+      "jiraiya",
+      "uchiha_itachi",
+      "nagato",
+      "shimura_danzo",
+      "konan",
+      "uchiha_obito"
+    ],
+    "must_track_revive_or_edo_exceptions": [
+      "gaara_revived_by_chiyo",
+      "konoha_victims_revived_by_nagato",
+      "edo_tensei_army",
+      "edo_itachi_self_control"
+    ],
+    "must_track_jinchuriki_events": [
+      "naruto_is_kyuubi_jinchuriki",
+      "gaara_shukaku_extracted",
+      "yugito_nii_matatabi_captured",
+      "killer_bee_capture_attempt_failed",
+      "naruto_kurama_extraction_near_death"
+    ],
+    "must_track_organization_shifts": [
+      "team_7_formation",
+      "tsunade_becomes_fifth_hokage",
+      "sasuke_joins_orochimaru",
+      "hebi_formation",
+      "hebi_renamed_taka",
+      "shinobi_allied_forces_formation",
+      "akatsuki_public_war_declaration"
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "reference_url": "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+    "retrieved_at": "2026-04-13",
+    "policy": "归纳摘要，不保存网页长段原文。"
+  },
+  "cleaning_policy": {
+    "id_style": "rel_source_type_target",
+    "removed_dirty_data": [
+      "无方向的朋友/敌人标签",
+      "没有 arc_scope 的关系",
+      "重复的双向边，除非反向关系含义不同"
+    ],
+    "relation_rule": "关系是有方向的。反向关系心理含义不同才另建一条。"
+  },
+  "relations": [
+    {
+      "id": "rel_uzumaki_naruto_rival_uchiha_sasuke",
+      "source_id": "uzumaki_naruto",
+      "target_id": "uchiha_sasuke",
+      "type": "rival_bond",
+      "arc_scope": "part_1_to_war_finale",
+      "status_canon_end": "reconciled",
+      "importance": "critical",
+      "notes": "鸣人与佐助的对立和互认是主线精神核心。",
+      "canon_anchor_ids": ["canon_005_sasuke_retrieval", "canon_016_war_finale_kaguya_sasuke"]
+    },
+    {
+      "id": "rel_uchiha_sasuke_rival_uzumaki_naruto",
+      "source_id": "uchiha_sasuke",
+      "target_id": "uzumaki_naruto",
+      "type": "rival_bond",
+      "arc_scope": "part_1_to_war_finale",
+      "status_canon_end": "reconciled",
+      "importance": "critical",
+      "notes": "佐助视鸣人为能理解孤独但又阻挡其道路的人。",
+      "canon_anchor_ids": ["canon_005_sasuke_retrieval", "canon_016_war_finale_kaguya_sasuke"]
+    },
+    {
+      "id": "rel_hatake_kakashi_mentor_team_7",
+      "source_id": "hatake_kakashi",
+      "target_id": "team_7",
+      "type": "mentor_to_team",
+      "arc_scope": "part_1_to_war",
+      "status_canon_end": "mentor_bond_retained",
+      "importance": "critical",
+      "notes": "卡卡西把带土的团队观传给第七班。",
+      "canon_anchor_ids": ["canon_001_land_of_waves", "canon_006_kakashi_gaiden"]
+    },
+    {
+      "id": "rel_jiraiya_mentor_uzumaki_naruto",
+      "source_id": "jiraiya",
+      "target_id": "uzumaki_naruto",
+      "type": "mentor",
+      "arc_scope": "search_tsunade_to_pain",
+      "status_canon_end": "mentor_dead_legacy_active",
+      "importance": "critical",
+      "notes": "自来也传授螺旋丸、修行观和预言之子责任。",
+      "canon_anchor_ids": ["canon_004_search_tsunade", "canon_011_jiraiya_pain_sasuke_itachi"]
+    },
+    {
+      "id": "rel_tsunade_mentor_haruno_sakura",
+      "source_id": "tsunade",
+      "target_id": "haruno_sakura",
+      "type": "mentor",
+      "arc_scope": "post_part_1_to_war",
+      "status_canon_end": "active",
+      "importance": "high",
+      "notes": "小樱医疗忍术、怪力、百豪路线均来自纲手体系。",
+      "canon_anchor_ids": ["canon_007_shippuden_return", "canon_008_kazekage_rescue"]
+    },
+    {
+      "id": "rel_orochimaru_tempter_uchiha_sasuke",
+      "source_id": "orochimaru",
+      "target_id": "uchiha_sasuke",
+      "type": "tempter_and_target",
+      "arc_scope": "chunin_exam_to_sasuke_vs_itachi",
+      "status_canon_end": "failed_body_takeover",
+      "importance": "critical",
+      "notes": "咒印与力量诱惑将佐助推离木叶。",
+      "canon_anchor_ids": ["canon_002_chunin_exam", "canon_005_sasuke_retrieval"]
+    },
+    {
+      "id": "rel_uchiha_itachi_brother_uchiha_sasuke",
+      "source_id": "uchiha_itachi",
+      "target_id": "uchiha_sasuke",
+      "type": "older_brother_hidden_protector",
+      "arc_scope": "pre_story_to_itachi_death",
+      "status_canon_end": "truth_revealed_after_death",
+      "importance": "critical",
+      "notes": "鼬表面是仇敌，实际以极端方式保护佐助。",
+      "canon_anchor_ids": ["canon_011_jiraiya_pain_sasuke_itachi", "canon_015_war_escalation"]
+    },
+    {
+      "id": "rel_uchiha_sasuke_avenger_uchiha_itachi",
+      "source_id": "uchiha_sasuke",
+      "target_id": "uchiha_itachi",
+      "type": "revenge_target_then_grief",
+      "arc_scope": "part_1_to_five_kage_summit",
+      "status_canon_end": "truth_reframed",
+      "importance": "critical",
+      "notes": "佐助的复仇目标从鼬转向木叶高层，取决于真相揭露。",
+      "canon_anchor_ids": ["canon_011_jiraiya_pain_sasuke_itachi", "canon_013_five_kage_summit"]
+    },
+    {
+      "id": "rel_uchiha_obito_manipulates_nagato",
+      "source_id": "uchiha_obito",
+      "target_id": "nagato",
+      "type": "hidden_manipulation",
+      "arc_scope": "akatsuki_backstory_to_pain_death",
+      "status_canon_end": "broken_by_naruto",
+      "importance": "critical",
+      "notes": "带土利用长门推进尾兽捕获和月之眼计划。",
+      "canon_anchor_ids": ["canon_012_pain_assault", "canon_014_war_opening"]
+    },
+    {
+      "id": "rel_nagato_partner_konan",
+      "source_id": "nagato",
+      "target_id": "konan",
+      "type": "trusted_partner",
+      "arc_scope": "ame_orphans_to_pain_death",
+      "status_canon_end": "konan_inherits_will_briefly",
+      "importance": "high",
+      "notes": "小南是长门意志与雨隐遗产的关键见证者。",
+      "canon_anchor_ids": ["canon_012_pain_assault", "canon_014_war_opening"]
+    },
+    {
+      "id": "rel_uzumaki_naruto_mirror_gaara",
+      "source_id": "uzumaki_naruto",
+      "target_id": "gaara",
+      "type": "jinchuriki_mirror_and_friend",
+      "arc_scope": "konoha_crush_to_war",
+      "status_canon_end": "trusted_friend",
+      "importance": "high",
+      "notes": "鸣人影响我爱罗从孤独杀戮走向被村子认可。",
+      "canon_anchor_ids": ["canon_003_konoha_crush", "canon_008_kazekage_rescue"]
+    },
+    {
+      "id": "rel_killer_bee_teacher_uzumaki_naruto",
+      "source_id": "killer_bee",
+      "target_id": "uzumaki_naruto",
+      "type": "jinchuriki_teacher",
+      "arc_scope": "war_opening",
+      "status_canon_end": "ally",
+      "importance": "high",
+      "notes": "奇拉比指导鸣人控制尾兽力量。",
+      "canon_anchor_ids": ["canon_014_war_opening"]
+    },
+    {
+      "id": "rel_shimura_danzo_political_enemy_uchiha_sasuke",
+      "source_id": "shimura_danzo",
+      "target_id": "uchiha_sasuke",
+      "type": "political_enemy",
+      "arc_scope": "five_kage_summit",
+      "status_canon_end": "danzo_killed_by_sasuke",
+      "importance": "high",
+      "notes": "团藏的宇智波罪责将佐助仇恨转向木叶权力层。",
+      "canon_anchor_ids": ["canon_013_five_kage_summit"]
+    },
+    {
+      "id": "rel_sarutobi_asuma_mentor_team_10",
+      "source_id": "sarutobi_asuma",
+      "target_id": "team_10",
+      "type": "mentor_to_team",
+      "arc_scope": "part_1_to_hidan_kakuzu",
+      "status_canon_end": "mentor_dead_legacy_active",
+      "importance": "high",
+      "notes": "阿斯玛死亡推动鹿丸与第十班成熟。",
+      "canon_anchor_ids": ["canon_010_hidan_kakuzu"]
+    },
+    {
+      "id": "rel_nara_shikamaru_avenges_sarutobi_asuma",
+      "source_id": "nara_shikamaru",
+      "target_id": "hidan",
+      "type": "revenge_enemy",
+      "arc_scope": "hidan_kakuzu_arc",
+      "status_canon_end": "hidan_buried",
+      "importance": "high",
+      "notes": "鹿丸依靠情报、陷阱和地形完成复仇。",
+      "canon_anchor_ids": ["canon_010_hidan_kakuzu"]
+    },
+    {
+      "id": "rel_deidara_partner_sasori",
+      "source_id": "deidara",
+      "target_id": "sasori",
+      "type": "akatsuki_pair",
+      "arc_scope": "kazekage_rescue",
+      "status_canon_end": "broken_by_sasori_death",
+      "importance": "medium",
+      "notes": "艺术观冲突构成晓搭档关系张力。",
+      "canon_anchor_ids": ["canon_008_kazekage_rescue"]
+    },
+    {
+      "id": "rel_hidan_partner_kakuzu",
+      "source_id": "hidan",
+      "target_id": "kakuzu",
+      "type": "akatsuki_pair",
+      "arc_scope": "hidan_kakuzu_arc",
+      "status_canon_end": "both_removed",
+      "importance": "medium",
+      "notes": "不死飞段与多心脏角都组成高容错搭档。",
+      "canon_anchor_ids": ["canon_010_hidan_kakuzu"]
+    },
+    {
+      "id": "rel_uchiha_itachi_partner_hoshigaki_kisame",
+      "source_id": "uchiha_itachi",
+      "target_id": "hoshigaki_kisame",
+      "type": "akatsuki_pair",
+      "arc_scope": "part_1_to_itachi_death",
+      "status_canon_end": "broken_by_itachi_death",
+      "importance": "medium",
+      "notes": "鬼鲛对鼬有特殊尊重，二人承担晓早期对九尾压力。",
+      "canon_anchor_ids": ["canon_004_search_tsunade", "canon_011_jiraiya_pain_sasuke_itachi"]
+    },
+    {
+      "id": "rel_might_guy_mentor_rock_lee",
+      "source_id": "might_guy",
+      "target_id": "rock_lee",
+      "type": "mentor",
+      "arc_scope": "part_1_to_war",
+      "status_canon_end": "active",
+      "importance": "high",
+      "notes": "凯把纯体术道路和八门训练传给小李。",
+      "canon_anchor_ids": ["canon_002_chunin_exam"]
+    },
+    {
+      "id": "rel_hyuga_neji_family_hyuga_hinata",
+      "source_id": "hyuga_neji",
+      "target_id": "hyuga_hinata",
+      "type": "clan_branch_conflict_then_protector",
+      "arc_scope": "chunin_exam_to_war",
+      "status_canon_end": "neji_dies_protecting",
+      "importance": "high",
+      "notes": "宁次与雏田关系体现日向宗分家制度和命运观转变。",
+      "canon_anchor_ids": ["canon_002_chunin_exam", "canon_016_war_finale_kaguya_sasuke"]
+    },
+    {
+      "id": "rel_uchiha_obito_trauma_hatake_kakashi",
+      "source_id": "uchiha_obito",
+      "target_id": "hatake_kakashi",
+      "type": "former_teammate_enemy_then_reconciled",
+      "arc_scope": "kakashi_gaiden_to_war_finale",
+      "status_canon_end": "obito_dead_reconciled",
+      "importance": "critical",
+      "notes": "带土与卡卡西共享写轮眼和琳创伤，是战争后段情感核心。",
+      "canon_anchor_ids": ["canon_006_kakashi_gaiden", "canon_016_war_finale_kaguya_sasuke"]
+    },
+    {
+      "id": "rel_black_zetsu_manipulates_uchiha_madara",
+      "source_id": "black_zetsu",
+      "target_id": "uchiha_madara",
+      "type": "hidden_manipulation",
+      "arc_scope": "ancient_history_to_war_finale",
+      "status_canon_end": "revealed_at_kaguya_revival",
+      "importance": "critical",
+      "notes": "黑绝将斑的计划导向辉夜复活。",
+      "canon_anchor_ids": ["canon_016_war_finale_kaguya_sasuke"]
+    }
+  ]
+}

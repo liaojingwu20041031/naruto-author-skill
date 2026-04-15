@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.1",
+  "generated_at": "2026-04-13",
+  "scope": "naruto_fanfic_db",
+  "actions": [
+    {
+      "type": "created_missing_tables",
+      "files": [
+        "characters.json",
+        "organizations.json",
+        "jutsus.json",
+        "relations.json",
+        "tailed_beasts.json",
+        "artifacts.json"
+      ],
+      "reason": "当前工作区只有 canon_plot.json 和 world_background.json；补齐 Claude Code / Codex 写作检索常用实体表。"
+    },
+    {
+      "type": "normalized_ids",
+      "policy": "lower_snake_case_ascii",
+      "reason": "稳定 ID 便于 story_graph.json、章节 delta 和 Claude Code / Codex 检索引用。"
+    },
+    {
+      "type": "separated_state_dimensions",
+      "examples": [
+        "life_status 与 edo_tensei 分离",
+        "jinchuriki 宿主历史与尾兽当前状态分离",
+        "晓戒指归属与成员生死分离",
+        "瞳术移植与普通能力分离"
+      ],
+      "reason": "避免 alive_but_edo、dead_or_sealed、owner/current-host 等混合脏状态。"
+    },
+    {
+      "type": "removed_placeholders",
+      "policy": "不写空对象、不写 [待定] 事实、不写无来源能力名。",
+      "reason": "Claude Code / Codex 不应把占位符当作原著事实。"
+    },
+    {
+      "type": "added_continuity_warnings",
+      "files": [
+        "characters.json",
+        "organizations.json",
+        "jutsus.json",
+        "tailed_beasts.json",
+        "artifacts.json"
+      ],
+      "reason": "长篇同人需要每个高影响记录暴露为什么改动它会引发蝴蝶效应。"
+    },
+    {
+      "type": "normalized_range_values",
+      "files": [
+        "canon_plot.json"
+      ],
+      "reason": "将含斜杠的模糊卷数范围规范为机器更友好的连续范围，降低检索和排序歧义。"
+    },
+    {
+      "type": "expanded_character_encyclopedia",
+      "files": [
+        "characters.json"
+      ],
+      "reason": "将 characters.json 从核心连续性人物表升级为 Claude Code / Codex 可用的人物百科索引，补齐历代火影、木叶同期、五影、鹰小队、关键历史人物、尾兽宿主和重要反派。"
+    },
+    {
+      "type": "added_pre_main_timeline",
+      "files": [
+        "pre_main_timeline.json",
+        "characters.json",
+        "organizations.json",
+        "artifacts.json",
+        "README.md"
+      ],
+      "reason": "补齐神树时代、战国时代、木叶建村、前三次忍界大战、九尾之夜等正篇前史，并同步六道/因陀罗/阿修罗/泉奈/半藏/金角银角等关键人物与势力。"
+    }
+  ],
+  "known_limits": [
+    "这不是完整火影百科，优先服务长篇同人的一致性写作。",
+    "动画原创/扩展线只在会影响一致性时标注，不能默认当漫画硬主线。",
+    "精确生日和绝对纪年未强填，等项目选择纪年法后再补。",
+    "后续新增条目必须带 canonical id、来源、状态范围和连续性风险。"
+  ],
+  "validation_expectations": [
+    "所有 JSON 文件必须可解析。",
+    "所有 *_id 引用应使用 lower_snake_case_ascii。",
+    "不要覆盖 history 字段，新增变化应 append。",
+    "章节改写原著时，改 story_graph.json 或 chapter_delta，不要改 canon_plot.json 的原著事实。"
+  ],
+  "source": {
+    "additional_reference_urls": [
+      "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+      "https://zh.wikipedia.org/zh-sg/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8"
+    ],
+    "last_enriched_at": "2026-04-14",
+    "policy": "归纳摘要并结构化为同人写作一致性锚点，不保存网页长段原文。"
+  },
+  "enrichment_notes": [
+    {
+      "id": "enrichment_2026_04_14_world_and_midlayer",
+      "category": "enrichment",
+      "source_urls": [
+        "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+        "https://zh.wikipedia.org/zh-sg/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8"
+      ],
+      "summary": "补充长篇写作中高频使用的中层资料：任务/等级/查克拉/血继/通灵/封印/小队配置/政治规则、标准忍具、补充角色、组织和忍术。",
+      "policy": "归纳摘要并结构化为同人写作一致性锚点，不保存网页长段原文。"
+    }
+  ]
+}
+

@@ -1,0 +1,3487 @@
+{
+  "schema_version": "1.1",
+  "table_purpose": "人物百科与长篇连续性索引。用于 Claude Code / Codex 检索人物身份、阵营、生死状态、招牌能力、敏感秘密和蝴蝶效应风险。",
+  "coverage_note": "本表优先收录会影响原著主线、组织状态、尾兽/秽土/瞳术/政治分叉的角色；不是完整百科终稿，后续新增角色必须遵守 cleaning_policy。",
+  "source": {
+    "reference_url": "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+    "retrieved_at": "2026-04-13",
+    "policy": "归纳摘要，不保存网页长段原文。",
+    "additional_reference_urls": [
+      "https://zh.wikipedia.org/zh-sg/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8"
+    ],
+    "last_enriched_at": "2026-04-14"
+  },
+  "cleaning_policy": {
+    "id_style": "lower_snake_case_ascii",
+    "removed_dirty_data": [
+      "空对象",
+      "待定占位记录",
+      "无 canonical_id 的中文自由文本",
+      "把死亡、秽土、封印、人柱力混在同一 status 字符串里的脏状态"
+    ],
+    "status_rule": "life_status 只记录生物学/叙事状态；jinchuriki、edo_tensei、curse_mark、dojutsu 等单独建字段或关联表。"
+  },
+  "characters": [
+    {
+      "id": "uzumaki_naruto",
+      "name_zh": "漩涡鸣人",
+      "aliases": [
+        "鸣人",
+        "七代目火影"
+      ],
+      "category": "canon_main",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_7",
+        "konohagakure",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "protagonist",
+        "jinchuriki",
+        "future_hokage"
+      ],
+      "signature_abilities": [
+        "shadow_clone_jutsu",
+        "rasengan",
+        "rasenshuriken",
+        "sage_mode",
+        "kurama_chakra_mode"
+      ],
+      "sensitive_secrets": [
+        "九尾封印真相",
+        "父母身份",
+        "佩恩本体",
+        "六道力量"
+      ],
+      "continuity_risks": [
+        "九尾合作阶段必须分层记录",
+        "木叶认可节奏不能跳过",
+        "提前知道未来会重写几乎全部主线"
+      ],
+      "canon_anchor_ids": [
+        "canon_000_kyuubi_attack_backstory",
+        "canon_012_pain_assault",
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "uchiha_sasuke",
+      "name_zh": "宇智波佐助",
+      "aliases": [
+        "佐助"
+      ],
+      "category": "canon_main",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_7",
+        "orochimaru_camp",
+        "team_hebi",
+        "team_taka"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "rival",
+        "avenger",
+        "uchiha_survivor"
+      ],
+      "signature_abilities": [
+        "chidori",
+        "sharingan",
+        "amaterasu",
+        "susanoo",
+        "rinnegan_space_time"
+      ],
+      "sensitive_secrets": [
+        "宇智波灭族真相",
+        "鼬真实动机",
+        "团藏责任"
+      ],
+      "continuity_risks": [
+        "咒印决定叛逃因果",
+        "鼬死亡与真相揭露顺序决定仇恨目标",
+        "阵营变化必须按事件逐步记录"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_005_sasuke_retrieval",
+        "canon_011_jiraiya_pain_sasuke_itachi"
+      ]
+    },
+    {
+      "id": "haruno_sakura",
+      "name_zh": "春野樱",
+      "aliases": [
+        "小樱"
+      ],
+      "category": "canon_main",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_7",
+        "konohagakure_medical_corps"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "team_7_member",
+        "medical_ninja",
+        "tsunade_student"
+      ],
+      "signature_abilities": [
+        "medical_ninjutsu",
+        "chakra_enhanced_strength",
+        "byakugo_seal"
+      ],
+      "sensitive_secrets": [
+        "百豪储备进度",
+        "医疗禁术代价"
+      ],
+      "continuity_risks": [
+        "医疗成长需要纲手师承和训练时间",
+        "对佐助的情感不能替代战场判断"
+      ],
+      "canon_anchor_ids": [
+        "canon_008_kazekage_rescue",
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "hatake_kakashi",
+      "name_zh": "旗木卡卡西",
+      "aliases": [
+        "卡卡西",
+        "复制忍者"
+      ],
+      "category": "canon_core",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_minato",
+        "team_7",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "mentor",
+        "jonin",
+        "future_hokage"
+      ],
+      "signature_abilities": [
+        "raikiri",
+        "sharingan_copy",
+        "kamui"
+      ],
+      "sensitive_secrets": [
+        "带土身份",
+        "琳死亡真相",
+        "万花筒同源"
+      ],
+      "continuity_risks": [
+        "写轮眼移植造成查克拉负担",
+        "战后是否保留写轮眼必须单独记录"
+      ],
+      "canon_anchor_ids": [
+        "canon_001_land_of_waves",
+        "canon_006_kakashi_gaiden"
+      ]
+    },
+    {
+      "id": "jiraiya",
+      "name_zh": "自来也",
+      "aliases": [
+        "好色仙人",
+        "三忍自来也"
+      ],
+      "category": "canon_core",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "legendary_sannin",
+        "mount_myoboku"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "mentor",
+        "sannin",
+        "intel_gatherer"
+      ],
+      "signature_abilities": [
+        "summoning_toads",
+        "rasengan",
+        "sage_mode"
+      ],
+      "sensitive_secrets": [
+        "佩恩身份线索",
+        "预言之子",
+        "晓组织情报"
+      ],
+      "continuity_risks": [
+        "自来也若存活，佩恩篇情报优势会极大改变",
+        "死亡是鸣人仙术和精神成熟的重要触发器"
+      ],
+      "canon_anchor_ids": [
+        "canon_004_search_tsunade",
+        "canon_011_jiraiya_pain_sasuke_itachi"
+      ]
+    },
+    {
+      "id": "tsunade",
+      "name_zh": "纲手",
+      "aliases": [
+        "五代火影",
+        "三忍纲手"
+      ],
+      "category": "canon_core",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "legendary_sannin",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "hokage",
+        "medical_ninja",
+        "mentor"
+      ],
+      "signature_abilities": [
+        "medical_ninjutsu",
+        "chakra_enhanced_strength",
+        "creation_rebirth",
+        "byakugo_seal"
+      ],
+      "sensitive_secrets": [
+        "木叶高层政治",
+        "创造再生代价"
+      ],
+      "continuity_risks": [
+        "是否继任火影决定木叶医疗、审批和复兴",
+        "百豪与创造再生不能无代价滥用"
+      ],
+      "canon_anchor_ids": [
+        "canon_004_search_tsunade",
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "orochimaru",
+      "name_zh": "大蛇丸",
+      "aliases": [
+        "三忍大蛇丸"
+      ],
+      "category": "canon_core",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "legendary_sannin",
+        "otogakure",
+        "orochimaru_camp"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "rogue_ninja",
+        "researcher",
+        "forbidden_jutsu_user"
+      ],
+      "signature_abilities": [
+        "edo_tensei",
+        "curse_mark",
+        "living_corpse_reincarnation",
+        "snake_summoning"
+      ],
+      "sensitive_secrets": [
+        "禁术资料",
+        "木叶实验",
+        "秽土转生条件"
+      ],
+      "continuity_risks": [
+        "双手被尸鬼封尽后结印与忍术受限",
+        "身体转生要记录宿主、时间和灵魂状态"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_003_konoha_crush"
+      ]
+    },
+    {
+      "id": "uchiha_itachi",
+      "name_zh": "宇智波鼬",
+      "aliases": [
+        "鼬"
+      ],
+      "category": "canon_core",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "uchiha_clan",
+        "akatsuki"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "akatsuki_member",
+        "sasuke_brother",
+        "mangekyo_user"
+      ],
+      "signature_abilities": [
+        "tsukuyomi",
+        "amaterasu",
+        "susanoo",
+        "izanami"
+      ],
+      "sensitive_secrets": [
+        "灭族真相",
+        "止水别天神",
+        "木叶高层交易"
+      ],
+      "continuity_risks": [
+        "鼬真实动机不能提前全员知晓",
+        "病弱状态和万花筒消耗必须限制战力"
+      ],
+      "canon_anchor_ids": [
+        "canon_004_search_tsunade",
+        "canon_011_jiraiya_pain_sasuke_itachi"
+      ]
+    },
+    {
+      "id": "uchiha_obito",
+      "name_zh": "宇智波带土",
+      "aliases": [
+        "带土",
+        "阿飞",
+        "面具男"
+      ],
+      "category": "canon_core",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_minato",
+        "akatsuki",
+        "madara_plan"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "hidden_antagonist",
+        "kamui_user",
+        "ten_tails_jinchuriki_temporary"
+      ],
+      "signature_abilities": [
+        "kamui",
+        "wood_release_implant",
+        "six_paths_jinchuriki_power"
+      ],
+      "sensitive_secrets": [
+        "真实身份",
+        "九尾之乱责任",
+        "月之眼计划"
+      ],
+      "continuity_risks": [
+        "带土是否被救是原著最大因果开关之一",
+        "神威空间与卡卡西万花筒同源"
+      ],
+      "canon_anchor_ids": [
+        "canon_006_kakashi_gaiden",
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "uchiha_madara",
+      "name_zh": "宇智波斑",
+      "aliases": [
+        "斑"
+      ],
+      "category": "canon_legend",
+      "home_village": "konohagakure_founder",
+      "affiliations": [
+        "uchiha_clan",
+        "madara_plan"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "founder",
+        "legendary_antagonist",
+        "rinnegan_owner"
+      ],
+      "signature_abilities": [
+        "susanoo",
+        "rinnegan",
+        "limbo",
+        "wood_release_implant",
+        "infinite_tsukuyomi"
+      ],
+      "sensitive_secrets": [
+        "月之眼计划真实结构",
+        "黑绝真实身份"
+      ],
+      "continuity_risks": [
+        "秽土、轮回天生、完全复活必须分清",
+        "轮回眼流转路径必须同步长门和带土"
+      ],
+      "canon_anchor_ids": [
+        "canon_014_war_opening",
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "sarutobi_hiruzen",
+      "name_zh": "猿飞日斩",
+      "aliases": [
+        "三代火影"
+      ],
+      "category": "canon_core",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "konohagakure"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "third_hokage",
+        "mentor_of_sannin"
+      ],
+      "signature_abilities": [
+        "summoning_enma",
+        "reaper_death_seal",
+        "five_nature_jutsu"
+      ],
+      "sensitive_secrets": [
+        "鸣人身世",
+        "宇智波灭族后续",
+        "根与团藏问题"
+      ],
+      "continuity_risks": [
+        "三代死亡是纲手继任强因果",
+        "不能为衬托主角无脑黑化或降智"
+      ],
+      "canon_anchor_ids": [
+        "canon_000_kyuubi_attack_backstory",
+        "canon_003_konoha_crush"
+      ]
+    },
+    {
+      "id": "shimura_danzo",
+      "name_zh": "志村团藏",
+      "aliases": [
+        "团藏"
+      ],
+      "category": "canon_core",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "root",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "root_leader",
+        "political_antagonist",
+        "acting_hokage"
+      ],
+      "signature_abilities": [
+        "izanagi_chain",
+        "wind_release",
+        "kotoamatsukami_eye_implant"
+      ],
+      "sensitive_secrets": [
+        "宇智波灭族责任",
+        "止水眼",
+        "根部行动"
+      ],
+      "continuity_risks": [
+        "团藏应符合极端木叶利益逻辑，不能只是背锅符号",
+        "写轮眼手臂和止水眼要记录来源、冷却和暴露程度"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "gaara",
+      "name_zh": "我爱罗",
+      "aliases": [
+        "五代风影"
+      ],
+      "category": "canon_core",
+      "home_village": "sunagakure",
+      "affiliations": [
+        "sunagakure",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "former_jinchuriki",
+        "kazekage",
+        "naruto_mirror"
+      ],
+      "signature_abilities": [
+        "sand_control",
+        "absolute_defense",
+        "sand_burial"
+      ],
+      "sensitive_secrets": [
+        "一尾抽离后状态",
+        "砂隐政治认可"
+      ],
+      "continuity_risks": [
+        "被鸣人影响前后人格差异极大",
+        "一尾抽离后仍能控砂但不是完整人柱力"
+      ],
+      "canon_anchor_ids": [
+        "canon_003_konoha_crush",
+        "canon_008_kazekage_rescue"
+      ]
+    },
+    {
+      "id": "killer_bee",
+      "name_zh": "奇拉比",
+      "aliases": [
+        "八尾人柱力"
+      ],
+      "category": "canon_core",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "kumogakure",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "jinchuriki",
+        "naruto_teacher",
+        "swordsman"
+      ],
+      "signature_abilities": [
+        "eight_tails_transformation",
+        "seven_swords_style",
+        "tailed_beast_bomb"
+      ],
+      "sensitive_secrets": [
+        "完美人柱力训练方法",
+        "八尾替身逃脱"
+      ],
+      "continuity_risks": [
+        "被捕成功会让晓集齐尾兽节奏提前",
+        "他是鸣人控制九尾的重要导师"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit",
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "nagato",
+      "name_zh": "长门",
+      "aliases": [
+        "佩恩本体"
+      ],
+      "category": "canon_core",
+      "home_village": "amegakure",
+      "affiliations": [
+        "akatsuki",
+        "amegakure"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "akatsuki_leader_public",
+        "rinnegan_user",
+        "ideological_antagonist"
+      ],
+      "signature_abilities": [
+        "six_paths_of_pain",
+        "shinra_tensei",
+        "chibaku_tensei",
+        "rinne_tensei"
+      ],
+      "sensitive_secrets": [
+        "佩恩六道机制",
+        "本体位置",
+        "弥彦死亡真相"
+      ],
+      "continuity_risks": [
+        "轮回天生会重写死亡表",
+        "身体虚弱与外道魔像消耗必须限制行动"
+      ],
+      "canon_anchor_ids": [
+        "canon_011_jiraiya_pain_sasuke_itachi",
+        "canon_012_pain_assault"
+      ]
+    },
+    {
+      "id": "konan",
+      "name_zh": "小南",
+      "aliases": [
+        "天使"
+      ],
+      "category": "canon_core",
+      "home_village": "amegakure",
+      "affiliations": [
+        "akatsuki",
+        "amegakure"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "akatsuki_member",
+        "nagato_confidante",
+        "paper_jutsu_user"
+      ],
+      "signature_abilities": [
+        "paper_ninjutsu",
+        "paper_clone",
+        "paper_sea_explosion"
+      ],
+      "sensitive_secrets": [
+        "长门尸体位置",
+        "轮回眼去向"
+      ],
+      "continuity_risks": [
+        "存活会改变雨隐与鸣人战后关系",
+        "大规模起爆符准备必须有长期资源解释"
+      ],
+      "canon_anchor_ids": [
+        "canon_012_pain_assault",
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "yakushi_kabuto",
+      "name_zh": "药师兜",
+      "aliases": [
+        "兜"
+      ],
+      "category": "canon_core",
+      "home_village": "unknown",
+      "affiliations": [
+        "orochimaru_camp",
+        "akatsuki_war_alliance"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "spy",
+        "medical_ninja",
+        "edo_tensei_commander"
+      ],
+      "signature_abilities": [
+        "medical_ninjutsu",
+        "edo_tensei_mass_use",
+        "sage_mode"
+      ],
+      "sensitive_secrets": [
+        "秽土转生名单",
+        "大蛇丸研究",
+        "晓与斑情报"
+      ],
+      "continuity_risks": [
+        "兜掌握秽土转生是第四次大战死人军团成立关键",
+        "伊邪那美后的心理转变要分阶段记录"
+      ],
+      "canon_anchor_ids": [
+        "canon_014_war_opening",
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "nara_shikamaru",
+      "name_zh": "奈良鹿丸",
+      "aliases": [
+        "鹿丸"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_10",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "strategist",
+        "asuma_student",
+        "chunin"
+      ],
+      "signature_abilities": [
+        "shadow_possession_jutsu",
+        "shadow_sewing"
+      ],
+      "sensitive_secrets": [
+        "飞段弱点",
+        "阿斯玛遗言",
+        "战场指挥情报"
+      ],
+      "continuity_risks": [
+        "阿斯玛死亡是成熟转折",
+        "鹿丸胜利应依赖情报、准备和地形"
+      ],
+      "canon_anchor_ids": [
+        "canon_005_sasuke_retrieval",
+        "canon_010_hidan_kakuzu"
+      ]
+    },
+    {
+      "id": "hyuga_hinata",
+      "name_zh": "日向雏田",
+      "aliases": [
+        "雏田"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_8",
+        "hyuga_clan"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "byakugan_user",
+        "naruto_supporter"
+      ],
+      "signature_abilities": [
+        "byakugan",
+        "gentle_fist",
+        "protective_eight_trigrams"
+      ],
+      "sensitive_secrets": [
+        "鸣人情感线",
+        "日向宗分家制度"
+      ],
+      "continuity_risks": [
+        "性格成长慢热，不能突然中二化",
+        "白眼侦查范围和盲点必须遵守"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_012_pain_assault"
+      ]
+    },
+    {
+      "id": "hyuga_neji",
+      "name_zh": "日向宁次",
+      "aliases": [
+        "宁次"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_guy",
+        "hyuga_clan"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "byakugan_user",
+        "branch_family_member",
+        "jonin"
+      ],
+      "signature_abilities": [
+        "byakugan",
+        "eight_trigrams_sixty_four_palms",
+        "rotation"
+      ],
+      "sensitive_secrets": [
+        "日向分家怨恨",
+        "父亲死亡真相"
+      ],
+      "continuity_risks": [
+        "命运观转变要保留因果",
+        "大战牺牲若改写需更新鸣人/雏田关系推进"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "might_guy",
+      "name_zh": "迈特凯",
+      "aliases": [
+        "阿凯",
+        "凯"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_guy",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "taijutsu_master",
+        "jonin",
+        "lee_mentor"
+      ],
+      "signature_abilities": [
+        "eight_gates",
+        "hirudora",
+        "night_guy"
+      ],
+      "sensitive_secrets": [
+        "八门代价",
+        "体术训练极限"
+      ],
+      "continuity_risks": [
+        "八门全开必须接近死亡级后果",
+        "喜剧表现不能削弱战场判断"
+      ],
+      "canon_anchor_ids": [
+        "canon_008_kazekage_rescue",
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "deidara",
+      "name_zh": "迪达拉",
+      "aliases": [
+        "迪达拉"
+      ],
+      "category": "canon_antagonist",
+      "home_village": "iwagakure",
+      "affiliations": [
+        "akatsuki"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "akatsuki_member",
+        "explosive_clay_user"
+      ],
+      "signature_abilities": [
+        "explosive_clay",
+        "c3",
+        "c4",
+        "c0"
+      ],
+      "sensitive_secrets": [
+        "一尾捕获",
+        "雷遁克制"
+      ],
+      "continuity_risks": [
+        "爆炸黏土需要材料与准备",
+        "雷遁克制是关键战术设定"
+      ],
+      "canon_anchor_ids": [
+        "canon_008_kazekage_rescue"
+      ]
+    },
+    {
+      "id": "sasori",
+      "name_zh": "赤砂之蝎",
+      "aliases": [
+        "蝎"
+      ],
+      "category": "canon_antagonist",
+      "home_village": "sunagakure",
+      "affiliations": [
+        "akatsuki"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "akatsuki_member",
+        "puppet_master"
+      ],
+      "signature_abilities": [
+        "human_puppet",
+        "iron_sand_puppet",
+        "poison_mastery"
+      ],
+      "sensitive_secrets": [
+        "药师兜间谍线",
+        "三代风影傀儡"
+      ],
+      "continuity_risks": [
+        "蝎死亡会断开晓与兜接头线",
+        "毒药解毒需要医疗准备"
+      ],
+      "canon_anchor_ids": [
+        "canon_008_kazekage_rescue"
+      ]
+    },
+    {
+      "id": "hidan",
+      "name_zh": "飞段",
+      "aliases": [
+        "飞段"
+      ],
+      "category": "canon_antagonist",
+      "home_village": "yugakure",
+      "affiliations": [
+        "akatsuki",
+        "jashin_cult"
+      ],
+      "life_status_canon_end": "incapacitated",
+      "roles": [
+        "akatsuki_member",
+        "immortal_ritual_user"
+      ],
+      "signature_abilities": [
+        "jashin_ritual",
+        "triple_bladed_scythe"
+      ],
+      "sensitive_secrets": [
+        "仪式触发条件",
+        "不死弱点"
+      ],
+      "continuity_risks": [
+        "飞段可被封存但不等于普通死亡",
+        "仪式必须满足取血和图阵条件"
+      ],
+      "canon_anchor_ids": [
+        "canon_010_hidan_kakuzu"
+      ]
+    },
+    {
+      "id": "kakuzu",
+      "name_zh": "角都",
+      "aliases": [
+        "角都"
+      ],
+      "category": "canon_antagonist",
+      "home_village": "takigakure",
+      "affiliations": [
+        "akatsuki"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "akatsuki_member",
+        "bounty_hunter"
+      ],
+      "signature_abilities": [
+        "earth_grudge_fear",
+        "multiple_mask_hearts"
+      ],
+      "sensitive_secrets": [
+        "心脏数量",
+        "赏金网络"
+      ],
+      "continuity_risks": [
+        "每颗心脏对应生命和属性",
+        "死亡会影响晓资金线"
+      ],
+      "canon_anchor_ids": [
+        "canon_010_hidan_kakuzu"
+      ]
+    },
+    {
+      "id": "hoshigaki_kisame",
+      "name_zh": "干柿鬼鲛",
+      "aliases": [
+        "鬼鲛"
+      ],
+      "category": "canon_antagonist",
+      "home_village": "kirigakure",
+      "affiliations": [
+        "akatsuki",
+        "seven_ninja_swordsmen"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "akatsuki_member",
+        "swordsman"
+      ],
+      "signature_abilities": [
+        "water_dome",
+        "samehada_chakra_absorption"
+      ],
+      "sensitive_secrets": [
+        "晓情报",
+        "联军情报泄露"
+      ],
+      "continuity_risks": [
+        "鲛肌归属必须同步记录",
+        "死亡前情报是否传出影响大战准备"
+      ],
+      "canon_anchor_ids": [
+        "canon_004_search_tsunade",
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "otsutsuki_kaguya",
+      "name_zh": "大筒木辉夜",
+      "aliases": [
+        "辉夜"
+      ],
+      "category": "canon_final_antagonist",
+      "home_village": "none",
+      "affiliations": [
+        "otsutsuki_lineage"
+      ],
+      "life_status_canon_end": "sealed",
+      "roles": [
+        "progenitor",
+        "final_antagonist",
+        "ten_tails_origin"
+      ],
+      "signature_abilities": [
+        "amenominaka",
+        "all_killing_ash_bones",
+        "infinite_tsukuyomi_origin"
+      ],
+      "sensitive_secrets": [
+        "黑绝真实目的",
+        "神树与查克拉源流"
+      ],
+      "continuity_risks": [
+        "终局设定不宜过早揭露",
+        "提前处理辉夜会重写斑和黑绝的终战结构"
+      ],
+      "canon_anchor_ids": [
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "black_zetsu",
+      "name_zh": "黑绝",
+      "aliases": [
+        "黑绝"
+      ],
+      "category": "canon_final_antagonist",
+      "home_village": "none",
+      "affiliations": [
+        "akatsuki",
+        "kaguya_plan"
+      ],
+      "life_status_canon_end": "sealed",
+      "roles": [
+        "hidden_manipulator",
+        "kaguya_will"
+      ],
+      "signature_abilities": [
+        "body_merging",
+        "history_manipulation",
+        "kaguya_revive_trigger"
+      ],
+      "sensitive_secrets": [
+        "忍界历史篡改",
+        "斑被操纵真相"
+      ],
+      "continuity_risks": [
+        "提前暴露会崩掉月之眼隐藏层",
+        "其存在解释斑计划偏离，必须谨慎使用"
+      ],
+      "canon_anchor_ids": [
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "sarutobi_asuma",
+      "name_zh": "猿飞阿斯玛",
+      "aliases": [
+        "阿斯玛"
+      ],
+      "category": "canon_support_minimal",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_10",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "team_10_mentor"
+      ],
+      "signature_abilities": [
+        "wind_chakra_blades"
+      ],
+      "sensitive_secrets": [
+        "阿斯玛遗言",
+        "第十班成长触发"
+      ],
+      "continuity_risks": [
+        "若存活，鹿丸复仇线和第十班成熟节点必须重写。"
+      ],
+      "canon_anchor_ids": [
+        "canon_010_hidan_kakuzu"
+      ]
+    },
+    {
+      "id": "rock_lee",
+      "name_zh": "洛克李",
+      "aliases": [
+        "小李"
+      ],
+      "category": "canon_support_minimal",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_guy"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "taijutsu_specialist"
+      ],
+      "signature_abilities": [
+        "eight_gates",
+        "front_lotus",
+        "reverse_lotus"
+      ],
+      "sensitive_secrets": [
+        "伤势恢复",
+        "开门上限"
+      ],
+      "continuity_risks": [
+        "不能使用忍术或幻术；中忍考试伤势会影响后续。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_005_sasuke_retrieval"
+      ]
+    },
+    {
+      "id": "yugito_nii",
+      "name_zh": "二位由木人",
+      "aliases": [
+        "由木人"
+      ],
+      "category": "canon_jinchuriki_minimal",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "kumogakure"
+      ],
+      "life_status_canon_end": "dead_or_extracted_canon",
+      "roles": [
+        "two_tails_jinchuriki"
+      ],
+      "signature_abilities": [
+        "matatabi_chakra"
+      ],
+      "sensitive_secrets": [
+        "二尾捕获进度"
+      ],
+      "continuity_risks": [
+        "若逃脱或存活，晓尾兽进度和云隐反应必须重写。"
+      ],
+      "canon_anchor_ids": [
+        "canon_010_hidan_kakuzu"
+      ]
+    },
+    {
+      "id": "yagura",
+      "name_zh": "矢仓",
+      "aliases": [
+        "四代水影"
+      ],
+      "category": "canon_jinchuriki_minimal",
+      "home_village": "kirigakure",
+      "affiliations": [
+        "kirigakure"
+      ],
+      "life_status_canon_end": "dead_historical",
+      "roles": [
+        "mizukage",
+        "three_tails_jinchuriki_historical"
+      ],
+      "signature_abilities": [
+        "isobu_chakra"
+      ],
+      "sensitive_secrets": [
+        "雾隐血雾统治",
+        "被操纵历史"
+      ],
+      "continuity_risks": [
+        "矢仓生死与三尾状态会影响雾隐政治。"
+      ],
+      "canon_anchor_ids": [
+        "canon_007_shippuden_return"
+      ]
+    },
+    {
+      "id": "roshi",
+      "name_zh": "老紫",
+      "aliases": [
+        "四尾人柱力"
+      ],
+      "category": "canon_jinchuriki_minimal",
+      "home_village": "iwagakure",
+      "affiliations": [
+        "iwagakure"
+      ],
+      "life_status_canon_end": "dead_or_extracted_canon",
+      "roles": [
+        "four_tails_jinchuriki"
+      ],
+      "signature_abilities": [
+        "son_goku_chakra",
+        "lava_release"
+      ],
+      "sensitive_secrets": [
+        "四尾捕获进度"
+      ],
+      "continuity_risks": [
+        "捕获时间变化会影响岩隐与晓冲突节奏。"
+      ],
+      "canon_anchor_ids": [
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "han",
+      "name_zh": "汉",
+      "aliases": [
+        "五尾人柱力"
+      ],
+      "category": "canon_jinchuriki_minimal",
+      "home_village": "iwagakure",
+      "affiliations": [
+        "iwagakure"
+      ],
+      "life_status_canon_end": "dead_or_extracted_canon",
+      "roles": [
+        "five_tails_jinchuriki"
+      ],
+      "signature_abilities": [
+        "kokuo_chakra",
+        "steam_style"
+      ],
+      "sensitive_secrets": [
+        "五尾捕获进度"
+      ],
+      "continuity_risks": [
+        "若未被捕获，十尾复活资源链必须重算。"
+      ],
+      "canon_anchor_ids": [
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "utakata",
+      "name_zh": "羽高",
+      "aliases": [
+        "六尾人柱力"
+      ],
+      "category": "canon_jinchuriki_minimal",
+      "home_village": "kirigakure",
+      "affiliations": [
+        "kirigakure"
+      ],
+      "life_status_canon_end": "dead_or_extracted_canon",
+      "roles": [
+        "six_tails_jinchuriki"
+      ],
+      "signature_abilities": [
+        "saiken_chakra",
+        "bubble_ninjutsu"
+      ],
+      "sensitive_secrets": [
+        "六尾捕获进度"
+      ],
+      "continuity_risks": [
+        "动画扩展线若采用，需要标注来源类型。"
+      ],
+      "canon_anchor_ids": [
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "fu",
+      "name_zh": "芙",
+      "aliases": [
+        "七尾人柱力"
+      ],
+      "category": "canon_jinchuriki_minimal",
+      "home_village": "takigakure",
+      "affiliations": [
+        "takigakure"
+      ],
+      "life_status_canon_end": "dead_or_extracted_canon",
+      "roles": [
+        "seven_tails_jinchuriki"
+      ],
+      "signature_abilities": [
+        "chomei_chakra"
+      ],
+      "sensitive_secrets": [
+        "七尾捕获进度"
+      ],
+      "continuity_risks": [
+        "小国人柱力视角改变会扩展泷隐政治线。"
+      ],
+      "canon_anchor_ids": [
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "uzumaki_mito",
+      "name_zh": "漩涡水户",
+      "aliases": [
+        "初代九尾人柱力"
+      ],
+      "category": "canon_historical_minimal",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "uzumaki_clan_historical",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "dead_historical",
+      "roles": [
+        "nine_tails_jinchuriki_historical"
+      ],
+      "signature_abilities": [
+        "sealing_jutsu",
+        "kurama_seal"
+      ],
+      "sensitive_secrets": [
+        "九尾宿主传承"
+      ],
+      "continuity_risks": [
+        "建村期或初代时期同人必须记录九尾封印传承。"
+      ],
+      "canon_anchor_ids": [
+        "canon_000_kyuubi_attack_backstory"
+      ]
+    },
+    {
+      "id": "uzumaki_kushina",
+      "name_zh": "漩涡玖辛奈",
+      "aliases": [
+        "玖辛奈"
+      ],
+      "category": "canon_historical_minimal",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "uzumaki_clan_historical",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "dead_before_main_story",
+      "roles": [
+        "nine_tails_jinchuriki",
+        "naruto_mother"
+      ],
+      "signature_abilities": [
+        "sealing_chains",
+        "kurama_seal"
+      ],
+      "sensitive_secrets": [
+        "鸣人身世",
+        "九尾之乱真相"
+      ],
+      "continuity_risks": [
+        "玖辛奈存活会重写鸣人童年、九尾封印和木叶政治。"
+      ],
+      "canon_anchor_ids": [
+        "canon_000_kyuubi_attack_backstory"
+      ]
+    },
+    {
+      "id": "zabuza",
+      "name_zh": "桃地再不斩",
+      "aliases": [
+        "再不斩"
+      ],
+      "category": "canon_support_minimal",
+      "home_village": "kirigakure",
+      "affiliations": [
+        "seven_ninja_swordsmen",
+        "missing_nin"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "missing_nin",
+        "swordsman"
+      ],
+      "signature_abilities": [
+        "hidden_mist_jutsu",
+        "kubikiribocho"
+      ],
+      "sensitive_secrets": [
+        "雾隐血雾旧事"
+      ],
+      "continuity_risks": [
+        "再不斩或白若存活，会扩展雾隐、血继和叛忍线。"
+      ],
+      "canon_anchor_ids": [
+        "canon_001_land_of_waves"
+      ]
+    },
+    {
+      "id": "suigetsu",
+      "name_zh": "鬼灯水月",
+      "aliases": [
+        "水月"
+      ],
+      "category": "canon_support_minimal",
+      "home_village": "kirigakure",
+      "affiliations": [
+        "team_hebi",
+        "team_taka"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "swordsman",
+        "sasuke_teammate"
+      ],
+      "signature_abilities": [
+        "hydrification_technique",
+        "kubikiribocho"
+      ],
+      "sensitive_secrets": [
+        "鹰小队行动"
+      ],
+      "continuity_risks": [
+        "斩首大刀归属变化要同步 artifacts.json。"
+      ],
+      "canon_anchor_ids": [
+        "canon_011_jiraiya_pain_sasuke_itachi"
+      ]
+    },
+    {
+      "id": "namikaze_minato",
+      "name_zh": "波风水门",
+      "aliases": [
+        "四代火影",
+        "黄色闪光"
+      ],
+      "category": "canon_historical",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "konohagakure",
+        "team_minato"
+      ],
+      "life_status_canon_end": "dead_before_main_story",
+      "roles": [
+        "fourth_hokage",
+        "naruto_father",
+        "space_time_master"
+      ],
+      "signature_abilities": [
+        "flying_thunder_god",
+        "rasengan",
+        "reaper_death_seal"
+      ],
+      "sensitive_secrets": [
+        "鸣人身世",
+        "九尾之乱真相",
+        "带土袭击"
+      ],
+      "continuity_risks": [
+        "水门存活会重写鸣人童年、木叶政治、晓和九尾封印。"
+      ],
+      "canon_anchor_ids": [
+        "canon_000_kyuubi_attack_backstory"
+      ]
+    },
+    {
+      "id": "senju_hashirama",
+      "name_zh": "千手柱间",
+      "aliases": [
+        "初代火影"
+      ],
+      "category": "canon_legend",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "senju_clan",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "first_hokage",
+        "founder",
+        "wood_release_user"
+      ],
+      "signature_abilities": [
+        "wood_release",
+        "sage_mode",
+        "tailed_beast_suppression"
+      ],
+      "sensitive_secrets": [
+        "尾兽分配历史",
+        "建村旧事",
+        "柱间细胞来源"
+      ],
+      "continuity_risks": [
+        "柱间细胞是高危外挂资源，任何移植必须记录来源、副作用和失败率。"
+      ],
+      "canon_anchor_ids": [
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "senju_tobirama",
+      "name_zh": "千手扉间",
+      "aliases": [
+        "二代火影"
+      ],
+      "category": "canon_legend",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "senju_clan",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "second_hokage",
+        "forbidden_jutsu_creator",
+        "space_time_user"
+      ],
+      "signature_abilities": [
+        "flying_thunder_god",
+        "edo_tensei",
+        "shadow_clone_jutsu"
+      ],
+      "sensitive_secrets": [
+        "禁术源流",
+        "宇智波政策"
+      ],
+      "continuity_risks": [
+        "秽土转生、飞雷神、影分身的传承路径必须解释。"
+      ],
+      "canon_anchor_ids": [
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "sai",
+      "name_zh": "佐井",
+      "aliases": [
+        "佐井"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "root",
+        "team_7",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "root_agent",
+        "team_7_member",
+        "ink_jutsu_user"
+      ],
+      "signature_abilities": [
+        "super_beast_imitation_drawing"
+      ],
+      "sensitive_secrets": [
+        "根部任务",
+        "团藏命令",
+        "情感恢复"
+      ],
+      "continuity_risks": [
+        "加入第七班后是逐步恢复情感，不能瞬间完全正常社交。"
+      ],
+      "canon_anchor_ids": [
+        "canon_009_sasuke_reunion"
+      ]
+    },
+    {
+      "id": "yamato",
+      "name_zh": "大和",
+      "aliases": [
+        "天藏"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "konohagakure",
+        "team_7",
+        "anbu"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "wood_release_user",
+        "team_7_acting_captain",
+        "nine_tails_suppressor"
+      ],
+      "signature_abilities": [
+        "wood_release",
+        "tailed_beast_suppression"
+      ],
+      "sensitive_secrets": [
+        "木遁实验",
+        "九尾压制方法",
+        "大蛇丸实验线"
+      ],
+      "continuity_risks": [
+        "大和存在会降低鸣人九尾失控风险；被俘会影响白绝强化。"
+      ],
+      "canon_anchor_ids": [
+        "canon_009_sasuke_reunion",
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "yamanaka_ino",
+      "name_zh": "山中井野",
+      "aliases": [
+        "井野"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_10",
+        "yamanaka_clan"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "sensory_ninja",
+        "mind_transfer_user",
+        "team_10_member"
+      ],
+      "signature_abilities": [
+        "mind_body_switch",
+        "sensory_link"
+      ],
+      "sensitive_secrets": [
+        "山中秘术限制",
+        "战场通讯链路"
+      ],
+      "continuity_risks": [
+        "心转身术本体暴露风险高；战争通讯会强影响信息流。"
+      ],
+      "canon_anchor_ids": [
+        "canon_010_hidan_kakuzu",
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "akimichi_choji",
+      "name_zh": "秋道丁次",
+      "aliases": [
+        "丁次"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_10",
+        "akimichi_clan"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "team_10_member",
+        "akimichi_clan_member"
+      ],
+      "signature_abilities": [
+        "multi_size_jutsu",
+        "butterfly_mode"
+      ],
+      "sensitive_secrets": [
+        "三色丸代价",
+        "蝶化成长"
+      ],
+      "continuity_risks": [
+        "秋道秘药和蝶化必须记录身体代价。"
+      ],
+      "canon_anchor_ids": [
+        "canon_005_sasuke_retrieval",
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "inuzuka_kiba",
+      "name_zh": "犬冢牙",
+      "aliases": [
+        "牙"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_8",
+        "inuzuka_clan"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "tracker",
+        "inuzuka_clan_member"
+      ],
+      "signature_abilities": [
+        "fang_over_fang",
+        "man_beast_clone"
+      ],
+      "sensitive_secrets": [
+        "追踪气味情报"
+      ],
+      "continuity_risks": [
+        "牙与赤丸是组合战力，赤丸状态也会影响战斗。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_005_sasuke_retrieval"
+      ]
+    },
+    {
+      "id": "aburame_shino",
+      "name_zh": "油女志乃",
+      "aliases": [
+        "志乃"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_8",
+        "aburame_clan"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "insect_user",
+        "tracker"
+      ],
+      "signature_abilities": [
+        "parasitic_insects",
+        "insect_tracking"
+      ],
+      "sensitive_secrets": [
+        "虫群侦查信息"
+      ],
+      "continuity_risks": [
+        "寄坏虫适合侦查和消耗，容易破坏潜入悬念，需限制范围和信息粒度。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam"
+      ]
+    },
+    {
+      "id": "tenten",
+      "name_zh": "天天",
+      "aliases": [
+        "天天"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_guy"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "weapon_specialist"
+      ],
+      "signature_abilities": [
+        "weapon_summoning_scrolls"
+      ],
+      "sensitive_secrets": [
+        "忍具库存"
+      ],
+      "continuity_risks": [
+        "卷轴忍具不是无限仓库，特殊忍具必须记录来源和库存。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_008_kazekage_rescue"
+      ]
+    },
+    {
+      "id": "rin",
+      "name_zh": "野原琳",
+      "aliases": [
+        "琳"
+      ],
+      "category": "canon_historical",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_minato"
+      ],
+      "life_status_canon_end": "dead_before_main_story",
+      "roles": [
+        "medical_ninja",
+        "obito_trauma_trigger",
+        "kakashi_trauma_trigger"
+      ],
+      "signature_abilities": [
+        "medical_ninjutsu"
+      ],
+      "sensitive_secrets": [
+        "三尾事件",
+        "带土黑化根因"
+      ],
+      "continuity_risks": [
+        "琳若存活，带土黑化和九尾之乱因果会彻底改写。"
+      ],
+      "canon_anchor_ids": [
+        "canon_006_kakashi_gaiden"
+      ]
+    },
+    {
+      "id": "uchiha_shisui",
+      "name_zh": "宇智波止水",
+      "aliases": [
+        "止水",
+        "瞬身止水"
+      ],
+      "category": "canon_historical",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "uchiha_clan",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "dead_before_main_story",
+      "roles": [
+        "mangekyo_user",
+        "itachi_friend"
+      ],
+      "signature_abilities": [
+        "kotoamatsukami",
+        "body_flicker"
+      ],
+      "sensitive_secrets": [
+        "别天神眼睛去向",
+        "宇智波政变前夜"
+      ],
+      "continuity_risks": [
+        "止水存活会强烈改变宇智波灭族和团藏线。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "a_fourth_raikage",
+      "name_zh": "四代雷影艾",
+      "aliases": [
+        "艾",
+        "四代雷影"
+      ],
+      "category": "canon_kage",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "kumogakure",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "raikage",
+        "allied_forces_commander",
+        "killer_bee_brother"
+      ],
+      "signature_abilities": [
+        "lightning_release_chakra_mode",
+        "lariat"
+      ],
+      "sensitive_secrets": [
+        "奇拉比安全",
+        "五影会谈决策"
+      ],
+      "continuity_risks": [
+        "奇拉比被捕或失踪会让雷影强硬推动国际危机。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit",
+        "canon_014_war_opening"
+      ]
+    },
+    {
+      "id": "onoki",
+      "name_zh": "大野木",
+      "aliases": [
+        "三代土影"
+      ],
+      "category": "canon_kage",
+      "home_village": "iwagakure",
+      "affiliations": [
+        "iwagakure",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "tsuchikage",
+        "particle_style_user"
+      ],
+      "signature_abilities": [
+        "particle_style",
+        "earth_release",
+        "flight"
+      ],
+      "sensitive_secrets": [
+        "岩隐战争旧怨",
+        "雇佣晓历史"
+      ],
+      "continuity_risks": [
+        "尘遁是高杀伤血继淘汰，战斗中不能随便让普通防御硬抗。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit",
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "terumi_mei",
+      "name_zh": "照美冥",
+      "aliases": [
+        "五代水影"
+      ],
+      "category": "canon_kage",
+      "home_village": "kirigakure",
+      "affiliations": [
+        "kirigakure",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "mizukage",
+        "bloodline_user"
+      ],
+      "signature_abilities": [
+        "lava_release",
+        "boil_release"
+      ],
+      "sensitive_secrets": [
+        "雾隐血雾改革"
+      ],
+      "continuity_risks": [
+        "雾隐改革背景会影响血继幸存者和叛忍回归线。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "fourth_kazekage",
+      "name_zh": "四代风影",
+      "aliases": [
+        "罗砂"
+      ],
+      "category": "canon_kage",
+      "home_village": "sunagakure",
+      "affiliations": [
+        "sunagakure"
+      ],
+      "life_status_canon_end": "dead_before_konoha_crush",
+      "roles": [
+        "kazekage",
+        "gaara_father"
+      ],
+      "signature_abilities": [
+        "gold_dust",
+        "magnet_release"
+      ],
+      "sensitive_secrets": [
+        "与大蛇丸交易",
+        "我爱罗童年创伤"
+      ],
+      "continuity_risks": [
+        "四代风影若未死，木叶崩溃计划和砂隐权力结构会改变。"
+      ],
+      "canon_anchor_ids": [
+        "canon_003_konoha_crush"
+      ]
+    },
+    {
+      "id": "kankuro",
+      "name_zh": "勘九郎",
+      "aliases": [
+        "勘九郎"
+      ],
+      "category": "canon_support",
+      "home_village": "sunagakure",
+      "affiliations": [
+        "sunagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "puppet_user",
+        "gaara_brother"
+      ],
+      "signature_abilities": [
+        "puppet_technique",
+        "poisoned_puppets"
+      ],
+      "sensitive_secrets": [
+        "砂隐傀儡库存"
+      ],
+      "continuity_risks": [
+        "傀儡损坏、毒药、维修材料必须记录。"
+      ],
+      "canon_anchor_ids": [
+        "canon_003_konoha_crush",
+        "canon_008_kazekage_rescue"
+      ]
+    },
+    {
+      "id": "temari",
+      "name_zh": "手鞠",
+      "aliases": [
+        "手鞠"
+      ],
+      "category": "canon_support",
+      "home_village": "sunagakure",
+      "affiliations": [
+        "sunagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "wind_release_user",
+        "gaara_sister",
+        "diplomatic_bridge"
+      ],
+      "signature_abilities": [
+        "giant_fan_wind_release"
+      ],
+      "sensitive_secrets": [
+        "砂隐与木叶同盟",
+        "鹿丸关系线"
+      ],
+      "continuity_risks": [
+        "手鞠常承担砂隐外交桥梁，砂木关系变化会影响她的出场逻辑。"
+      ],
+      "canon_anchor_ids": [
+        "canon_003_konoha_crush",
+        "canon_005_sasuke_retrieval"
+      ]
+    },
+    {
+      "id": "karin",
+      "name_zh": "香燐",
+      "aliases": [
+        "香燐"
+      ],
+      "category": "canon_support",
+      "home_village": "kusagakure_or_unknown",
+      "affiliations": [
+        "orochimaru_camp",
+        "team_hebi",
+        "team_taka"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "sensor",
+        "uzumaki_descendant",
+        "sasuke_teammate"
+      ],
+      "signature_abilities": [
+        "chakra_sensing",
+        "healing_bite",
+        "uzumaki_chains_late"
+      ],
+      "sensitive_secrets": [
+        "大蛇丸实验据点",
+        "佐助鹰小队行动"
+      ],
+      "continuity_risks": [
+        "香燐的感知能力会影响潜入和追踪悬念。"
+      ],
+      "canon_anchor_ids": [
+        "canon_011_jiraiya_pain_sasuke_itachi",
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "jugo",
+      "name_zh": "重吾",
+      "aliases": [
+        "重吾"
+      ],
+      "category": "canon_support",
+      "home_village": "unknown",
+      "affiliations": [
+        "orochimaru_camp",
+        "team_hebi",
+        "team_taka"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "sage_transformation_source",
+        "sasuke_teammate"
+      ],
+      "signature_abilities": [
+        "sage_transformation",
+        "body_modification"
+      ],
+      "sensitive_secrets": [
+        "咒印源流",
+        "自然能量暴走"
+      ],
+      "continuity_risks": [
+        "重吾暴走和理智切换必须分状态记录。"
+      ],
+      "canon_anchor_ids": [
+        "canon_011_jiraiya_pain_sasuke_itachi"
+      ]
+    },
+    {
+      "id": "zetsu",
+      "name_zh": "绝",
+      "aliases": [
+        "绝",
+        "白绝/黑绝复合体"
+      ],
+      "category": "canon_antagonist",
+      "home_village": "none",
+      "affiliations": [
+        "akatsuki",
+        "kaguya_plan"
+      ],
+      "life_status_canon_end": "split_or_resolved_after_war",
+      "roles": [
+        "akatsuki_member",
+        "spy",
+        "war_mass_body_source"
+      ],
+      "signature_abilities": [
+        "mayfly",
+        "spore_technique",
+        "body_merging"
+      ],
+      "sensitive_secrets": [
+        "黑绝真实身份",
+        "白绝军团来源"
+      ],
+      "continuity_risks": [
+        "白绝和黑绝功能不同，必要时应拆成独立状态。"
+      ],
+      "canon_anchor_ids": [
+        "canon_014_war_opening",
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "yahiko",
+      "name_zh": "弥彦",
+      "aliases": [
+        "弥彦"
+      ],
+      "category": "canon_historical",
+      "home_village": "amegakure",
+      "affiliations": [
+        "akatsuki_original",
+        "ame_orphans"
+      ],
+      "life_status_canon_end": "dead_before_main_story",
+      "roles": [
+        "akatsuki_founder",
+        "pain_deva_body_source"
+      ],
+      "signature_abilities": [
+        "water_release"
+      ],
+      "sensitive_secrets": [
+        "晓创立初心",
+        "长门黑化触发"
+      ],
+      "continuity_risks": [
+        "弥彦存活会重写长门、佩恩和晓组织目标。"
+      ],
+      "canon_anchor_ids": [
+        "canon_011_jiraiya_pain_sasuke_itachi"
+      ]
+    },
+    {
+      "id": "haku",
+      "name_zh": "白",
+      "aliases": [
+        "白"
+      ],
+      "category": "canon_support",
+      "home_village": "kirigakure_region",
+      "affiliations": [
+        "zabuza_partner"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "ice_release_user",
+        "zabuza_protege"
+      ],
+      "signature_abilities": [
+        "ice_release_crystal_mirrors",
+        "senbon_precision"
+      ],
+      "sensitive_secrets": [
+        "雾隐血继清洗"
+      ],
+      "continuity_risks": [
+        "白若存活，会扩展冰遁、雾隐和再不斩救赎线。"
+      ],
+      "canon_anchor_ids": [
+        "canon_001_land_of_waves"
+      ]
+    },
+    {
+      "id": "kimimaro",
+      "name_zh": "君麻吕",
+      "aliases": [
+        "君麻吕"
+      ],
+      "category": "canon_antagonist",
+      "home_village": "kaguya_clan_historical",
+      "affiliations": [
+        "orochimaru_camp",
+        "sound_five"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "kekkei_genkai_user",
+        "orochimaru_vessel_candidate"
+      ],
+      "signature_abilities": [
+        "shikotsumyaku",
+        "curse_mark"
+      ],
+      "sensitive_secrets": [
+        "辉夜一族血继",
+        "大蛇丸容器计划"
+      ],
+      "continuity_risks": [
+        "君麻吕若健康存活，佐助成为容器的必要性会变化。"
+      ],
+      "canon_anchor_ids": [
+        "canon_005_sasuke_retrieval"
+      ]
+    },
+    {
+      "id": "shizune",
+      "name_zh": "静音",
+      "aliases": [
+        "静音"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "tsunade_retinue",
+        "konohagakure_medical_corps"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "medical_ninja",
+        "tsunade_aide"
+      ],
+      "signature_abilities": [
+        "medical_ninjutsu",
+        "poison_senbon"
+      ],
+      "sensitive_secrets": [
+        "纲手状态",
+        "木叶医疗资料"
+      ],
+      "continuity_risks": [
+        "静音掌握医疗和行政信息，木叶危机时不能忽略她的信息作用。"
+      ],
+      "canon_anchor_ids": [
+        "canon_004_search_tsunade",
+        "canon_012_pain_assault"
+      ]
+    },
+    {
+      "id": "iruka",
+      "name_zh": "海野伊鲁卡",
+      "aliases": [
+        "伊鲁卡"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "konohagakure_academy"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "academy_teacher",
+        "naruto_first_recognizer"
+      ],
+      "signature_abilities": [
+        "basic_ninjutsu",
+        "teaching"
+      ],
+      "sensitive_secrets": [
+        "鸣人早期孤独",
+        "九尾袭击遗孤创伤"
+      ],
+      "continuity_risks": [
+        "伊鲁卡认可鸣人是第一章核心情感锚点，改写会影响鸣人早期心理。"
+      ],
+      "canon_anchor_ids": [
+        "canon_001_land_of_waves"
+      ]
+    },
+    {
+      "id": "mitarashi_anko",
+      "name_zh": "御手洗红豆",
+      "aliases": [
+        "红豆"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "examiner",
+        "orochimaru_former_student"
+      ],
+      "signature_abilities": [
+        "snake_ninjutsu",
+        "curse_mark_survivor"
+      ],
+      "sensitive_secrets": [
+        "大蛇丸旧实验",
+        "咒印情报"
+      ],
+      "continuity_risks": [
+        "红豆能提供大蛇丸与咒印情报，不能在中忍考试线被完全忽略。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam"
+      ]
+    },
+    {
+      "id": "yakushi_nono",
+      "name_zh": "药师野乃宇",
+      "aliases": [
+        "野乃宇"
+      ],
+      "category": "canon_historical",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "orphanage",
+        "root_historical"
+      ],
+      "life_status_canon_end": "dead_before_war_reveal",
+      "roles": [
+        "kabuto_mother_figure",
+        "spy"
+      ],
+      "signature_abilities": [
+        "medical_ninjutsu",
+        "espionage"
+      ],
+      "sensitive_secrets": [
+        "兜身份崩坏根因",
+        "根部操控"
+      ],
+      "continuity_risks": [
+        "野乃宇线影响兜的自我认同和战争阶段选择。"
+      ],
+      "canon_anchor_ids": [
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "nara_shikaku",
+      "name_zh": "奈良鹿久",
+      "aliases": [
+        "鹿久"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "nara_clan",
+        "konohagakure",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "dead_during_fourth_war",
+      "roles": [
+        "strategist",
+        "shikamaru_father",
+        "allied_forces_chief_strategist"
+      ],
+      "signature_abilities": [
+        "shadow_possession_jutsu",
+        "strategic_command"
+      ],
+      "sensitive_secrets": [
+        "联军作战情报",
+        "猪鹿蝶指挥链"
+      ],
+      "continuity_risks": [
+        "鹿久死亡会影响联军指挥和鹿丸战后成长；若存活需调整战争损失与指挥链。"
+      ],
+      "canon_anchor_ids": [
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "otsutsuki_hagoromo",
+      "name_zh": "大筒木羽衣",
+      "aliases": [
+        "六道仙人"
+      ],
+      "category": "canon_mythic",
+      "home_village": "none",
+      "affiliations": [
+        "otsutsuki_lineage",
+        "ninshu_origin"
+      ],
+      "life_status_canon_end": "spiritual_legacy",
+      "roles": [
+        "sage_of_six_paths",
+        "ninshu_founder",
+        "indra_asura_father"
+      ],
+      "signature_abilities": [
+        "six_paths_power",
+        "ninshu",
+        "ten_tails_sealing"
+      ],
+      "sensitive_secrets": [
+        "因陀罗/阿修罗转生",
+        "辉夜与神树真相",
+        "六道力量授予"
+      ],
+      "continuity_risks": [
+        "羽衣代表忍宗和精神连接，不应写成普通忍村老师或单纯外挂发放者。"
+      ],
+      "canon_anchor_ids": [
+        "pre_001_divine_tree_mythic_age",
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "otsutsuki_hamura",
+      "name_zh": "大筒木羽村",
+      "aliases": [
+        "羽村"
+      ],
+      "category": "canon_mythic",
+      "home_village": "moon_lineage",
+      "affiliations": [
+        "otsutsuki_lineage",
+        "moon_lineage"
+      ],
+      "life_status_canon_end": "dead_historical_or_spiritual_legacy",
+      "roles": [
+        "kaguya_son",
+        "moon_lineage_origin"
+      ],
+      "signature_abilities": [
+        "six_paths_related_power",
+        "byakugan_lineage_origin"
+      ],
+      "sensitive_secrets": [
+        "月球一脉",
+        "辉夜封印遗产"
+      ],
+      "continuity_risks": [
+        "羽村线牵涉月球一脉和大筒木遗产，提前展开会扩张世界观层级。"
+      ],
+      "canon_anchor_ids": [
+        "pre_001_divine_tree_mythic_age"
+      ]
+    },
+    {
+      "id": "otsutsuki_indra",
+      "name_zh": "因陀罗",
+      "aliases": [
+        "因陀罗"
+      ],
+      "category": "canon_mythic",
+      "home_village": "none",
+      "affiliations": [
+        "otsutsuki_lineage",
+        "uchiha_spiritual_origin"
+      ],
+      "life_status_canon_end": "dead_reincarnation_cycle",
+      "roles": [
+        "hagoromo_son",
+        "indra_reincarnation_origin",
+        "uchiha_spiritual_ancestor"
+      ],
+      "signature_abilities": [
+        "sharingan_origin_related",
+        "genius_chakra_control"
+      ],
+      "sensitive_secrets": [
+        "转生循环",
+        "黑绝诱导"
+      ],
+      "continuity_risks": [
+        "因陀罗路线是天赋、效率、力量、孤高，不要简化成天生邪恶。"
+      ],
+      "canon_anchor_ids": [
+        "pre_001_divine_tree_mythic_age"
+      ]
+    },
+    {
+      "id": "otsutsuki_asura",
+      "name_zh": "阿修罗",
+      "aliases": [
+        "阿修罗"
+      ],
+      "category": "canon_mythic",
+      "home_village": "none",
+      "affiliations": [
+        "otsutsuki_lineage",
+        "senju_uzumaki_spiritual_origin"
+      ],
+      "life_status_canon_end": "dead_reincarnation_cycle",
+      "roles": [
+        "hagoromo_son",
+        "asura_reincarnation_origin",
+        "naruto_spiritual_predecessor"
+      ],
+      "signature_abilities": [
+        "cooperation_growth",
+        "six_paths_inherited_will"
+      ],
+      "sensitive_secrets": [
+        "转生循环",
+        "鸣人精神源流"
+      ],
+      "continuity_risks": [
+        "阿修罗路线是后天成长和羁绊，不等于无脑嘴遁或主角光环。"
+      ],
+      "canon_anchor_ids": [
+        "pre_001_divine_tree_mythic_age"
+      ]
+    },
+    {
+      "id": "uchiha_izuna",
+      "name_zh": "宇智波泉奈",
+      "aliases": [
+        "泉奈"
+      ],
+      "category": "canon_historical",
+      "home_village": "pre_konoha_uchiha",
+      "affiliations": [
+        "uchiha_clan"
+      ],
+      "life_status_canon_end": "dead_before_konoha_foundation",
+      "roles": [
+        "madara_brother",
+        "warring_states_uchiha"
+      ],
+      "signature_abilities": [
+        "sharingan",
+        "mangekyo_sharingan"
+      ],
+      "sensitive_secrets": [
+        "斑的创伤",
+        "宇智波与千手血仇"
+      ],
+      "continuity_risks": [
+        "泉奈生死会影响斑对千手与木叶的信任底线。"
+      ],
+      "canon_anchor_ids": [
+        "pre_002_warring_states_child_soldiers",
+        "pre_003_konoha_foundation_fracture"
+      ]
+    },
+    {
+      "id": "hanzo",
+      "name_zh": "山椒鱼半藏",
+      "aliases": [
+        "半藏",
+        "半神半藏"
+      ],
+      "category": "canon_historical",
+      "home_village": "amegakure",
+      "affiliations": [
+        "amegakure"
+      ],
+      "life_status_canon_end": "dead_before_pain_assault",
+      "roles": [
+        "amegakure_leader",
+        "sannin_namer",
+        "yahiko_akatsuki_antagonist"
+      ],
+      "signature_abilities": [
+        "poison_salamander",
+        "high_level_taijutsu_ninjutsu"
+      ],
+      "sensitive_secrets": [
+        "三忍称号来源",
+        "团藏误导",
+        "弥彦死亡局"
+      ],
+      "continuity_risks": [
+        "半藏若不与团藏联手压迫弥彦一派，晓极端化路径会改变。"
+      ],
+      "canon_anchor_ids": [
+        "pre_006_second_shinobi_war_ame_tragedy"
+      ]
+    },
+    {
+      "id": "kinkaku",
+      "name_zh": "金角",
+      "aliases": [
+        "金角"
+      ],
+      "category": "canon_historical",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "kinkaku_force",
+        "kumogakure"
+      ],
+      "life_status_canon_end": "dead_historical",
+      "roles": [
+        "kinkaku_force_leader",
+        "first_war_threat"
+      ],
+      "signature_abilities": [
+        "nine_tails_chakra_fragment",
+        "sage_tools"
+      ],
+      "sensitive_secrets": [
+        "扉间断后事件",
+        "云隐政变/袭击历史"
+      ],
+      "continuity_risks": [
+        "金角银角牵涉扉间死亡、云隐关系和六道忍具，改写会影响第一次大战史。"
+      ],
+      "canon_anchor_ids": [
+        "pre_004_first_shinobi_war"
+      ]
+    },
+    {
+      "id": "ginkaku",
+      "name_zh": "银角",
+      "aliases": [
+        "银角"
+      ],
+      "category": "canon_historical",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "kinkaku_force",
+        "kumogakure"
+      ],
+      "life_status_canon_end": "dead_historical",
+      "roles": [
+        "kinkaku_force_member",
+        "first_war_threat"
+      ],
+      "signature_abilities": [
+        "nine_tails_chakra_fragment",
+        "sage_tools"
+      ],
+      "sensitive_secrets": [
+        "扉间断后事件",
+        "六道忍具"
+      ],
+      "continuity_risks": [
+        "银角与金角通常作为组合历史变量处理，不能拆掉一个却不重算另一个。"
+      ],
+      "canon_anchor_ids": [
+        "pre_004_first_shinobi_war"
+      ]
+    },
+    {
+      "id": "chiyo",
+      "name_zh": "千代",
+      "aliases": [
+        "千代婆婆"
+      ],
+      "category": "canon_support",
+      "home_village": "sunagakure",
+      "affiliations": [
+        "sunagakure",
+        "puppet_corps"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "elder",
+        "puppet_master",
+        "medical_knowledge_holder"
+      ],
+      "signature_abilities": [
+        "puppet_technique",
+        "life_transfer_jutsu",
+        "poison_and_antidote"
+      ],
+      "sensitive_secrets": [
+        "一尾抽离救援代价",
+        "砂隐傀儡与毒术经验"
+      ],
+      "continuity_risks": [
+        "千代复活我爱罗需要生命交换，不能无代价治疗。",
+        "她的牺牲影响砂隐对鸣人与木叶的观感。"
+      ],
+      "canon_anchor_ids": [
+        "canon_008_kazekage_rescue"
+      ]
+    },
+    {
+      "id": "mifune",
+      "name_zh": "三船",
+      "aliases": [
+        "铁之国大将",
+        "武士三船"
+      ],
+      "category": "canon_support",
+      "home_village": "land_of_iron",
+      "affiliations": [
+        "land_of_iron_samurai",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "samurai_general",
+        "summit_moderator"
+      ],
+      "signature_abilities": [
+        "iaido",
+        "samurai_chakra_blade"
+      ],
+      "sensitive_secrets": [
+        "五影会谈中立地位",
+        "半藏旧战因缘"
+      ],
+      "continuity_risks": [
+        "铁之国是武士政治空间，不应完全按忍村任务体系处理。",
+        "五影会谈地点和中立性变化会牵动国际政治。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit",
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "gamabunta",
+      "name_zh": "蛤蟆文太",
+      "aliases": [
+        "文太",
+        "蛤蟆老大"
+      ],
+      "category": "summon",
+      "home_village": "mount_myoboku",
+      "affiliations": [
+        "mount_myoboku",
+        "jiraiya_contract_line",
+        "uzumaki_naruto_contract_line"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "boss_summon",
+        "battlefield_support"
+      ],
+      "signature_abilities": [
+        "toad_blade",
+        "oil_combo",
+        "large_scale_summon_combat"
+      ],
+      "sensitive_secrets": [
+        "妙木山契约关系",
+        "鸣人通灵成长节点"
+      ],
+      "continuity_risks": [
+        "大型通灵需要查克拉和契约资格，不能随叫随到当坐骑。",
+        "文太性格强势，召唤者必须压得住场。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_003_konoha_crush"
+      ]
+    },
+    {
+      "id": "fukasaku",
+      "name_zh": "深作",
+      "aliases": [
+        "深作仙人",
+        "蛤蟆仙人"
+      ],
+      "category": "summon",
+      "home_village": "mount_myoboku",
+      "affiliations": [
+        "mount_myoboku"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "sage_teacher",
+        "battle_support"
+      ],
+      "signature_abilities": [
+        "sage_mode_training",
+        "frog_kata_support",
+        "toad_genjutsu_combo"
+      ],
+      "sensitive_secrets": [
+        "仙术修炼方法",
+        "佩恩情报传递"
+      ],
+      "continuity_risks": [
+        "仙术训练需要地点、时间、静止条件和自然能量风险。"
+      ],
+      "canon_anchor_ids": [
+        "canon_012_pain_assault"
+      ]
+    },
+    {
+      "id": "shima",
+      "name_zh": "志麻",
+      "aliases": [
+        "志麻仙人",
+        "蛤蟆婆婆"
+      ],
+      "category": "summon",
+      "home_village": "mount_myoboku",
+      "affiliations": [
+        "mount_myoboku"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "sage_support",
+        "toad_genjutsu_user"
+      ],
+      "signature_abilities": [
+        "toad_genjutsu_combo",
+        "summon_support"
+      ],
+      "sensitive_secrets": [
+        "妙木山仙术体系"
+      ],
+      "continuity_risks": [
+        "蛤蟆临唱等组合技需要配合与准备，不是瞬发控制。"
+      ],
+      "canon_anchor_ids": [
+        "canon_011_jiraiya_pain_sasuke_itachi",
+        "canon_012_pain_assault"
+      ]
+    },
+    {
+      "id": "katsuyu",
+      "name_zh": "蛞蝓",
+      "aliases": [
+        "活蝓",
+        "蛞蝓大人"
+      ],
+      "category": "summon",
+      "home_village": "shikkotsu_forest",
+      "affiliations": [
+        "shikkotsu_forest",
+        "tsunade_contract_line",
+        "haruno_sakura_contract_line"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "medical_summon",
+        "wide_area_healing_support"
+      ],
+      "signature_abilities": [
+        "split_body",
+        "chakra_transmission",
+        "acid"
+      ],
+      "sensitive_secrets": [
+        "百豪/医疗查克拉联动"
+      ],
+      "continuity_risks": [
+        "大范围治疗依赖召唤者查克拉储备，不能无限奶全场。"
+      ],
+      "canon_anchor_ids": [
+        "canon_012_pain_assault",
+        "canon_016_war_finale_kaguya_sasuke"
+      ]
+    },
+    {
+      "id": "manda",
+      "name_zh": "万蛇",
+      "aliases": [
+        "大蛇通灵兽"
+      ],
+      "category": "summon",
+      "home_village": "ryuchi_cave_or_snake_contract",
+      "affiliations": [
+        "orochimaru_contract_line"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "boss_summon",
+        "dangerous_contract_beast"
+      ],
+      "signature_abilities": [
+        "giant_snake_combat",
+        "high_mobility"
+      ],
+      "sensitive_secrets": [
+        "大蛇丸通灵契约代价"
+      ],
+      "continuity_risks": [
+        "万蛇性格凶暴且索要祭品，不能写成忠犬式通灵兽。"
+      ],
+      "canon_anchor_ids": [
+        "canon_004_search_tsunade",
+        "canon_011_jiraiya_pain_sasuke_itachi"
+      ]
+    },
+    {
+      "id": "pakkun",
+      "name_zh": "帕克",
+      "aliases": [
+        "忍犬帕克"
+      ],
+      "category": "summon",
+      "home_village": "konohagakure_contract",
+      "affiliations": [
+        "hatake_kakashi_contract_line"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "tracking_summon",
+        "intel_support"
+      ],
+      "signature_abilities": [
+        "scent_tracking",
+        "message_delivery"
+      ],
+      "sensitive_secrets": [
+        "卡卡西追踪任务细节"
+      ],
+      "continuity_risks": [
+        "忍犬追踪可破解搜索难题，使用前要考虑气味、地形和时间。"
+      ],
+      "canon_anchor_ids": [
+        "canon_005_sasuke_retrieval"
+      ]
+    },
+    {
+      "id": "yuhi_kurenai",
+      "name_zh": "夕日红",
+      "aliases": [
+        "红老师",
+        "夕日老师"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "team_8",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "jonin_sensei",
+        "genjutsu_specialist"
+      ],
+      "signature_abilities": [
+        "genjutsu_tree_binding"
+      ],
+      "sensitive_secrets": [
+        "阿斯玛关系",
+        "第八班成长节奏"
+      ],
+      "continuity_risks": [
+        "幻术专精不等于能压制万花筒级瞳术。",
+        "怀孕/家庭线会影响疾风传后续出场。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_010_hidan_kakuzu"
+      ]
+    },
+    {
+      "id": "hyuga_hiashi",
+      "name_zh": "日向日足",
+      "aliases": [
+        "日足",
+        "日向族长"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "hyuga_clan",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "clan_head",
+        "byakugan_user"
+      ],
+      "signature_abilities": [
+        "byakugan",
+        "gentle_fist"
+      ],
+      "sensitive_secrets": [
+        "日向宗分家制度",
+        "云隐绑架事件余波"
+      ],
+      "continuity_risks": [
+        "日向政治不是单个父亲态度问题，宗家/分家制度要作为压力源。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam"
+      ]
+    },
+    {
+      "id": "hyuga_hanabi",
+      "name_zh": "日向花火",
+      "aliases": [
+        "花火"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "hyuga_clan",
+        "konohagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "hyuga_heir_candidate",
+        "byakugan_user"
+      ],
+      "signature_abilities": [
+        "byakugan",
+        "gentle_fist"
+      ],
+      "sensitive_secrets": [
+        "日向继承压力"
+      ],
+      "continuity_risks": [
+        "花火年龄和实力阶段必须匹配时间线。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam"
+      ]
+    },
+    {
+      "id": "sarutobi_konohamaru",
+      "name_zh": "猿飞木叶丸",
+      "aliases": [
+        "木叶丸"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "konohagakure",
+        "konohamaru_corps"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "academy_student_then_shinobi",
+        "naruto_admirer"
+      ],
+      "signature_abilities": [
+        "rasengan",
+        "shadow_clone_jutsu"
+      ],
+      "sensitive_secrets": [
+        "三代火影孙子身份"
+      ],
+      "continuity_risks": [
+        "木叶丸掌握螺旋丸有后续训练因果，不能在过早时间线提前成熟。"
+      ],
+      "canon_anchor_ids": [
+        "canon_012_pain_assault"
+      ]
+    },
+    {
+      "id": "ebisu",
+      "name_zh": "惠比寿",
+      "aliases": [
+        "特别上忍惠比寿"
+      ],
+      "category": "canon_support",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "konohagakure",
+        "konohamaru_corps"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "tutor",
+        "special_jonin"
+      ],
+      "signature_abilities": [
+        "basic_training",
+        "chakra_control_instruction"
+      ],
+      "sensitive_secrets": [
+        "木叶丸教学安排"
+      ],
+      "continuity_risks": [
+        "惠比寿适合教学/保护线，不宜突然写成影级战斗力。"
+      ],
+      "canon_anchor_ids": [
+        "canon_000_kyuubi_attack_backstory",
+        "canon_012_pain_assault"
+      ]
+    },
+    {
+      "id": "mizuki",
+      "name_zh": "水木",
+      "aliases": [
+        "水木老师"
+      ],
+      "category": "canon_minor",
+      "home_village": "konohagakure",
+      "affiliations": [
+        "konohagakure"
+      ],
+      "life_status_canon_end": "incarcerated_or_defeated",
+      "roles": [
+        "academy_teacher",
+        "early_antagonist"
+      ],
+      "signature_abilities": [
+        "shurikenjutsu",
+        "manipulation"
+      ],
+      "sensitive_secrets": [
+        "封印之书事件"
+      ],
+      "continuity_risks": [
+        "水木是鸣人被伊鲁卡认可的触发器之一，替换他需保留护额/封印之书因果。"
+      ],
+      "canon_anchor_ids": [
+        "canon_001_land_of_waves"
+      ]
+    },
+    {
+      "id": "baki",
+      "name_zh": "马基",
+      "aliases": [
+        "砂隐马基"
+      ],
+      "category": "canon_support",
+      "home_village": "sunagakure",
+      "affiliations": [
+        "sunagakure",
+        "team_baki"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "jonin_sensei",
+        "sand_intel_handler"
+      ],
+      "signature_abilities": [
+        "wind_blade"
+      ],
+      "sensitive_secrets": [
+        "毁灭木叶行动前置合作"
+      ],
+      "continuity_risks": [
+        "马基涉及砂隐与音隐合谋线，不能只作为普通带队老师。"
+      ],
+      "canon_anchor_ids": [
+        "canon_002_chunin_exam",
+        "canon_003_konoha_crush"
+      ]
+    },
+    {
+      "id": "darui",
+      "name_zh": "达鲁伊",
+      "aliases": [
+        "达鲁伊"
+      ],
+      "category": "canon_support",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "kumogakure",
+        "shinobi_allied_forces"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "raikage_guard",
+        "war_division_commander"
+      ],
+      "signature_abilities": [
+        "black_lightning",
+        "storm_release"
+      ],
+      "sensitive_secrets": [
+        "云隐高层部署"
+      ],
+      "continuity_risks": [
+        "岚遁/黑雷属于高阶能力，出场要匹配云隐精英身份。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit",
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "samui",
+      "name_zh": "萨姆伊",
+      "aliases": [
+        "萨姆依"
+      ],
+      "category": "canon_support",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "team_samui",
+        "kumogakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "cloud_jonin",
+        "intel_messenger"
+      ],
+      "signature_abilities": [
+        "kenjutsu",
+        "team_command"
+      ],
+      "sensitive_secrets": [
+        "佐助袭击奇拉比后的云隐外交压力"
+      ],
+      "continuity_risks": [
+        "云隐小队来木叶会触发外交程序，不应像普通路人队一样处理。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "karui",
+      "name_zh": "卡鲁伊",
+      "aliases": [
+        "卡鲁依"
+      ],
+      "category": "canon_support",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "team_samui",
+        "kumogakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "cloud_chunin_or_jonin",
+        "killer_bee_rescue_related"
+      ],
+      "signature_abilities": [
+        "kenjutsu"
+      ],
+      "sensitive_secrets": [
+        "奇拉比失踪后的情绪压力"
+      ],
+      "continuity_risks": [
+        "卡鲁伊对鸣人的冲突源于云隐情报和奇拉比事件，不能随便改成无因挑衅。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "omoi",
+      "name_zh": "奥摩伊",
+      "aliases": [
+        "奥莫伊"
+      ],
+      "category": "canon_support",
+      "home_village": "kumogakure",
+      "affiliations": [
+        "team_samui",
+        "kumogakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "cloud_shinobi",
+        "overthinking_teammate"
+      ],
+      "signature_abilities": [
+        "kenjutsu",
+        "lightning_release"
+      ],
+      "sensitive_secrets": [
+        "奇拉比失踪后的云隐任务"
+      ],
+      "continuity_risks": [
+        "奥摩伊适合紧张吐槽和战术焦虑，但不能变成纯搞笑角色。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "ao",
+      "name_zh": "青",
+      "aliases": [
+        "雾隐青"
+      ],
+      "category": "canon_support",
+      "home_village": "kirigakure",
+      "affiliations": [
+        "kirigakure",
+        "mizukage_guard"
+      ],
+      "life_status_canon_end": "alive_or_later_boruto_state",
+      "roles": [
+        "sensor",
+        "byakugan_transplant_user"
+      ],
+      "signature_abilities": [
+        "sensor_ninjutsu",
+        "byakugan_transplant"
+      ],
+      "sensitive_secrets": [
+        "移植白眼来源",
+        "五影会谈感知情报"
+      ],
+      "continuity_risks": [
+        "青的白眼是移植而非日向血统，使用和政治含义都要记录。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "chojuro",
+      "name_zh": "长十郎",
+      "aliases": [
+        "长十郎"
+      ],
+      "category": "canon_support",
+      "home_village": "kirigakure",
+      "affiliations": [
+        "kirigakure",
+        "seven_ninja_swordsmen"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "mizukage_guard",
+        "swordsman"
+      ],
+      "signature_abilities": [
+        "hiramekarei"
+      ],
+      "sensitive_secrets": [
+        "雾隐忍刀继承"
+      ],
+      "continuity_risks": [
+        "长十郎早期性格怯弱但战斗能力强，不能只写成软弱背景板。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "kurotsuchi",
+      "name_zh": "黑土",
+      "aliases": [
+        "黑土"
+      ],
+      "category": "canon_support",
+      "home_village": "iwagakure",
+      "affiliations": [
+        "iwagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "tsuchikage_guard",
+        "future_tsuchikage"
+      ],
+      "signature_abilities": [
+        "lava_release",
+        "earth_release"
+      ],
+      "sensitive_secrets": [
+        "岩隐高层继承线"
+      ],
+      "continuity_risks": [
+        "黑土关联岩隐继任政治，不能只作为护卫消耗。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit",
+        "canon_015_war_escalation"
+      ]
+    },
+    {
+      "id": "akatsuchi",
+      "name_zh": "赤土",
+      "aliases": [
+        "赤土"
+      ],
+      "category": "canon_support",
+      "home_village": "iwagakure",
+      "affiliations": [
+        "iwagakure"
+      ],
+      "life_status_canon_end": "alive",
+      "roles": [
+        "tsuchikage_guard",
+        "earth_release_specialist"
+      ],
+      "signature_abilities": [
+        "earth_release_golem"
+      ],
+      "sensitive_secrets": [
+        "岩隐护卫部署"
+      ],
+      "continuity_risks": [
+        "赤土适合承担护卫与重装防线，不应无故离开土影保护职责。"
+      ],
+      "canon_anchor_ids": [
+        "canon_013_five_kage_summit"
+      ]
+    },
+    {
+      "id": "tayuya",
+      "name_zh": "多由也",
+      "aliases": [
+        "多由也"
+      ],
+      "category": "canon_minor_antagonist",
+      "home_village": "otogakure",
+      "affiliations": [
+        "sound_four",
+        "orochimaru_camp"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "sound_four_member",
+        "genjutsu_user"
+      ],
+      "signature_abilities": [
+        "demon_flute_genjutsu",
+        "curse_mark"
+      ],
+      "sensitive_secrets": [
+        "音忍四人众护送佐助任务"
+      ],
+      "continuity_risks": [
+        "音忍四人众死亡/存活会直接改变佐助夺还战人员与伤亡。"
+      ],
+      "canon_anchor_ids": [
+        "canon_005_sasuke_retrieval"
+      ]
+    },
+    {
+      "id": "kidomaru",
+      "name_zh": "鬼童丸",
+      "aliases": [
+        "鬼童丸"
+      ],
+      "category": "canon_minor_antagonist",
+      "home_village": "otogakure",
+      "affiliations": [
+        "sound_four",
+        "orochimaru_camp"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "sound_four_member",
+        "ranged_tactician"
+      ],
+      "signature_abilities": [
+        "spider_web_jutsu",
+        "curse_mark"
+      ],
+      "sensitive_secrets": [
+        "音忍四人众护送佐助任务"
+      ],
+      "continuity_risks": [
+        "鬼童丸对宁次成长节点关键，改写后要替代宁次的生死突破。"
+      ],
+      "canon_anchor_ids": [
+        "canon_005_sasuke_retrieval"
+      ]
+    },
+    {
+      "id": "jirobo",
+      "name_zh": "次郎坊",
+      "aliases": [
+        "次郎坊"
+      ],
+      "category": "canon_minor_antagonist",
+      "home_village": "otogakure",
+      "affiliations": [
+        "sound_four",
+        "orochimaru_camp"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "sound_four_member",
+        "strength_type"
+      ],
+      "signature_abilities": [
+        "earth_dome_prison",
+        "curse_mark"
+      ],
+      "sensitive_secrets": [
+        "音忍四人众护送佐助任务"
+      ],
+      "continuity_risks": [
+        "次郎坊对丁次成长和秋道秘药代价关键，不能随意移除。"
+      ],
+      "canon_anchor_ids": [
+        "canon_005_sasuke_retrieval"
+      ]
+    },
+    {
+      "id": "sakon_ukon",
+      "name_zh": "左近右近",
+      "aliases": [
+        "左近",
+        "右近"
+      ],
+      "category": "canon_minor_antagonist",
+      "home_village": "otogakure",
+      "affiliations": [
+        "sound_four",
+        "orochimaru_camp"
+      ],
+      "life_status_canon_end": "dead",
+      "roles": [
+        "sound_four_member",
+        "body_merge_user"
+      ],
+      "signature_abilities": [
+        "body_merge",
+        "curse_mark"
+      ],
+      "sensitive_secrets": [
+        "音忍四人众护送佐助任务"
+      ],
+      "continuity_risks": [
+        "左近右近与牙/赤丸战损、勘九郎救援强相关。"
+      ],
+      "canon_anchor_ids": [
+        "canon_005_sasuke_retrieval"
+      ]
+    }
+  ]
+}
+

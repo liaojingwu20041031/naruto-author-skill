@@ -1,0 +1,1568 @@
+{
+  "schema_version": "1.1",
+  "source": {
+    "reference_url": "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+    "retrieved_at": "2026-04-13",
+    "policy": "归纳摘要，不保存网页长段原文。",
+    "additional_reference_urls": [
+      "https://zh.wikipedia.org/zh-sg/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8"
+    ],
+    "last_enriched_at": "2026-04-14"
+  },
+  "cleaning_policy": {
+    "id_style": "lower_snake_case_ascii",
+    "removed_dirty_data": [
+      "无代价/无反制的外挂式能力",
+      "重复翻译名",
+      "把血继限界误标为普通可学忍术的记录"
+    ],
+    "power_rule": "高影响能力必须写 prerequisites、cost、limitations、counters、continuity_risk。"
+  },
+  "jutsus": [
+    {
+      "id": "transformation_jutsu",
+      "name_zh": "变身术",
+      "type": "ninjutsu_basic",
+      "rank": "E",
+      "nature": [],
+      "known_users": [
+        "shinobi_general"
+      ],
+      "prerequisites": [
+        "basic_chakra_control"
+      ],
+      "cost": "low",
+      "limitations": [
+        "持续维持需要查克拉控制",
+        "受惊或受击可能解除"
+      ],
+      "counters": [
+        "感知",
+        "白眼",
+        "经验识破"
+      ],
+      "continuity_risk": "不能写成无破绽易容神器。"
+    },
+    {
+      "id": "substitution_jutsu",
+      "name_zh": "替身术",
+      "type": "ninjutsu_basic",
+      "rank": "E",
+      "nature": [],
+      "known_users": [
+        "shinobi_general"
+      ],
+      "prerequisites": [
+        "prepared_replacement_object",
+        "timing"
+      ],
+      "cost": "low",
+      "limitations": [
+        "需要预判和替代物",
+        "不能无限规避高速致命攻击"
+      ],
+      "counters": [
+        "连续追击",
+        "范围攻击",
+        "感知锁定"
+      ],
+      "continuity_risk": "不要写成无条件瞬移。"
+    },
+    {
+      "id": "shadow_clone_jutsu",
+      "name_zh": "影分身之术",
+      "type": "ninjutsu",
+      "rank": "B",
+      "nature": [],
+      "known_users": [
+        "senju_tobirama",
+        "uzumaki_naruto",
+        "hatake_kakashi"
+      ],
+      "prerequisites": [
+        "large_enough_chakra_pool",
+        "forbidden_scroll_or_training"
+      ],
+      "cost": "chakra_split_evenly_between_clones",
+      "limitations": [
+        "分身受重击消散",
+        "记忆回流会造成精神疲劳",
+        "大量分身对普通忍者危险"
+      ],
+      "counters": [
+        "范围攻击",
+        "感知本体",
+        "消耗战"
+      ],
+      "continuity_risk": "鸣人大量使用来自查克拉量与九尾背景，普通角色不能同等滥用。"
+    },
+    {
+      "id": "rasengan",
+      "name_zh": "螺旋丸",
+      "type": "ninjutsu_shape_transformation",
+      "rank": "A",
+      "nature": [],
+      "known_users": [
+        "namikaze_minato",
+        "jiraiya",
+        "uzumaki_naruto",
+        "hatake_kakashi"
+      ],
+      "prerequisites": [
+        "high_chakra_shape_control",
+        "training_stages"
+      ],
+      "cost": "medium",
+      "limitations": [
+        "近身命中要求高",
+        "初学者常需分身辅助"
+      ],
+      "counters": [
+        "距离控制",
+        "高速闪避",
+        "防御忍术"
+      ],
+      "continuity_risk": "螺旋丸学习有明确门槛，不能突然掌握。"
+    },
+    {
+      "id": "rasenshuriken",
+      "name_zh": "风遁·螺旋手里剑",
+      "type": "ninjutsu_nature_and_shape",
+      "rank": "S",
+      "nature": [
+        "wind"
+      ],
+      "known_users": [
+        "uzumaki_naruto"
+      ],
+      "prerequisites": [
+        "rasengan",
+        "wind_nature_training",
+        "shadow_clone_accelerated_training"
+      ],
+      "cost": "very_high",
+      "limitations": [
+        "早期近身使用会反伤经络",
+        "需要仙术或后期形态降低风险"
+      ],
+      "counters": [
+        "高速闪避",
+        "提前打断",
+        "强防御"
+      ],
+      "continuity_risk": "这是鸣人阶段性成长成果，提前出现会严重推高战力。"
+    },
+    {
+      "id": "chidori",
+      "name_zh": "千鸟",
+      "type": "ninjutsu_nature_transformation",
+      "rank": "A",
+      "nature": [
+        "lightning"
+      ],
+      "known_users": [
+        "hatake_kakashi",
+        "uchiha_sasuke"
+      ],
+      "prerequisites": [
+        "lightning_nature",
+        "high_speed_charge",
+        "visual_tracking_preferred"
+      ],
+      "cost": "medium_high",
+      "limitations": [
+        "高速直线突刺容易被反击",
+        "写轮眼可降低视野死角风险"
+      ],
+      "counters": [
+        "预判",
+        "防御忍术",
+        "诱导撞击"
+      ],
+      "continuity_risk": "无雷遁基础或无训练角色不应随便掌握千鸟。"
+    },
+    {
+      "id": "sage_mode",
+      "name_zh": "仙人模式",
+      "type": "senjutsu_state",
+      "rank": "S",
+      "nature": [
+        "senjutsu"
+      ],
+      "known_users": [
+        "jiraiya",
+        "uzumaki_naruto",
+        "senju_hashirama",
+        "yakushi_kabuto"
+      ],
+      "prerequisites": [
+        "natural_energy_training",
+        "stillness_or_external_gathering_method",
+        "high_chakra_control"
+      ],
+      "cost": "natural_energy_balance_risk",
+      "limitations": [
+        "自然能量比例失衡会石化或变异",
+        "维持时间有限"
+      ],
+      "counters": [
+        "持续压制不给蓄能",
+        "远程消耗",
+        "封印"
+      ],
+      "continuity_risk": "仙术是体系跃迁，不是普通熟练度升级。"
+    },
+    {
+      "id": "kurama_chakra_mode",
+      "name_zh": "九尾查克拉模式",
+      "type": "jinchuriki_state",
+      "rank": "S",
+      "nature": [
+        "tailed_beast_chakra"
+      ],
+      "known_users": [
+        "uzumaki_naruto"
+      ],
+      "prerequisites": [
+        "kurama_chakra_access",
+        "seal_control",
+        "relationship_or_forceful_control"
+      ],
+      "cost": "very_high_but_supported_by_kyuubi",
+      "limitations": [
+        "早期可能被九尾恶意侵蚀",
+        "完全协作前有暴走风险"
+      ],
+      "counters": [
+        "tailed_beast_suppression",
+        "sealing_jutsu",
+        "chakra_absorption"
+      ],
+      "continuity_risk": "九尾关系阶段必须记录：泄漏、强夺、合作、完全同步不能混写。"
+    },
+    {
+      "id": "sharingan",
+      "name_zh": "写轮眼",
+      "type": "dojutsu_bloodline",
+      "rank": "bloodline",
+      "nature": [
+        "yin"
+      ],
+      "known_users": [
+        "uchiha_clan",
+        "hatake_kakashi_transplant"
+      ],
+      "prerequisites": [
+        "uchiha_bloodline_or_transplant",
+        "emotional_trigger"
+      ],
+      "cost": "chakra_drain_higher_for_non_uchiha",
+      "limitations": [
+        "洞察不等于自动胜利",
+        "非宇智波移植负担重"
+      ],
+      "counters": [
+        "视线规避",
+        "感知盲区利用",
+        "高速度压制"
+      ],
+      "continuity_risk": "开眼、勾玉进阶、移植眼位和查克拉消耗必须逐步记录。"
+    },
+    {
+      "id": "mangekyo_sharingan",
+      "name_zh": "万花筒写轮眼",
+      "type": "dojutsu_bloodline_advanced",
+      "rank": "S",
+      "nature": [
+        "yin"
+      ],
+      "known_users": [
+        "uchiha_itachi",
+        "uchiha_sasuke",
+        "uchiha_obito",
+        "hatake_kakashi"
+      ],
+      "prerequisites": [
+        "sharingan",
+        "severe_emotional_trauma"
+      ],
+      "cost": "vision_degradation_and_high_chakra_cost",
+      "limitations": [
+        "过度使用失明",
+        "能力个体化",
+        "非宇智波负担更重"
+      ],
+      "counters": [
+        "情报针对",
+        "消耗战",
+        "封印",
+        "不直视"
+      ],
+      "continuity_risk": "万花筒能力是剧情级资源，不能随便量产。"
+    },
+    {
+      "id": "kamui",
+      "name_zh": "神威",
+      "type": "mangekyo_space_time",
+      "rank": "S",
+      "nature": [
+        "space_time"
+      ],
+      "known_users": [
+        "uchiha_obito",
+        "hatake_kakashi"
+      ],
+      "prerequisites": [
+        "obito_mangekyo_eye"
+      ],
+      "cost": "high_chakra_severe_for_kakashi_before_war",
+      "limitations": [
+        "虚化与攻击存在时机限制",
+        "双眼能力互补",
+        "空间坐标可被研究"
+      ],
+      "counters": [
+        "时机预判",
+        "持续攻击",
+        "同源神威",
+        "空间封锁"
+      ],
+      "continuity_risk": "必须严格记录眼位、冷却、负担和对手情报。"
+    },
+    {
+      "id": "susanoo",
+      "name_zh": "须佐能乎",
+      "type": "mangekyo_manifestation",
+      "rank": "S",
+      "nature": [
+        "yin"
+      ],
+      "known_users": [
+        "uchiha_itachi",
+        "uchiha_sasuke",
+        "uchiha_madara"
+      ],
+      "prerequisites": [
+        "mangekyo_sharingan_progression"
+      ],
+      "cost": "very_high_chakra_and_body_eye_strain",
+      "limitations": [
+        "阶段化成长",
+        "持续消耗巨大",
+        "完全体是超高阶"
+      ],
+      "counters": [
+        "超强物理破坏",
+        "封印",
+        "消耗战",
+        "空间能力"
+      ],
+      "continuity_risk": "须佐阶段要分骨架、肌肉、铠甲、完全体，不能一开眼就完全体。"
+    },
+    {
+      "id": "rinnegan",
+      "name_zh": "轮回眼",
+      "type": "dojutsu_legendary",
+      "rank": "mythic",
+      "nature": [
+        "six_paths"
+      ],
+      "known_users": [
+        "nagato_transplant",
+        "uchiha_madara",
+        "uchiha_obito_transplant",
+        "uchiha_sasuke"
+      ],
+      "prerequisites": [
+        "six_paths_chakra_or_transplant"
+      ],
+      "cost": "massive_chakra_transplant_burden",
+      "limitations": [
+        "移植者负担极高",
+        "能力使用与身体状态强绑定"
+      ],
+      "counters": [
+        "情报拆解",
+        "封印",
+        "速度压制",
+        "能力冷却利用"
+      ],
+      "continuity_risk": "轮回眼来源、移植路径和谁知道真相必须单独建账。"
+    },
+    {
+      "id": "six_paths_of_pain",
+      "name_zh": "佩恩六道",
+      "type": "rinnegan_remote_body_system",
+      "rank": "S",
+      "nature": [
+        "rinnegan"
+      ],
+      "known_users": [
+        "nagato"
+      ],
+      "prerequisites": [
+        "rinnegan",
+        "chakra_receivers",
+        "prepared_corpses"
+      ],
+      "cost": "continuous_chakra_transmission",
+      "limitations": [
+        "本体距离与身体负担",
+        "单个身体能力分工明显",
+        "黑棒接收器可被破坏"
+      ],
+      "counters": [
+        "找出本体",
+        "逐个击破",
+        "破坏接收器",
+        "识别能力冷却"
+      ],
+      "continuity_risk": "六道身体死亡与长门本体死亡不能混淆。"
+    },
+    {
+      "id": "shinra_tensei",
+      "name_zh": "神罗天征",
+      "type": "rinnegan_gravity",
+      "rank": "S",
+      "nature": [
+        "rinnegan"
+      ],
+      "known_users": [
+        "nagato"
+      ],
+      "prerequisites": [
+        "deva_path"
+      ],
+      "cost": "varies_village_scale_extreme_cost",
+      "limitations": [
+        "常规使用存在短冷却",
+        "超大范围使用会削弱其他佩恩"
+      ],
+      "counters": [
+        "冷却窗口",
+        "耐久抵抗",
+        "地形利用"
+      ],
+      "continuity_risk": "摧毁木叶级神罗天征后必须削弱佩恩状态。"
+    },
+    {
+      "id": "chibaku_tensei",
+      "name_zh": "地爆天星",
+      "type": "rinnegan_sealing_gravity",
+      "rank": "S",
+      "nature": [
+        "rinnegan"
+      ],
+      "known_users": [
+        "nagato",
+        "uchiha_madara",
+        "uchiha_sasuke"
+      ],
+      "prerequisites": [
+        "rinnegan",
+        "high_chakra"
+      ],
+      "cost": "very_high",
+      "limitations": [
+        "核心可被破坏",
+        "大型目标需要巨大查克拉"
+      ],
+      "counters": [
+        "集中远程破坏核心",
+        "同级力量突破",
+        "封印反制"
+      ],
+      "continuity_risk": "这是封印级术，不能当普通控场技能频繁使用。"
+    },
+    {
+      "id": "rinne_tensei",
+      "name_zh": "轮回天生之术",
+      "type": "rinnegan_revival",
+      "rank": "forbidden_s",
+      "nature": [
+        "rinnegan",
+        "yang"
+      ],
+      "known_users": [
+        "nagato",
+        "uchiha_obito"
+      ],
+      "prerequisites": [
+        "rinnegan",
+        "massive_life_force",
+        "revivable_targets"
+      ],
+      "cost": "life_threatening_or_fatal",
+      "limitations": [
+        "施术者生命代价极高",
+        "目标范围和死亡状态要明确"
+      ],
+      "counters": [
+        "阻止术式",
+        "夺眼",
+        "封印灵魂"
+      ],
+      "continuity_risk": "任何使用都会重写死亡表，必须记录所有复活对象。"
+    },
+    {
+      "id": "edo_tensei",
+      "name_zh": "秽土转生",
+      "type": "forbidden_summoning",
+      "rank": "forbidden_s",
+      "nature": [
+        "yin",
+        "yang"
+      ],
+      "known_users": [
+        "senju_tobirama",
+        "orochimaru",
+        "yakushi_kabuto"
+      ],
+      "prerequisites": [
+        "dna_sample",
+        "living_sacrifice",
+        "soul_not_sealed",
+        "ritual_knowledge"
+      ],
+      "cost": "sacrifice_and_preparation",
+      "limitations": [
+        "灵魂被封印者无法召回",
+        "控制符影响自主性",
+        "解除条件复杂"
+      ],
+      "counters": [
+        "封印秽土体",
+        "解除施术",
+        "灵魂升天",
+        "控制覆盖"
+      ],
+      "continuity_risk": "必须区分原死亡状态、秽土行动状态和再次解放状态。"
+    },
+    {
+      "id": "reaper_death_seal",
+      "name_zh": "尸鬼封尽",
+      "type": "forbidden_sealing",
+      "rank": "forbidden_s",
+      "nature": [
+        "sealing",
+        "soul"
+      ],
+      "known_users": [
+        "namikaze_minato",
+        "sarutobi_hiruzen",
+        "uzumaki_clan_historical"
+      ],
+      "prerequisites": [
+        "sealing_knowledge",
+        "sacrifice_willingness"
+      ],
+      "cost": "caster_death_or_soul_cost",
+      "limitations": [
+        "以施术者灵魂为代价",
+        "被封印灵魂无法常规秽土"
+      ],
+      "counters": [
+        "打断术式",
+        "距离规避",
+        "死神面具解除法"
+      ],
+      "continuity_risk": "涉及灵魂封印，后续秽土转生和复活资格必须同步更新。"
+    },
+    {
+      "id": "flying_thunder_god",
+      "name_zh": "飞雷神之术",
+      "type": "space_time_ninjutsu",
+      "rank": "S",
+      "nature": [
+        "space_time"
+      ],
+      "known_users": [
+        "senju_tobirama",
+        "namikaze_minato"
+      ],
+      "prerequisites": [
+        "space_time_formula_marks",
+        "elite_reflexes",
+        "formula_knowledge"
+      ],
+      "cost": "medium_per_jump_high_skill_requirement",
+      "limitations": [
+        "需要术式标记",
+        "反应速度和判断要求极高"
+      ],
+      "counters": [
+        "移除标记",
+        "诱导跳点",
+        "范围封锁"
+      ],
+      "continuity_risk": "飞雷神是战争级机动能力，OC 学会会巨大改变战局。"
+    },
+    {
+      "id": "wood_release",
+      "name_zh": "木遁",
+      "type": "kekkei_genkai",
+      "rank": "bloodline_s",
+      "nature": [
+        "water",
+        "earth",
+        "yang"
+      ],
+      "known_users": [
+        "senju_hashirama",
+        "yamato",
+        "uchiha_madara_implant",
+        "uchiha_obito_implant"
+      ],
+      "prerequisites": [
+        "hashirama_lineage_or_cells",
+        "water_and_earth_combination",
+        "body_compatibility"
+      ],
+      "cost": "varies_high_for_large_scale",
+      "limitations": [
+        "移植者稳定性问题",
+        "非柱间级无法复制初代规模"
+      ],
+      "counters": [
+        "高温火遁",
+        "切断控制",
+        "查克拉吸收"
+      ],
+      "continuity_risk": "柱间细胞是脏数据高发区，任何移植必须记录来源、副作用、失败率。"
+    },
+    {
+      "id": "byakugan",
+      "name_zh": "白眼",
+      "type": "dojutsu_bloodline",
+      "rank": "bloodline",
+      "nature": [],
+      "known_users": [
+        "hyuga_clan"
+      ],
+      "prerequisites": [
+        "hyuga_bloodline_or_transplant"
+      ],
+      "cost": "low_to_medium",
+      "limitations": [
+        "存在盲点",
+        "范围与熟练度有关"
+      ],
+      "counters": [
+        "盲点利用",
+        "烟雾/干扰配合",
+        "高速突袭"
+      ],
+      "continuity_risk": "白眼侦查能力会破坏悬念，写潜入和伪装时必须考虑。"
+    },
+    {
+      "id": "eight_gates",
+      "name_zh": "八门遁甲",
+      "type": "forbidden_taijutsu_state",
+      "rank": "forbidden_s",
+      "nature": [],
+      "known_users": [
+        "might_guy",
+        "rock_lee"
+      ],
+      "prerequisites": [
+        "extreme_taijutsu_training",
+        "body_conditioning"
+      ],
+      "cost": "severe_body_damage_scaling_by_gate",
+      "limitations": [
+        "越高门代价越恐怖",
+        "八门全开接近必死"
+      ],
+      "counters": [
+        "拖延时间",
+        "远程消耗",
+        "空间规避"
+      ],
+      "continuity_risk": "开门数、伤势、恢复期必须逐章记录。"
+    },
+    {
+      "id": "curse_mark",
+      "name_zh": "咒印",
+      "type": "senjutsu_mutation_seal",
+      "rank": "forbidden_a",
+      "nature": [
+        "senjutsu_corrupted"
+      ],
+      "known_users": [
+        "uchiha_sasuke",
+        "sound_four"
+      ],
+      "prerequisites": [
+        "orochimaru_application",
+        "survival_compatibility"
+      ],
+      "cost": "pain_corruption_body_risk",
+      "limitations": [
+        "精神侵蚀",
+        "身体负担",
+        "二阶段变化有风险"
+      ],
+      "counters": [
+        "封邪法印",
+        "意志压制",
+        "移除术式"
+      ],
+      "continuity_risk": "佐助咒印是叛逃强因果，是否存在必须进入事件账本。"
+    },
+    {
+      "id": "explosive_clay",
+      "name_zh": "爆炸黏土",
+      "type": "explosive_ninjutsu",
+      "rank": "A_to_S",
+      "nature": [
+        "earth"
+      ],
+      "known_users": [
+        "deidara"
+      ],
+      "prerequisites": [
+        "explosive_clay_material",
+        "mouth_palm_modification",
+        "detonation_trigger"
+      ],
+      "cost": "clay_stock_and_chakra",
+      "limitations": [
+        "雷遁可干扰",
+        "需要黏土库存",
+        "大型作品准备时间更长"
+      ],
+      "counters": [
+        "lightning_release",
+        "sensor_detection",
+        "distance_control"
+      ],
+      "continuity_risk": "不要让爆炸黏土无库存限制；雷遁克制是关键。"
+    },
+    {
+      "id": "jashin_ritual",
+      "name_zh": "邪神仪式",
+      "type": "curse_ritual",
+      "rank": "forbidden_unknown",
+      "nature": [
+        "curse"
+      ],
+      "known_users": [
+        "hidan"
+      ],
+      "prerequisites": [
+        "target_blood",
+        "ritual_circle",
+        "hidan_body_condition"
+      ],
+      "cost": "setup_time_and_self_damage_transfer",
+      "limitations": [
+        "离开图阵会失效",
+        "必须取得目标血液"
+      ],
+      "counters": [
+        "不让取血",
+        "破坏图阵",
+        "肢解封存"
+      ],
+      "continuity_risk": "仪式条件必须写清楚，否则会变成无解诅咒。"
+    },
+    {
+      "id": "earth_grudge_fear",
+      "name_zh": "地怨虞",
+      "type": "forbidden_body_modification",
+      "rank": "forbidden_a",
+      "nature": [
+        "body_modification"
+      ],
+      "known_users": [
+        "kakuzu"
+      ],
+      "prerequisites": [
+        "forbidden_technique",
+        "stolen_hearts"
+      ],
+      "cost": "heart_stock_and_body_threads",
+      "limitations": [
+        "心脏数量有限",
+        "面具被毁会损失属性和生命"
+      ],
+      "counters": [
+        "逐个摧毁心脏",
+        "情报识别",
+        "高威力集中攻击"
+      ],
+      "continuity_risk": "每毁一颗心必须更新角都剩余生命与可用属性。"
+    },
+    {
+      "id": "infinite_tsukuyomi",
+      "name_zh": "无限月读",
+      "type": "world_scale_genjutsu",
+      "rank": "mythic",
+      "nature": [
+        "yin",
+        "six_paths"
+      ],
+      "known_users": [
+        "uchiha_madara",
+        "otsutsuki_kaguya"
+      ],
+      "prerequisites": [
+        "rinne_sharingan",
+        "moon_reflection",
+        "god_tree_or_ten_tails_setup"
+      ],
+      "cost": "world_scale_setup",
+      "limitations": [
+        "六道级封印/力量可解除",
+        "少数特殊保护可抵抗"
+      ],
+      "counters": [
+        "six_paths_power",
+        "seal_kaguya",
+        "avoid_activation_conditions"
+      ],
+      "continuity_risk": "终局术，提前出现会结束普通叙事结构。"
+    },
+    {
+      "id": "summoning_jutsu",
+      "name_zh": "通灵之术",
+      "aliases": [
+        "通灵术",
+        "召唤术"
+      ],
+      "type": "space_time_contract_ninjutsu",
+      "rank": "C_to_A_by_scale",
+      "nature": [],
+      "known_users": [
+        "jiraiya",
+        "orochimaru",
+        "tsunade",
+        "uzumaki_naruto",
+        "hatake_kakashi"
+      ],
+      "prerequisites": [
+        "blood_contract",
+        "chakra_payment",
+        "hand_signs"
+      ],
+      "cost": "scales_with_summon_size",
+      "limitations": [
+        "需要契约或特殊媒介",
+        "大型通灵消耗巨大",
+        "通灵兽有自主意志"
+      ],
+      "counters": [
+        "打断结印",
+        "封锁空间",
+        "压制召唤者查克拉"
+      ],
+      "continuity_risk": "通灵兽不是免费道具；契约来源、大小、性格和消耗必须记录。"
+    },
+    {
+      "id": "medical_ninjutsu",
+      "name_zh": "医疗忍术",
+      "aliases": [
+        "掌仙术",
+        "医疗术"
+      ],
+      "type": "ninjutsu_support",
+      "rank": "variable",
+      "nature": [],
+      "known_users": [
+        "tsunade",
+        "haruno_sakura",
+        "shizune",
+        "yakushi_kabuto"
+      ],
+      "prerequisites": [
+        "fine_chakra_control",
+        "anatomy_knowledge",
+        "training_time"
+      ],
+      "cost": "depends_on_injury_severity",
+      "limitations": [
+        "不能无视死亡边界",
+        "毒素/经络/器官伤需要诊断",
+        "战场治疗会暴露医疗忍者"
+      ],
+      "counters": [
+        "持续追击",
+        "毒素复杂化",
+        "查克拉干扰"
+      ],
+      "continuity_risk": "医疗忍术不能当万能复活术；重大伤势必须留下恢复期或代价。"
+    },
+    {
+      "id": "chakra_enhanced_strength",
+      "name_zh": "怪力",
+      "aliases": [
+        "查克拉怪力",
+        "纲手怪力"
+      ],
+      "type": "chakra_control_taijutsu",
+      "rank": "A",
+      "nature": [],
+      "known_users": [
+        "tsunade",
+        "haruno_sakura"
+      ],
+      "prerequisites": [
+        "extreme_chakra_control",
+        "physical_training"
+      ],
+      "cost": "burst_chakra",
+      "limitations": [
+        "命中窗口要求高",
+        "地形破坏会影响友军",
+        "控制不足会自伤"
+      ],
+      "counters": [
+        "远程牵制",
+        "高速闪避",
+        "柔性卸力"
+      ],
+      "continuity_risk": "怪力来自高精度控制和训练，不是单纯力气大。"
+    },
+    {
+      "id": "creation_rebirth",
+      "name_zh": "创造再生",
+      "aliases": [
+        "创造再生之术"
+      ],
+      "type": "medical_forbidden_jutsu",
+      "rank": "S",
+      "nature": [],
+      "known_users": [
+        "tsunade"
+      ],
+      "prerequisites": [
+        "byakugo_seal",
+        "massive_chakra_storage",
+        "medical_mastery"
+      ],
+      "cost": "shortens_lifespan_or_cell_division_limit",
+      "limitations": [
+        "不能无限重置身体",
+        "依赖预存查克拉",
+        "战后负担极高"
+      ],
+      "counters": [
+        "封印",
+        "持续高强度压制",
+        "查克拉吸收"
+      ],
+      "continuity_risk": "创造再生有寿命/细胞分裂代价，不能变成无冷却回血。"
+    },
+    {
+      "id": "byakugo_seal",
+      "name_zh": "百豪之印",
+      "aliases": [
+        "百豪",
+        "阴封印"
+      ],
+      "type": "chakra_storage_seal",
+      "rank": "S",
+      "nature": [],
+      "known_users": [
+        "tsunade",
+        "haruno_sakura"
+      ],
+      "prerequisites": [
+        "long_term_chakra_storage",
+        "precise_control"
+      ],
+      "cost": "years_of_storage_and_release_burden",
+      "limitations": [
+        "形成需要长期积累",
+        "释放后需重新储备",
+        "不等于无限查克拉"
+      ],
+      "counters": [
+        "封印干扰",
+        "查克拉吸收",
+        "逼迫提前消耗"
+      ],
+      "continuity_risk": "百豪必须记录储备进度和释放后状态。"
+    },
+    {
+      "id": "amaterasu",
+      "name_zh": "天照",
+      "aliases": [
+        "黑炎"
+      ],
+      "type": "mangekyo_dojutsu",
+      "rank": "S",
+      "nature": [
+        "fire_like_dojutsu"
+      ],
+      "known_users": [
+        "uchiha_itachi",
+        "uchiha_sasuke"
+      ],
+      "prerequisites": [
+        "mangekyo_sharingan",
+        "eye_specific_ability"
+      ],
+      "cost": "high_eye_strain_and_chakra",
+      "limitations": [
+        "视线命中依赖",
+        "可被剥离/封印/高速规避",
+        "大量使用导致视力恶化"
+      ],
+      "counters": [
+        "提前遮挡",
+        "高速移动",
+        "封印术",
+        "脱壳或断肢规避"
+      ],
+      "continuity_risk": "天照不能无脑秒杀所有敌人；视力消耗和命中条件必须出现。"
+    },
+    {
+      "id": "tsukuyomi",
+      "name_zh": "月读",
+      "aliases": [
+        "月读幻术"
+      ],
+      "type": "mangekyo_genjutsu",
+      "rank": "S",
+      "nature": [
+        "yin"
+      ],
+      "known_users": [
+        "uchiha_itachi"
+      ],
+      "prerequisites": [
+        "mangekyo_sharingan",
+        "eye_contact"
+      ],
+      "cost": "severe_eye_strain",
+      "limitations": [
+        "需要目光接触",
+        "对瞳力/精神力强者风险升高",
+        "频繁使用会加速恶化"
+      ],
+      "counters": [
+        "避免对视",
+        "瞳术对抗",
+        "外部打断"
+      ],
+      "continuity_risk": "月读是高压幻术，不应用作普通审讯工具刷屏。"
+    },
+    {
+      "id": "kotoamatsukami",
+      "name_zh": "别天神",
+      "aliases": [
+        "最强幻术",
+        "止水眼"
+      ],
+      "type": "mangekyo_genjutsu",
+      "rank": "S",
+      "nature": [
+        "yin"
+      ],
+      "known_users": [
+        "uchiha_shisui",
+        "shimura_danzo",
+        "uchiha_itachi"
+      ],
+      "prerequisites": [
+        "shisui_mangekyo_eye"
+      ],
+      "cost": "very_long_cooldown_or_hashirama_cell_modifier",
+      "limitations": [
+        "冷却极长",
+        "眼位和持有者必须明确",
+        "政治后果巨大"
+      ],
+      "counters": [
+        "提前发现瞳术",
+        "夺眼",
+        "封印或隔绝视线"
+      ],
+      "continuity_risk": "别天神会破坏角色意志与政治线，任何使用都必须成为重大事件。"
+    },
+    {
+      "id": "izanagi",
+      "name_zh": "伊邪那岐",
+      "aliases": [
+        "改写现实"
+      ],
+      "type": "forbidden_dojutsu",
+      "rank": "S",
+      "nature": [
+        "yin_yang"
+      ],
+      "known_users": [
+        "uchiha_madara",
+        "shimura_danzo"
+      ],
+      "prerequisites": [
+        "sharingan",
+        "uchiha_or_implant_conditions"
+      ],
+      "cost": "eye_blindness",
+      "limitations": [
+        "持续时间有限",
+        "每只眼消耗一次",
+        "移植眼需适配"
+      ],
+      "counters": [
+        "拖延持续时间",
+        "情报识破",
+        "封锁身体行动"
+      ],
+      "continuity_risk": "伊邪那岐必须消耗眼睛，不能作为无代价重开。"
+    },
+    {
+      "id": "izanami",
+      "name_zh": "伊邪那美",
+      "aliases": [
+        "命运循环"
+      ],
+      "type": "forbidden_dojutsu",
+      "rank": "S",
+      "nature": [
+        "yin"
+      ],
+      "known_users": [
+        "uchiha_itachi"
+      ],
+      "prerequisites": [
+        "sharingan",
+        "setup_loop_events"
+      ],
+      "cost": "eye_blindness",
+      "limitations": [
+        "需要构建感官循环",
+        "目标需陷入自我逃避主题",
+        "使用者牺牲眼睛"
+      ],
+      "counters": [
+        "接受现实解除",
+        "打断前置构建"
+      ],
+      "continuity_risk": "伊邪那美是主题性封印幻术，不是普通控场技能。"
+    },
+    {
+      "id": "gentle_fist",
+      "name_zh": "柔拳",
+      "aliases": [
+        "日向柔拳"
+      ],
+      "type": "byakugan_taijutsu",
+      "rank": "B_to_A",
+      "nature": [],
+      "known_users": [
+        "hyuga_neji",
+        "hyuga_hinata",
+        "hyuga_hiashi",
+        "hyuga_hanabi"
+      ],
+      "prerequisites": [
+        "byakugan",
+        "tenketsu_knowledge",
+        "taijutsu_training"
+      ],
+      "cost": "precision_chakra",
+      "limitations": [
+        "需要近身",
+        "对高防御/非人结构需调整",
+        "白眼视野也有盲点"
+      ],
+      "counters": [
+        "远程压制",
+        "视野盲点利用",
+        "高速扰乱"
+      ],
+      "continuity_risk": "柔拳强在点穴和查克拉干扰，不是普通拳脚加成。"
+    },
+    {
+      "id": "eight_trigrams_sixty_four_palms",
+      "name_zh": "八卦六十四掌",
+      "aliases": [
+        "六十四掌"
+      ],
+      "type": "hyuga_secret_taijutsu",
+      "rank": "A",
+      "nature": [],
+      "known_users": [
+        "hyuga_neji",
+        "hyuga_hiashi",
+        "hyuga_hinata"
+      ],
+      "prerequisites": [
+        "byakugan",
+        "gentle_fist_mastery"
+      ],
+      "cost": "high_precision_and_stamina",
+      "limitations": [
+        "需要把目标拉入八卦领域",
+        "被打断会失去连段收益"
+      ],
+      "counters": [
+        "脱离近身范围",
+        "分身扰乱",
+        "范围攻击"
+      ],
+      "continuity_risk": "宗家/分家学习边界会影响宁次线，必须看时间点。"
+    },
+    {
+      "id": "shadow_imitation",
+      "name_zh": "影子模仿术",
+      "aliases": [
+        "影缚术",
+        "影子束缚术"
+      ],
+      "type": "nara_clan_secret",
+      "rank": "B",
+      "nature": [
+        "yin"
+      ],
+      "known_users": [
+        "nara_shikamaru",
+        "nara_shikaku"
+      ],
+      "prerequisites": [
+        "nara_clan_training",
+        "shadow_line_of_effect"
+      ],
+      "cost": "chakra_maintenance",
+      "limitations": [
+        "影子长度和光源限制",
+        "力量差距会影响控制",
+        "维持期间本体受限"
+      ],
+      "counters": [
+        "改变光源",
+        "切断影子连接",
+        "力量挣脱"
+      ],
+      "continuity_risk": "影子术适合智斗，不能无视光照与距离。"
+    },
+    {
+      "id": "mind_body_switch",
+      "name_zh": "心转身之术",
+      "aliases": [
+        "心转身",
+        "山中秘术"
+      ],
+      "type": "yamanaka_clan_secret",
+      "rank": "C_to_B",
+      "nature": [
+        "yin"
+      ],
+      "known_users": [
+        "yamanaka_ino",
+        "yamanaka_inoichi"
+      ],
+      "prerequisites": [
+        "yamanaka_training",
+        "mental_targeting"
+      ],
+      "cost": "user_body_incapacitated",
+      "limitations": [
+        "命中失败会暴露本体",
+        "控制期间本体无防备",
+        "强意志目标可抵抗"
+      ],
+      "counters": [
+        "闪避直线锁定",
+        "精神防御",
+        "攻击施术者本体"
+      ],
+      "continuity_risk": "山中秘术必须处理施术者身体安全和情报回传。"
+    },
+    {
+      "id": "partial_expansion",
+      "name_zh": "部分倍化术",
+      "aliases": [
+        "倍化术",
+        "秋道秘术"
+      ],
+      "type": "akimichi_clan_secret",
+      "rank": "C_to_B",
+      "nature": [
+        "yang"
+      ],
+      "known_users": [
+        "akimichi_choji",
+        "akimichi_choza"
+      ],
+      "prerequisites": [
+        "akimichi_training",
+        "calorie_conversion"
+      ],
+      "cost": "calorie_and_chakra_consumption",
+      "limitations": [
+        "体型变化影响机动",
+        "过度使用需兵粮丸或恢复",
+        "目标大时更易被命中"
+      ],
+      "counters": [
+        "灵活拉扯",
+        "消耗战",
+        "关节限制"
+      ],
+      "continuity_risk": "秋道秘术与体能/热量强绑定，秘药有严重代价。"
+    },
+    {
+      "id": "fang_over_fang",
+      "name_zh": "牙通牙",
+      "aliases": [
+        "牙通牙"
+      ],
+      "type": "inuzuka_clan_taijutsu",
+      "rank": "C_to_B",
+      "nature": [],
+      "known_users": [
+        "inuzuka_kiba"
+      ],
+      "prerequisites": [
+        "ninken_partner",
+        "beast_mimicry_training"
+      ],
+      "cost": "stamina_and_coordination",
+      "limitations": [
+        "直线突进可被预判",
+        "依赖忍犬搭档状态"
+      ],
+      "counters": [
+        "气味干扰",
+        "地形陷阱",
+        "侧向闪避"
+      ],
+      "continuity_risk": "牙与赤丸是组合战，忍犬受伤会削弱整套战法。"
+    },
+    {
+      "id": "destruction_bug_technique",
+      "name_zh": "寄坏虫",
+      "aliases": [
+        "油女虫术",
+        "寄坏虫之术"
+      ],
+      "type": "aburame_clan_secret",
+      "rank": "B",
+      "nature": [],
+      "known_users": [
+        "aburame_shino"
+      ],
+      "prerequisites": [
+        "aburame_host_body",
+        "insect_colony"
+      ],
+      "cost": "long_term_host_symbiosis",
+      "limitations": [
+        "虫群数量和距离限制",
+        "火遁/范围攻击可压制",
+        "宿主需要保持供养"
+      ],
+      "counters": [
+        "大范围火焰",
+        "毒雾",
+        "查克拉隔绝"
+      ],
+      "continuity_risk": "油女秘术是寄生共生体系，不能临时学会。"
+    },
+    {
+      "id": "fireball_jutsu",
+      "name_zh": "火遁·豪火球之术",
+      "aliases": [
+        "豪火球",
+        "豪火球之术"
+      ],
+      "type": "fire_release",
+      "rank": "C",
+      "nature": [
+        "fire"
+      ],
+      "known_users": [
+        "uchiha_sasuke",
+        "uchiha_itachi",
+        "uchiha_madara"
+      ],
+      "prerequisites": [
+        "fire_nature",
+        "basic_hand_seals"
+      ],
+      "cost": "medium_for_young_ninja",
+      "limitations": [
+        "直线范围明显",
+        "水遁和地形可削弱",
+        "幼年使用体现天赋但仍需训练"
+      ],
+      "counters": [
+        "water_release",
+        "dodging",
+        "terrain_cover"
+      ],
+      "continuity_risk": "宇智波儿童会豪火球是族内成人认可节点，时间线要谨慎。"
+    },
+    {
+      "id": "raikiri",
+      "name_zh": "雷切",
+      "aliases": [
+        "千鸟雷切",
+        "卡卡西雷切"
+      ],
+      "type": "lightning_release_assassination",
+      "rank": "S_or_A_variant",
+      "nature": [
+        "lightning"
+      ],
+      "known_users": [
+        "hatake_kakashi"
+      ],
+      "prerequisites": [
+        "chidori_base",
+        "high_speed_charge",
+        "visual_tracking_support"
+      ],
+      "cost": "medium_high",
+      "limitations": [
+        "高速突进暴露路线",
+        "查克拉消耗限制次数",
+        "不适合持续群战"
+      ],
+      "counters": [
+        "预判反击",
+        "替身诱导",
+        "防御忍术"
+      ],
+      "continuity_risk": "雷切是卡卡西招牌，次数、查克拉和写轮眼负担要记录。"
+    },
+    {
+      "id": "puppet_technique",
+      "name_zh": "傀儡术",
+      "aliases": [
+        "傀儡操演",
+        "砂隐傀儡术"
+      ],
+      "type": "chakra_thread_ninjutsu",
+      "rank": "B_to_S",
+      "nature": [],
+      "known_users": [
+        "sasori",
+        "chiyo",
+        "kankuro"
+      ],
+      "prerequisites": [
+        "chakra_threads",
+        "puppet_build",
+        "trap_and_poison_knowledge"
+      ],
+      "cost": "fine_control_and_inventory",
+      "limitations": [
+        "傀儡损坏需维修",
+        "毒药/机关需库存",
+        "操作者位置和手指动作可被针对"
+      ],
+      "counters": [
+        "切线",
+        "破坏傀儡",
+        "近身压制操作者"
+      ],
+      "continuity_risk": "傀儡战必须记录傀儡数量、机关、毒药和维修状态。"
+    },
+    {
+      "id": "sand_manipulation",
+      "name_zh": "砂缚/砂操控",
+      "aliases": [
+        "控砂",
+        "砂瀑"
+      ],
+      "type": "sand_ninjutsu_or_jinchuriki_style",
+      "rank": "B_to_S",
+      "nature": [
+        "earth",
+        "wind"
+      ],
+      "known_users": [
+        "gaara"
+      ],
+      "prerequisites": [
+        "sand_medium",
+        "chakra_control",
+        "shukaku_history_or_training"
+      ],
+      "cost": "scales_with_sand_volume",
+      "limitations": [
+        "环境砂量影响效率",
+        "水分/重量/速度会改变战斗",
+        "大规模防御消耗高"
+      ],
+      "counters": [
+        "高速突破",
+        "水分干扰",
+        "空中机动"
+      ],
+      "continuity_risk": "我爱罗控砂阶段受一尾和心理状态影响，抽离后能力边界要重估。"
+    },
+    {
+      "id": "sealing_jutsu_general",
+      "name_zh": "封印术",
+      "aliases": [
+        "封印术式",
+        "符咒封印"
+      ],
+      "type": "fuinjutsu",
+      "rank": "C_to_S",
+      "nature": [],
+      "known_users": [
+        "uzumaki_kushina",
+        "namikaze_minato",
+        "jiraiya",
+        "orochimaru"
+      ],
+      "prerequisites": [
+        "seal_formula_knowledge",
+        "medium_or_body_anchor",
+        "chakra_precision"
+      ],
+      "cost": "depends_on_target_and_formula",
+      "limitations": [
+        "需要术式设计和媒介",
+        "错误封印会反噬",
+        "高阶封印常有牺牲代价"
+      ],
+      "counters": [
+        "解印知识",
+        "破坏媒介",
+        "外部干扰"
+      ],
+      "continuity_risk": "封印术最容易变万能钥匙；必须写清术式来源、媒介、限制和代价。"
+    },
+    {
+      "id": "poison_craft",
+      "name_zh": "毒术",
+      "aliases": [
+        "傀儡毒",
+        "砂隐毒"
+      ],
+      "type": "support_assassination",
+      "rank": "B_to_A",
+      "nature": [],
+      "known_users": [
+        "sasori",
+        "chiyo",
+        "shizune"
+      ],
+      "prerequisites": [
+        "toxin_formula",
+        "delivery_method",
+        "medical_counter_knowledge"
+      ],
+      "cost": "materials_and_preparation",
+      "limitations": [
+        "需提前制备",
+        "解药/医疗忍者可对抗",
+        "环境和剂量影响效果"
+      ],
+      "counters": [
+        "解毒剂",
+        "避开伤口",
+        "傀儡机关识破"
+      ],
+      "continuity_risk": "毒一旦命中会强改战斗节奏，必须记录剂量、发作时间和解药来源。"
+    }
+  ]
+}

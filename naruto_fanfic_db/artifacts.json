@@ -1,0 +1,476 @@
+{
+  "schema_version": "1.1",
+  "source": {
+    "reference_url": "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+    "retrieved_at": "2026-04-13",
+    "policy": "归纳摘要，不保存网页长段原文。",
+    "additional_reference_urls": [
+      "https://zh.wikipedia.org/zh-sg/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85%E8%A7%92%E8%89%B2%E5%88%97%E8%A1%A8"
+    ],
+    "last_enriched_at": "2026-04-14"
+  },
+  "cleaning_policy": {
+    "id_style": "lower_snake_case_ascii",
+    "removed_dirty_data": [
+      "只有当前 owner、没有历史 owner 的物品",
+      "把晓戒指塞进人物 notes 的记录",
+      "把瞳术移植写成普通技能的记录"
+    ],
+    "ownership_rule": "使用 owner_history；不要覆盖旧主人。"
+  },
+  "akatsuki_rings": [
+    {
+      "id": "akatsuki_ring_rei",
+      "kanji": "零",
+      "canon_owner_id": "nagato",
+      "status_canon_end": "inactive_after_akatsuki_collapse"
+    },
+    {
+      "id": "akatsuki_ring_sei",
+      "kanji": "青",
+      "canon_owner_id": "deidara",
+      "status_canon_end": "inactive_after_deidara_death"
+    },
+    {
+      "id": "akatsuki_ring_byaku",
+      "kanji": "白",
+      "canon_owner_id": "konan",
+      "status_canon_end": "inactive_after_konan_death"
+    },
+    {
+      "id": "akatsuki_ring_shu",
+      "kanji": "朱",
+      "canon_owner_id": "uchiha_itachi",
+      "status_canon_end": "inactive_after_itachi_death"
+    },
+    {
+      "id": "akatsuki_ring_kai",
+      "kanji": "亥",
+      "canon_owner_id": "zetsu",
+      "status_canon_end": "sealed_or_inactive_after_war"
+    },
+    {
+      "id": "akatsuki_ring_ku",
+      "kanji": "空",
+      "canon_owner_id": "orochimaru",
+      "status_canon_end": "retained_by_orochimaru_after_defection"
+    },
+    {
+      "id": "akatsuki_ring_nan",
+      "kanji": "南",
+      "canon_owner_id": "hoshigaki_kisame",
+      "status_canon_end": "inactive_after_kisame_death"
+    },
+    {
+      "id": "akatsuki_ring_hoku",
+      "kanji": "北",
+      "canon_owner_id": "kakuzu",
+      "status_canon_end": "inactive_after_kakuzu_death"
+    },
+    {
+      "id": "akatsuki_ring_san",
+      "kanji": "三",
+      "canon_owner_id": "hidan",
+      "status_canon_end": "buried_or_inactive_with_hidan"
+    },
+    {
+      "id": "akatsuki_ring_gyoku",
+      "kanji": "玉",
+      "canon_owner_id": "sasori",
+      "status_canon_end": "passed_to_tobi_after_sasori_death"
+    }
+  ],
+  "key_artifacts": [
+    {
+      "id": "samehada",
+      "name_zh": "鲛肌",
+      "type": "legendary_sword",
+      "owner_history": [
+        {
+          "owner_id": "hoshigaki_kisame",
+          "status": "primary_owner_until_killer_bee_battle"
+        },
+        {
+          "owner_id": "killer_bee",
+          "status": "accepted_later"
+        }
+      ],
+      "abilities": [
+        "chakra_absorption",
+        "sentient_preference",
+        "fusion_with_user"
+      ],
+      "continuity_rule": "鲛肌有自身喜好和查克拉食性，换主人必须有战斗或情感因果。"
+    },
+    {
+      "id": "kubikiribocho",
+      "name_zh": "斩首大刀",
+      "type": "legendary_sword",
+      "owner_history": [
+        {
+          "owner_id": "zabuza",
+          "status": "part_1_owner"
+        },
+        {
+          "owner_id": "suigetsu",
+          "status": "later_owner"
+        }
+      ],
+      "abilities": [
+        "self_repair_using_blood_iron"
+      ],
+      "continuity_rule": "断裂、修复、持有者变化必须进装备账。"
+    },
+    {
+      "id": "totsuka_blade",
+      "name_zh": "十拳剑",
+      "type": "susanoo_spiritual_weapon",
+      "owner_history": [
+        {
+          "owner_id": "uchiha_itachi",
+          "status": "susanoo_manifested"
+        }
+      ],
+      "abilities": [
+        "spiritual_sealing"
+      ],
+      "continuity_rule": "十拳剑属于鼬须佐灵器，不能随便实体化转让。"
+    },
+    {
+      "id": "yata_mirror",
+      "name_zh": "八咫镜",
+      "type": "susanoo_spiritual_weapon",
+      "owner_history": [
+        {
+          "owner_id": "uchiha_itachi",
+          "status": "susanoo_manifested"
+        }
+      ],
+      "abilities": [
+        "adaptive_defense"
+      ],
+      "continuity_rule": "使用时要考虑鼬病弱和万花筒消耗。"
+    },
+    {
+      "id": "gedo_statue",
+      "name_zh": "外道魔像",
+      "type": "ten_tails_husk",
+      "owner_history": [
+        {
+          "owner_id": "nagato",
+          "status": "summoned_and_used_by_akatsuki"
+        },
+        {
+          "owner_id": "uchiha_obito",
+          "status": "war_phase_controller"
+        },
+        {
+          "owner_id": "uchiha_madara",
+          "status": "ten_tails_plan"
+        }
+      ],
+      "abilities": [
+        "tailed_beast_storage",
+        "chakra_receivers",
+        "ten_tails_revival_component"
+      ],
+      "continuity_rule": "尾兽封印进度、轮回眼控制者和十尾复活条件必须联动。"
+    },
+    {
+      "id": "reaper_mask",
+      "name_zh": "死神面具",
+      "type": "sealing_release_tool",
+      "owner_history": [
+        {
+          "owner_id": "uzumaki_clan_historical",
+          "status": "temple_asset"
+        },
+        {
+          "owner_id": "orochimaru",
+          "status": "used_to_release_reaper_seal"
+        }
+      ],
+      "abilities": [
+        "release_reaper_death_seal_souls"
+      ],
+      "continuity_rule": "一旦使用，会改变被尸鬼封尽封印者的秽土资格。"
+    },
+    {
+      "id": "divine_tree",
+      "name_zh": "神树",
+      "type": "mythic_origin_entity",
+      "owner_history": [
+        {
+          "owner_id": "otsutsuki_lineage",
+          "status": "mythic_origin_resource"
+        },
+        {
+          "owner_id": "otsutsuki_kaguya",
+          "status": "chakra_fruit_taken"
+        }
+      ],
+      "abilities": [
+        "chakra_fruit_source",
+        "ten_tails_origin_component",
+        "infinite_tsukuyomi_link"
+      ],
+      "continuity_rule": "神树是查克拉神话底层，不应作为普通修炼资源或可量产外挂。"
+    },
+    {
+      "id": "chakra_fruit",
+      "name_zh": "查克拉果实",
+      "type": "mythic_power_source",
+      "owner_history": [
+        {
+          "owner_id": "otsutsuki_kaguya",
+          "status": "consumed_or_absorbed_mythic_origin"
+        }
+      ],
+      "abilities": [
+        "chakra_origin_for_kaguya",
+        "god_tier_power_source"
+      ],
+      "continuity_rule": "查克拉果实牵涉辉夜与神树源流，不能下放成普通秘宝或主角开局礼包。"
+    },
+    {
+      "id": "sage_tools",
+      "name_zh": "六道忍具",
+      "type": "mythic_tools",
+      "owner_history": [
+        {
+          "owner_id": "otsutsuki_hagoromo",
+          "status": "origin_legend"
+        },
+        {
+          "owner_id": "kinkaku",
+          "status": "historical_user"
+        },
+        {
+          "owner_id": "ginkaku",
+          "status": "historical_user"
+        }
+      ],
+      "abilities": [
+        "word_soul_sealing",
+        "specialized_six_paths_effects"
+      ],
+      "continuity_rule": "六道忍具是高危神话道具，出现会显著改变战斗和封印规则。"
+    }
+  ],
+  "dojutsu_transfers": [
+    {
+      "id": "transfer_obito_left_eye_to_kakashi",
+      "eye_type": "sharingan_later_mangekyo",
+      "from_character_id": "uchiha_obito",
+      "to_character_id": "hatake_kakashi",
+      "eye_position": "left_eye",
+      "canon_anchor_id": "canon_006_kakashi_gaiden",
+      "continuity_rule": "卡卡西非宇智波体质导致长期查克拉负担，神威觉醒与带土同源。"
+    },
+    {
+      "id": "transfer_madara_rinnegan_to_nagato",
+      "eye_type": "rinnegan",
+      "from_character_id": "uchiha_madara",
+      "to_character_id": "nagato",
+      "eye_position": "both_eyes",
+      "canon_anchor_id": "canon_014_war_opening",
+      "continuity_rule": "长门轮回眼来源是终局真相之一，知情者范围必须严格记录。"
+    },
+    {
+      "id": "transfer_nagato_rinnegan_to_obito",
+      "eye_type": "rinnegan",
+      "from_character_id": "nagato",
+      "to_character_id": "uchiha_obito",
+      "eye_position": "one_eye",
+      "canon_anchor_id": "canon_014_war_opening",
+      "continuity_rule": "带土只移植一只轮回眼也负担极高，不能按原生轮回眼使用。"
+    },
+    {
+      "id": "transfer_itachi_eyes_to_sasuke",
+      "eye_type": "eternal_mangekyo_sharingan",
+      "from_character_id": "uchiha_itachi",
+      "to_character_id": "uchiha_sasuke",
+      "eye_position": "both_eyes",
+      "canon_anchor_id": "canon_013_five_kage_summit",
+      "continuity_rule": "佐助永恒万花筒需要鼬死亡后移植与恢复时间。"
+    }
+  ],
+  "standard_tools": [
+    {
+      "id": "kunai",
+      "name_zh": "苦无",
+      "aliases": [
+        "苦无刀"
+      ],
+      "type": "standard_weapon",
+      "owner_history": [],
+      "abilities": [
+        "melee",
+        "throwing",
+        "trap_anchor"
+      ],
+      "continuity_rule": "苦无是通用忍具，可用于格挡、投掷、挂起爆符，但数量和携带位置应合理。"
+    },
+    {
+      "id": "shuriken",
+      "name_zh": "手里剑",
+      "aliases": [
+        "忍者镖"
+      ],
+      "type": "standard_weapon",
+      "owner_history": [],
+      "abilities": [
+        "throwing",
+        "distraction",
+        "wire_combo"
+      ],
+      "continuity_rule": "手里剑适合牵制和试探，不应轻易击杀上忍级目标。"
+    },
+    {
+      "id": "explosive_tag",
+      "name_zh": "起爆符",
+      "aliases": [
+        "爆符",
+        "引爆符"
+      ],
+      "type": "consumable_explosive",
+      "owner_history": [],
+      "abilities": [
+        "delayed_explosion",
+        "trap",
+        "area_denial"
+      ],
+      "continuity_rule": "起爆符是消耗品，必须记录库存、布置时间和引爆方式。"
+    },
+    {
+      "id": "smoke_bomb",
+      "name_zh": "烟雾弹",
+      "aliases": [
+        "烟幕弹"
+      ],
+      "type": "consumable_tool",
+      "owner_history": [],
+      "abilities": [
+        "line_of_sight_block",
+        "escape_cover"
+      ],
+      "continuity_rule": "烟雾会阻断视线，但对白眼、嗅觉、感知和风遁未必有效。"
+    },
+    {
+      "id": "flash_bomb",
+      "name_zh": "闪光弹",
+      "aliases": [
+        "闪光玉"
+      ],
+      "type": "consumable_tool",
+      "owner_history": [],
+      "abilities": [
+        "visual_disruption",
+        "escape_cover"
+      ],
+      "continuity_rule": "闪光适合干扰瞳术视线，但对闭眼感知或非视觉定位效果有限。"
+    },
+    {
+      "id": "soldier_pill",
+      "name_zh": "兵粮丸",
+      "aliases": [
+        "兵粮药"
+      ],
+      "type": "consumable_medicine",
+      "owner_history": [],
+      "abilities": [
+        "temporary_stamina_restore",
+        "chakra_support"
+      ],
+      "continuity_rule": "兵粮丸是短期补给，不能代替休息；过量使用应有副作用。"
+    },
+    {
+      "id": "forehead_protector",
+      "name_zh": "护额",
+      "aliases": [
+        "忍者护额"
+      ],
+      "type": "identity_marker",
+      "owner_history": [],
+      "abilities": [
+        "village_identity",
+        "rank_milestone_symbol"
+      ],
+      "continuity_rule": "护额代表忍者身份、叛忍划痕和阵营归属，毕业/叛逃/投诚时要记录变化。"
+    },
+    {
+      "id": "storage_scroll",
+      "name_zh": "封物卷轴",
+      "aliases": [
+        "储物卷轴",
+        "忍具卷轴"
+      ],
+      "type": "seal_medium",
+      "owner_history": [],
+      "abilities": [
+        "item_storage",
+        "weapon_deployment"
+      ],
+      "continuity_rule": "卷轴可储物但需封印术式和查克拉启动，容量与内容要登记。"
+    },
+    {
+      "id": "summoning_scroll",
+      "name_zh": "通灵卷轴",
+      "aliases": [
+        "契约卷轴"
+      ],
+      "type": "contract_medium",
+      "owner_history": [],
+      "abilities": [
+        "summon_contract_record",
+        "blood_contract"
+      ],
+      "continuity_rule": "通灵卷轴承载契约血印，签约、传承和丢失都会改变召唤资格。"
+    },
+    {
+      "id": "wire_string",
+      "name_zh": "钢丝",
+      "aliases": [
+        "忍线",
+        "金属丝"
+      ],
+      "type": "trap_tool",
+      "owner_history": [],
+      "abilities": [
+        "trap",
+        "weapon_guidance",
+        "binding"
+      ],
+      "continuity_rule": "钢丝可配合手里剑和火遁，但布置需要时间、角度和遮蔽。"
+    },
+    {
+      "id": "senbon",
+      "name_zh": "千本",
+      "aliases": [
+        "针"
+      ],
+      "type": "precision_weapon",
+      "owner_history": [],
+      "abilities": [
+        "pressure_point_attack",
+        "fake_death_setup",
+        "medical_use"
+      ],
+      "continuity_rule": "千本可造成假死/穴位效果，但需要解剖知识和命中精度。"
+    },
+    {
+      "id": "chakra_blade",
+      "name_zh": "查克拉刀",
+      "aliases": [
+        "查克拉短刀"
+      ],
+      "type": "chakra_conductive_weapon",
+      "owner_history": [],
+      "abilities": [
+        "chakra_flow",
+        "nature_channeling"
+      ],
+      "continuity_rule": "查克拉刀需材料和属性控制，不能让所有角色随便灌属性。"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "reference_url": "https://zh.wikipedia.org/zh-cn/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85",
+    "retrieved_at": "2026-04-13",
+    "policy": "归纳摘要，不保存网页长段原文。"
+  },
+  "cleaning_policy": {
+    "id_style": "bijuu_<tails>_<romanized_name>",
+    "removed_dirty_data": [
+      "把宿主写成自由文本",
+      "把 captured、extracted、sealed 合成一个含混 status",
+      "没有 host_history 的尾兽记录"
+    ],
+    "state_rule": "current_status、host_history、major_events、consistency_rules 分开记录。"
+  },
+  "tailed_beasts": [
+    {
+      "id": "bijuu_1_shukaku",
+      "name_zh": "一尾守鹤",
+      "tails": 1,
+      "current_status_canon_end": "free_or_allied_after_war",
+      "host_history": [{"host_id": "gaara", "status": "canon_host_until_kazekage_rescue"}],
+      "major_events": [
+        {"event": "gaara_uses_shukaku_power", "canon_anchor_id": "canon_003_konoha_crush"},
+        {"event": "extracted_by_akatsuki", "canon_anchor_id": "canon_008_kazekage_rescue"}
+      ],
+      "consistency_rules": ["一尾抽离后我爱罗不再是完整人柱力。", "我爱罗复活来自千代牺牲，不能自动恢复。"]
+    },
+    {
+      "id": "bijuu_2_matatabi",
+      "name_zh": "二尾又旅",
+      "tails": 2,
+      "current_status_canon_end": "free_or_allied_after_war",
+      "host_history": [{"host_id": "yugito_nii", "status": "canon_host_until_hidan_kakuzu_arc"}],
+      "major_events": [{"event": "captured_by_hidan_and_kakuzu", "canon_anchor_id": "canon_010_hidan_kakuzu"}],
+      "consistency_rules": ["二尾捕获影响晓的尾兽进度。", "由木人若存活或逃脱，飞段角都篇和云隐反应会改变。"]
+    },
+    {
+      "id": "bijuu_3_isobu",
+      "name_zh": "三尾矶抚",
+      "tails": 3,
+      "current_status_canon_end": "free_or_allied_after_war",
+      "host_history": [{"host_id": "yagura", "status": "historical_host"}],
+      "major_events": [{"event": "akatsuki_capture_offscreen_or_anime_expanded", "canon_anchor_id": "canon_007_shippuden_return"}],
+      "consistency_rules": ["三尾是否有宿主会影响捕获难度。", "动画扩展剧情应标注 anime_expanded，避免和漫画主线混淆。"]
+    },
+    {
+      "id": "bijuu_4_son_goku",
+      "name_zh": "四尾孙悟空",
+      "tails": 4,
+      "current_status_canon_end": "free_or_allied_after_war",
+      "host_history": [{"host_id": "roshi", "status": "canon_host_until_akatsuki_capture"}],
+      "major_events": [{"event": "captured_before_war", "canon_anchor_id": "canon_014_war_opening"}],
+      "consistency_rules": ["四尾熔遁属性会影响战斗设计。", "老紫捕获时间变化会牵动岩隐政治反应。"]
+    },
+    {
+      "id": "bijuu_5_kokuo",
+      "name_zh": "五尾穆王",
+      "tails": 5,
+      "current_status_canon_end": "free_or_allied_after_war",
+      "host_history": [{"host_id": "han", "status": "canon_host_until_akatsuki_capture"}],
+      "major_events": [{"event": "captured_before_war", "canon_anchor_id": "canon_014_war_opening"}],
+      "consistency_rules": ["五尾与汉的蒸汽/沸遁风格适合做战场机动变量。", "汉未被捕获时，晓集齐尾兽顺序必须重算。"]
+    },
+    {
+      "id": "bijuu_6_saiken",
+      "name_zh": "六尾犀犬",
+      "tails": 6,
+      "current_status_canon_end": "free_or_allied_after_war",
+      "host_history": [{"host_id": "utakata", "status": "canon_host_until_akatsuki_capture"}],
+      "major_events": [{"event": "captured_before_war", "canon_anchor_id": "canon_014_war_opening"}],
+      "consistency_rules": ["羽高线若采用动画扩展，应单独标注。", "六尾酸液/泡沫能力会影响战斗地形。"]
+    },
+    {
+      "id": "bijuu_7_chomei",
+      "name_zh": "七尾重明",
+      "tails": 7,
+      "current_status_canon_end": "free_or_allied_after_war",
+      "host_history": [{"host_id": "fu", "status": "canon_host_until_akatsuki_capture"}],
+      "major_events": [{"event": "captured_before_war", "canon_anchor_id": "canon_014_war_opening"}],
+      "consistency_rules": ["泷隐不是五大忍村，七尾失守体现小国无力。", "芙若存活，可扩展小国人柱力视角。"]
+    },
+    {
+      "id": "bijuu_8_gyuki",
+      "name_zh": "八尾牛鬼",
+      "tails": 8,
+      "current_status_canon_end": "hosted_by_killer_bee_or_allied",
+      "host_history": [{"host_id": "killer_bee", "status": "perfect_jinchuriki"}],
+      "major_events": [
+        {"event": "taka_capture_attempt_failed", "canon_anchor_id": "canon_013_five_kage_summit"},
+        {"event": "helps_naruto_train", "canon_anchor_id": "canon_014_war_opening"}
+      ],
+      "consistency_rules": ["奇拉比与八尾关系成熟，不能按普通暴走人柱力写。", "八尾被真正捕获会让五影会谈和战争节奏提前恶化。"]
+    },
+    {
+      "id": "bijuu_9_kurama",
+      "name_zh": "九尾九喇嘛",
+      "tails": 9,
+      "current_status_canon_end": "allied_with_naruto",
+      "host_history": [
+        {"host_id": "uzumaki_mito", "status": "historical_host"},
+        {"host_id": "uzumaki_kushina", "status": "host_until_kyuubi_attack"},
+        {"host_id": "uzumaki_naruto", "status": "canon_main_host"}
+      ],
+      "major_events": [
+        {"event": "sealed_into_naruto", "canon_anchor_id": "canon_000_kyuubi_attack_backstory"},
+        {"event": "partial_berserk_states", "canon_anchor_id": "canon_009_sasuke_reunion"},
+        {"event": "controlled_training", "canon_anchor_id": "canon_014_war_opening"},
+        {"event": "full_cooperation", "canon_anchor_id": "canon_015_war_escalation"}
+      ],
+      "consistency_rules": ["九尾早期是恶意力量源，不应一开始完全合作。", "泄漏、强夺、查克拉模式、完全合作必须分阶段。"]
+    },
+    {
+      "id": "bijuu_10_ten_tails",
+      "name_zh": "十尾",
+      "tails": 10,
+      "current_status_canon_end": "sealed_or_resolved_after_kaguya",
+      "host_history": [
+        {"host_id": "uchiha_obito", "status": "temporary_jinchuriki"},
+        {"host_id": "uchiha_madara", "status": "temporary_jinchuriki"}
+      ],
+      "major_events": [
+        {"event": "revived_from_captured_bijuu_chakra", "canon_anchor_id": "canon_015_war_escalation"},
+        {"event": "madara_casts_infinite_tsukuyomi", "canon_anchor_id": "canon_016_war_finale_kaguya_sasuke"}
+      ],
+      "consistency_rules": ["十尾是终局级资源，出现会压扁普通忍者叙事。", "复活需要外道魔像、尾兽查克拉与轮回眼链路。"]
+    }
+  ]
+}

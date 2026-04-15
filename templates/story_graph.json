@@ -1,0 +1,146 @@
+{
+  "project_name": "Naruto Author AI Project",
+  "version": "1.0",
+  "meta": {
+    "creation_date": "",
+    "total_chapters": 0,
+    "last_updated_chapter": 0,
+    "current_outline_version": "outline_v0",
+    "outline_revision_count": 0
+  },
+  "outline_versions": [
+    {
+      "id": "outline_v0",
+      "status": "baseline",
+      "created_at": "",
+      "summary": "初始大纲版本",
+      "source": "00_memory/novel_plan.md",
+      "artifact": null
+    }
+  ],
+  "retcon_log": [],
+  "downstream_obligations": [],
+  "long_outline": {
+    "premise_summaries": {
+      "one_sentence": "",
+      "fifty_characters": "",
+      "two_hundred_to_three_hundred_characters": "",
+      "theme_statement": ""
+    },
+    "canon_anchor_timeline": [
+      {
+        "id": "canon_anchor_1",
+        "canon_event": "原著锚点，例如九尾之夜/宇智波灭族/中忍考试",
+        "canon_time": "木叶X年X月或原著阶段",
+        "protagonist_knows": "主角此时知道什么",
+        "protagonist_can_do": "主角此时能做什么",
+        "protagonist_action": "主角实际做了什么",
+        "missed_window": "主角没来得及做什么",
+        "deviation_result": "世界线偏移结果"
+      }
+    ],
+    "protagonist_intervention_timeline": [],
+    "butterfly_fermentation": [
+      {
+        "id": "butterfly_1",
+        "source_event": "被改动的事件",
+        "direct_result": "",
+        "delayed_result": "",
+        "fermentation_period": "",
+        "beneficiaries": [],
+        "damaged_parties": [],
+        "suspicious_parties": [],
+        "misjudgements": [],
+        "plan_corrections": []
+      }
+    ],
+    "faction_response_tree": [
+      {
+        "faction_id": "konoha_council",
+        "goal": "",
+        "information_source": "",
+        "misjudgement": "",
+        "true_assessment": "",
+        "tactical_change": "",
+        "earliest_detector": "",
+        "fastest_responder": "",
+        "most_dangerous_countermeasure": ""
+      }
+    ],
+    "volume_outlines": [],
+    "arc_outlines": [],
+    "scene_chains": [],
+    "serialization_markers": []
+  },
+  "entities": {
+    "characters": [
+      {
+        "id": "主角ID",
+        "name": "主角名",
+        "status": "alive",
+        "affiliation": "木叶",
+        "chakra_nature": [],
+        "signature_jutsus": [],
+        "butterfly_effect_score": 0,
+        "notes": "主角的特别备注，例如对某人的特殊情感或隐藏的动机"
+      }
+    ],
+    "factions": [
+      {
+        "id": "konoha",
+        "name": "木叶隐村",
+        "leader": "猿飞日斩",
+        "status": "active",
+        "relations": {
+          "suna": "allied",
+          "kumo": "hostile"
+        }
+      }
+    ],
+    "tailed_beasts": [
+      {
+        "id": "kyuubi",
+        "name": "九尾九喇嘛",
+        "jinchuriki": "漩涡玖辛奈",
+        "status": "sealed_in_host"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "event_1",
+      "chapter": 1,
+      "name": "故事开篇：意外的幸存",
+      "timestamp": "木叶X年X月",
+      "participants": ["主角ID", "带土"],
+      "impact": "主角首次干预原著剧情，引发高层关注",
+      "is_canon": false
+    }
+  ],
+  "emotional_arcs": [
+    {
+      "id": "emotion_arc_1",
+      "chapter": 1,
+      "character_id": "主角ID",
+      "pressure_source": "角色实际经历的事件",
+      "visible_reactions": [
+        "身体动作",
+        "物件处理",
+        "环境注意点或对话潜台词"
+      ],
+      "action_choice": "角色在压力下做出的选择",
+      "carryover_to_next_chapter": "下一章必须承接的行为惯性或未解决小冲突",
+      "density_rule": "不要用抽象词反复重说同一情绪；用事件、动作、物件和对话潜台词承载心理"
+    }
+  ],
+  "foreshadowing": [
+    {
+      "id": "foreshadowing_1",
+      "chapter_introduced": 1,
+      "description": "面具男临走前掉落的一块带血的碎布",
+      "status": "active",
+      "resolved_in_chapter": null,
+      "notes": "这是揭露带土身份的重要物理证据"
+    }
+  ]
+}

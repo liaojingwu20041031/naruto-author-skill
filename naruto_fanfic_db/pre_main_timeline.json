@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "basis": "user_supplied_official_summary",
+    "retrieved_or_recorded_at": "2026-04-13",
+    "policy": "根据用户提供的官方站/Narutopedia脉络做结构化归纳；不保存长段原文。"
+  },
+  "table_purpose": "正篇开始前的历史时间线。用于 Claude Code / Codex 写神树时代、战国时代、建村、前三次忍界大战、九尾之夜、宇智波裂痕等前史时检索。",
+  "usage_note": "本表是 canon_plot.json 的前置层。涉及鸣佐宿命、宇智波制度性不信任、晓的起源、带土黑化、九尾之夜、灭族夜时必须先读本表。",
+  "eras": [
+    {
+      "id": "pre_001_divine_tree_mythic_age",
+      "sequence": -800,
+      "title": "神树时代：查克拉与忍者世界的神话底层",
+      "historical_layer": "mythic_origin",
+      "summary": "辉夜与神树、查克拉果实、无限月读、十尾源流绑定，是忍界查克拉神话的起点。羽衣把神话级暴力转化为忍宗的精神连接理念，羽村开启月球一脉。因陀罗与阿修罗的路线冲突经转生延续，最终对应现代的佐助与鸣人。",
+      "key_figures": ["otsutsuki_kaguya", "otsutsuki_hagoromo", "otsutsuki_hamura", "otsutsuki_indra", "otsutsuki_asura", "black_zetsu"],
+      "core_ideologies": [
+        {
+          "figure_id": "otsutsuki_kaguya",
+          "ideology": "神树果实、绝对支配、无限月读、以恐惧压制世界"
+        },
+        {
+          "figure_id": "otsutsuki_hagoromo",
+          "ideology": "忍宗、精神连接、把查克拉从暴力资源转为理解媒介"
+        },
+        {
+          "figure_id": "otsutsuki_hamura",
+          "ideology": "月球一脉、封印与监视辉夜遗产"
+        },
+        {
+          "figure_id": "otsutsuki_indra",
+          "ideology": "天赋、效率、力量、孤高、以强力实现秩序"
+        },
+        {
+          "figure_id": "otsutsuki_asura",
+          "ideology": "后天成长、同伴、羁绊、通过连接获得力量"
+        }
+      ],
+      "anchor_events": [
+        "辉夜取得查克拉并成为神话源头",
+        "神树与十尾源流建立",
+        "羽衣建立忍宗",
+        "羽村开启月球一脉",
+        "因陀罗与阿修罗路线分裂",
+        "因陀罗/阿修罗转生冲突延续到现代鸣人与佐助"
+      ],
+      "black_zetsu_intervention": "黑绝自因陀罗与阿修罗时代后长期操纵历史，目标是促成辉夜复活。它不是普通情报 NPC，而是大历史悲剧背后的隐藏干预者。",
+      "fanfic_use": [
+        "解释鸣人/佐助冲突为什么不只是个人恩怨，而是世界观级路线对立。",
+        "涉及六道、神树、十尾、无限月读、黑绝时，必须回到本时代校验源流。",
+        "不要把黑绝写成纯外挂说明器；它应通过长期误导、挑拨、篡改历史发挥作用。"
+      ],
+      "continuity_risks": [
+        "过早揭露黑绝或辉夜，会摧毁斑、带土、晓、月之眼计划的隐藏层。",
+        "阿修罗/因陀罗转生不是简单血统外挂，必须体现理念继承与冲突延续。",
+        "忍宗不是现代忍术学校，不能把羽衣写成普通忍村创始人。"
+      ]
+    },
+    {
+      "id": "pre_002_warring_states_child_soldiers",
+      "sequence": -700,
+      "title": "战国时代：木叶成立前的血海深仇",
+      "historical_layer": "warring_states",
+      "summary": "木叶建立前，忍族之间长期雇佣厮杀，孩子也会被送上战场。千手与宇智波是众多忍族中的两大顶级强族。少年柱间与少年斑共同幻想过一个不用让孩子上战场的村子，这成为木叶思想雏形。",
+      "key_figures": ["senju_hashirama", "uchiha_madara", "senju_tobirama", "uchiha_izuna"],
+      "anchor_events": [
+        "千手与宇智波长期血仇",
+        "儿童上战场成为常态",
+        "少年柱间开始质疑时代正确性",
+        "柱间与斑共同幻想保护孩子的村子",
+        "扉间在战乱中形成制度、规则、压制情绪的现实主义倾向"
+      ],
+      "core_conflict": "理想和平愿景诞生于血海深仇之中，因此木叶不是凭空出现的乌托邦，而是战国疲惫后的制度尝试。",
+      "fanfic_use": [
+        "写建村前同人时，要让死亡、家族仇恨、儿童兵和雇佣制度成为社会底色。",
+        "柱间的和平理想必须来自战场创伤，而不是天真口号。",
+        "斑不是单纯黑化，他能看见和平制度下宇智波可能被多数秩序吞没。"
+      ],
+      "continuity_risks": [
+        "不要把战国时代写成现代木叶校园的前身。",
+        "扉间的现实主义不能简单等同于反派思维；它来自战乱经验和制度焦虑。",
+        "泉奈的生死和斑的创伤会影响斑对千手/木叶的信任底线。"
+      ]
+    },
+    {
+      "id": "pre_003_konoha_foundation_fracture",
+      "sequence": -600,
+      "title": "木叶建村：和平制度诞生，也是裂痕起点",
+      "historical_layer": "village_foundation",
+      "summary": "柱间与斑联手结束千手与宇智波长期厮杀，木叶成为隐藏忍村制度模板。但村内对宇智波的不安和猜忌开始累积，斑逐渐确信家族会被压迫，最终叛离并在终结谷与柱间决战。",
+      "key_figures": ["senju_hashirama", "uchiha_madara", "senju_tobirama", "uchiha_izuna"],
+      "anchor_events": [
+        "千手与宇智波停战并共建木叶",
+        "隐藏忍村制度成为新秩序模板",
+        "柱间追求终结仇恨",
+        "扉间设计制度以兜住风险",
+        "斑认为宇智波会被纳入多数人的秩序并边缘化",
+        "斑叛离木叶并与柱间在终结谷决战"
+      ],
+      "core_conflict": "木叶从诞生起就同时包含理想和平与制度性不信任。这个裂缝通向九尾之夜后的宇智波边缘化、政变谋划和灭族夜。",
+      "fanfic_use": [
+        "写宇智波政治线时，不要只从九尾之夜开始，根要追到建村制度裂缝。",
+        "柱间、扉间、斑三人的冲突是理想、制度和少数族群安全感的冲突。",
+        "终结谷不是普通强者决斗，而是建村理念破裂的象征。"
+      ],
+      "continuity_risks": [
+        "如果斑没有叛离，黑绝的长期计划、轮回眼开启、带土线都会失去原始支点。",
+        "如果扉间制度完全不同，宇智波警务部、后世猜忌和政变逻辑都必须重写。",
+        "不要把木叶建村写成无阴影的纯理想胜利。"
+      ]
+    },
+    {
+      "id": "pre_004_first_shinobi_war",
+      "sequence": -500,
+      "title": "第一次忍界大战：村制化后的第一次全面战争",
+      "historical_layer": "first_shinobi_war",
+      "summary": "隐藏忍村建立后，战争并未结束。第一次忍界大战发生在五大国与五大忍村体制成形后不久，各国均遭重创。较稳妥写法是柱间时代后期到扉间时代，忍界进入村制化后的第一次全面大战。柱间死因不宜写成铁律 canon。",
+      "key_figures": ["senju_tobirama", "sarutobi_hiruzen", "shimura_danzo", "kinkaku", "ginkaku"],
+      "anchor_events": [
+        "五大国/五大忍村体制成形后不久爆发大战",
+        "各国被战争重创",
+        "扉间带日斩、团藏等弟子行动时遭金角部队追击",
+        "扉间选择断后，为弟子撤离争取机会",
+        "猿飞日斩接任第三代火影"
+      ],
+      "canon_safety_note": "柱间之死过程不要写成绝对铁律；官方没有给出足够细的死因过程。同人可以设计，但必须标记为本作设定。",
+      "fanfic_use": [
+        "写第一次大战时，重点是村制化后仍无法止战。",
+        "扉间牺牲和日斩继任是木叶权力交接核心。",
+        "团藏与日斩在同一危机中形成不同政治人格，可作为后续火影一系/根逻辑分裂源头。"
+      ],
+      "continuity_risks": [
+        "扉间若存活更久，日斩、团藏、木叶制度成熟路径会改变。",
+        "日斩若不接任三代，三忍、根、九尾之夜后的治理逻辑会改写。",
+        "金角银角部队与云隐关系会影响后续木叶-云隐外交。"
+      ]
+    },
+    {
+      "id": "pre_005_hiruzen_mature_system_shadow",
+      "sequence": -400,
+      "title": "三代火影时代前中期：制度成熟与阴影积累",
+      "historical_layer": "hiruzen_early_mid_rule",
+      "summary": "猿飞日斩是木叶制度成熟期的核心火影。他直接教导三忍，并以长年执政影响多代木叶忍者的成长环境。此时期公开的火影治理与地下的团藏/根逻辑同时发展，火之意志与必要之恶开始分裂。",
+      "key_figures": ["sarutobi_hiruzen", "shimura_danzo", "jiraiya", "tsunade", "orochimaru"],
+      "anchor_events": [
+        "日斩长期执政，木叶制度成熟",
+        "日斩直接教导三忍",
+        "公开治理、传承和村子秩序逐步稳定",
+        "团藏/根的地下治理逻辑积累",
+        "火之意志与必要之恶形成张力"
+      ],
+      "core_conflict": "木叶表面是公开秩序与火之意志，地下则存在根的必要之恶。二者并非总是一致。",
+      "fanfic_use": [
+        "写木叶政治线时，不要把所有矛盾都推给团藏；日斩的长期执政责任也要存在。",
+        "三忍的分化可以从日斩时代制度成熟和战争压力中解释。",
+        "根不是独立国家，它依附木叶安全逻辑却不断侵蚀公开治理。"
+      ],
+      "continuity_risks": [
+        "如果根被提前清除，佐井、团藏、宇智波灭族、五影会谈线都要重写。",
+        "如果日斩更强硬或更透明，木叶黑暗政治会产生不同后果。",
+        "不要把日斩写成教过所有后辈的直接老师；他直接弟子是三忍。"
+      ]
+    },
+    {
+      "id": "pre_006_second_shinobi_war_ame_tragedy",
+      "sequence": -300,
+      "title": "第二次忍界大战：三忍成名与雨之国悲剧",
+      "historical_layer": "second_shinobi_war",
+      "summary": "第二次大战的重要结果不是哪国漂亮获胜，而是三忍称号诞生、小国雨之国被大国战争践踏、弥彦长门小南这一代战争孤儿成长。自来也短暂留在雨之国教导三名孤儿，后来半藏在团藏误导下逼迫弥彦一派，推动长门走向佩恩的极端和平论。",
+      "key_figures": ["jiraiya", "tsunade", "orochimaru", "hanzo", "yahiko", "nagato", "konan", "shimura_danzo"],
+      "anchor_events": [
+        "自来也、纲手、大蛇丸与半藏交锋",
+        "半藏赐名木叶三忍",
+        "雨之国作为夹缝小国被战争践踏",
+        "弥彦、长门、小南成为战争孤儿",
+        "自来也在雨之国教导三名孤儿",
+        "弥彦建立反战理想主义组织晓的雏形",
+        "半藏与团藏介入，弥彦死亡",
+        "长门走向佩恩式极端和平论"
+      ],
+      "core_conflict": "大国战争把小国当战场，孕育了后来以和平之名制造恐怖的晓。",
+      "fanfic_use": [
+        "写晓起源不能直接从黑袍反派开始，必须经过雨之国战争孤儿和反战组织阶段。",
+        "弥彦是理想主义政治领袖，长门是被极端力量推到极端位置的人，小南是见证者和守护者。",
+        "半藏与团藏的联手/误导是晓从反战组织转向恐怖组织的关键历史拐点。"
+      ],
+      "continuity_risks": [
+        "弥彦若存活，佩恩六道、晓组织目标和长门心理都会重写。",
+        "自来也若带走三名孤儿，佩恩篇和雨隐政治线将完全不同。",
+        "半藏若不被团藏误导，雨隐政权和晓的关系可能保留谈判空间。"
+      ]
+    },
+    {
+      "id": "pre_007_third_shinobi_war_team_minato_break",
+      "sequence": -200,
+      "title": "第三次忍界大战：水门班的断裂点",
+      "historical_layer": "third_shinobi_war",
+      "summary": "第三次大战连接老一代木叶传奇与少年篇主角群。正篇开始十多年前，五大国秩序动荡，神无毗桥任务中，水门带队的卡卡西、带土、琳被推到战场核心。带土被认为已死，后被确认由斑救下；琳之死成为带土坠入极端的心理中心。",
+      "key_figures": ["namikaze_minato", "uzumaki_kushina", "hatake_kakashi", "uchiha_obito", "rin", "uchiha_madara"],
+      "anchor_events": [
+        "第三次忍界大战爆发",
+        "水门以黄色闪光成为大战末期顶尖战力",
+        "卡卡西少年时代快速成熟",
+        "神无毗桥任务发生",
+        "带土被认为战死，实际被斑救下",
+        "带土赠予卡卡西写轮眼",
+        "琳之死导致带土彻底崩塌",
+        "面具男、月之眼计划和九尾之夜心理起点形成"
+      ],
+      "core_conflict": "战场把理想主义少年压成极端主义工具，带土的黑化不是突然转向，而是战争、斑、琳之死和黑绝/计划共同作用的结果。",
+      "fanfic_use": [
+        "第三次大战同人要同时处理水门高光、卡卡西创伤、带土坠落、琳中心悲剧。",
+        "神威、卡卡西写轮眼、带土身份必须从神无毗桥开始建账。",
+        "琳之死是九尾之夜和月之眼计划的心理前置。"
+      ],
+      "continuity_risks": [
+        "带土若真正死亡或被救回木叶，晓、九尾之夜、月之眼计划都会失去核心执行者。",
+        "卡卡西若没有写轮眼，第七班教学和后续神威战局都要改写。",
+        "琳若存活，带土黑化因果必须寻找完全不同触发器。"
+      ]
+    },
+    {
+      "id": "pre_008_kyuubi_night_uchiha_marginalization",
+      "sequence": -100,
+      "title": "九尾之夜：鸣人出生与宇智波问题恶化",
+      "historical_layer": "kyuubi_attack",
+      "summary": "鸣人出生当夜，面具男袭击木叶，九尾从玖辛奈体内被强行抽出并袭村。水门与玖辛奈战死，九尾被封印进刚出生的鸣人体内，三代重新出山稳定局面。更深后果是宇智波被怀疑与九尾事件有关，村内不信任升级，最终通向政变谋划与灭族夜。",
+      "key_figures": ["namikaze_minato", "uzumaki_kushina", "uzumaki_naruto", "uchiha_obito", "sarutobi_hiruzen", "uchiha_itachi", "uchiha_shisui", "shimura_danzo"],
+      "anchor_events": [
+        "鸣人出生",
+        "面具男袭击并抽出九尾",
+        "九尾袭击木叶",
+        "三代指挥防御",
+        "水门与玖辛奈以生命完成封印",
+        "九尾封入鸣人体内",
+        "三代复职稳定局面",
+        "宇智波被怀疑与九尾事件相关",
+        "宇智波边缘化加剧，后续通向政变与灭族夜"
+      ],
+      "core_conflict": "九尾之夜不是只制造了孤儿鸣人，还让建村以来的宇智波制度裂痕进入不可逆恶化阶段。",
+      "fanfic_use": [
+        "写九尾之夜必须同时记录鸣人封印、四代夫妇死亡、三代复职、宇智波猜忌升级。",
+        "水门/玖辛奈存活不是小改动，会重写鸣人童年、木叶权力和九尾封印稳定性。",
+        "宇智波灭族不能孤立写，要连回建村不信任、九尾之夜怀疑、团藏/高层压力。"
+      ],
+      "continuity_risks": [
+        "如果宇智波没有被怀疑，政变和灭族夜因果需要重建。",
+        "如果带土身份提前暴露，木叶对宇智波整体怀疑可能减轻或转向。",
+        "如果鸣人不成为九尾人柱力，晓第二部目标和鸣人成长结构都会改写。"
+      ],
+      "linked_canon_plot_id": "canon_000_kyuubi_attack_backstory"
+    }
+  ],
+  "cross_era_threads": [
+    {
+      "id": "thread_indra_asura_to_naruto_sasuke",
+      "title": "因陀罗/阿修罗转生到鸣人/佐助",
+      "from_era_id": "pre_001_divine_tree_mythic_age",
+      "to_canon_anchor_ids": ["canon_016_war_finale_kaguya_sasuke"],
+      "rule": "鸣佐冲突应体现力量孤高路线与羁绊成长路线的世界观级对立。"
+    },
+    {
+      "id": "thread_uchiha_marginalization",
+      "title": "宇智波制度裂痕",
+      "from_era_id": "pre_003_konoha_foundation_fracture",
+      "to_canon_anchor_ids": ["canon_000_kyuubi_attack_backstory", "canon_011_jiraiya_pain_sasuke_itachi", "canon_013_five_kage_summit"],
+      "rule": "宇智波灭族线必须连回建村制度不信任、九尾之夜怀疑、政变压力和团藏/高层选择。"
+    },
+    {
+      "id": "thread_akatsuki_origin",
+      "title": "晓从反战组织到恐怖组织",
+      "from_era_id": "pre_006_second_shinobi_war_ame_tragedy",
+      "to_canon_anchor_ids": ["canon_011_jiraiya_pain_sasuke_itachi", "canon_012_pain_assault"],
+      "rule": "晓的极端化必须经过雨之国小国创伤、弥彦死亡、长门理念崩坏。"
+    },
+    {
+      "id": "thread_obito_moon_eye",
+      "title": "带土创伤到月之眼计划",
+      "from_era_id": "pre_007_third_shinobi_war_team_minato_break",
+      "to_canon_anchor_ids": ["canon_000_kyuubi_attack_backstory", "canon_014_war_opening", "canon_016_war_finale_kaguya_sasuke"],
+      "rule": "带土不是单纯面具反派，他的行动必须连接神无毗桥、琳之死、斑救助、月之眼诱导。"
+    },
+    {
+      "id": "thread_black_zetsu_hidden_history",
+      "title": "黑绝长期操纵历史",
+      "from_era_id": "pre_001_divine_tree_mythic_age",
+      "to_canon_anchor_ids": ["canon_016_war_finale_kaguya_sasuke"],
+      "rule": "黑绝应作为大历史隐藏变量，而不是临场解释器。提前揭露会导致终战结构重写。"
+    }
+  ]
+}
+
